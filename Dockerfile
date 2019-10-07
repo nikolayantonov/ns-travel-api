@@ -1,6 +1,6 @@
 FROM maven:3.6-jdk-8-slim
 COPY . /repo
-WORKDIR /repo/ns-travel-api
+WORKDIR /repo
 RUN mvn package
 
 FROM openjdk:8-slim
