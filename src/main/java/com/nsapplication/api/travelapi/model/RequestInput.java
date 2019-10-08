@@ -2,10 +2,10 @@ package com.nsapplication.api.travelapi.model;
 
 
 import lombok.Getter;
-import lombok.Setter;
+//import lombok.Setter;
 
 @Getter
-@Setter
+//@Setter
 public class RequestInput {
     private String originEVACode;
     private String destinationEVACode;

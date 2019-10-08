@@ -1,0 +1,998 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Reisinformatie API",
+    "version": "1.0",
+    "description": "Reisinformatie API"
+  },
+  "host": "gateway.apiportal.ns.nl",
+  "basePath": "/reisinformatie-api",
+  "schemes": [
+    "https"
+  ],
+  "securityDefinitions": {
+    "apiKeyHeader": {
+      "type": "apiKey",
+      "name": "Ocp-Apim-Subscription-Key",
+      "in": "header"
+    },
+    "apiKeyQuery": {
+      "type": "apiKey",
+      "name": "subscription-key",
+      "in": "query"
+    }
+  },
+  "security": [
+    {
+      "apiKeyHeader": []
+    },
+    {
+      "apiKeyQuery": []
+    }
+  ],
+  "paths": {
+    "/api/v2/disruptions": {
+      "get": {
+        "description": "List of disruptions/maintenance.",
+        "operationId": "getDisruptions",
+        "summary": "getDisruptions",
+        "tags": [
+          "Disruptions"
+        ],
+        "parameters": [
+          {
+            "name": "type",
+            "in": "query",
+            "description": "Type of the disruptions. If not present both will be returned.",
+            "type": "string",
+            "enum": [
+              "storing",
+              "werkzaamheid"
+            ]
+          },
+          {
+            "name": "actual",
+            "in": "query",
+            "description": "Whether to only return disruptions within 2 hours of the request.",
+            "type": "boolean"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "description": "The language in which to return the disruption messages, note that not all messages are translated.",
+            "type": "string",
+            "enum": [
+              "nl",
+              "en"
+            ]
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of disruptions"
+          },
+          "400": {
+            "description": "A list of disruptions"
+          },
+          "500": {
+            "description": "A list of disruptions"
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/api/v2/disruptions/station/{code}": {
+      "get": {
+        "description": "Disruptions for a station, code is either a UIC code or old-skool station code",
+        "operationId": "getStationDisruption",
+        "summary": "getStationDisruption",
+        "tags": [
+          "Disruptions"
+        ],
+        "parameters": [
+          {
+            "name": "code",
+            "in": "path",
+            "description": "The UICCode or the station code",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The disruption"
+          },
+          "400": {
+            "description": "The disruption"
+          },
+          "500": {
+            "description": "The disruption"
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/api/v2/disruptions/{id}": {
+      "get": {
+        "description": "Specific disruption/maintenance",
+        "operationId": "getDisruption",
+        "summary": "getDisruption",
+        "tags": [
+          "Disruptions"
+        ],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "The id of the disruptions",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The disruption"
+          },
+          "400": {
+            "description": "The disruption"
+          },
+          "500": {
+            "description": "The disruption"
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/api/v2/price": {
+      "get": {
+        "description": "Get the price for a specified trip, either by using ctxRecon or fromStation, toStation and plannedFromTime",
+        "operationId": "getPrice",
+        "summary": "getPrice",
+        "tags": [
+          "Price"
+        ],
+        "parameters": [
+          {
+            "name": "ctxRecon",
+            "in": "query",
+            "description": "reconstruction context to use as basis for finding trip, use either this or fromStation, toStation and plannedFromTime",
+            "type": "string"
+          },
+          {
+            "name": "fromStation",
+            "in": "query",
+            "description": "departure station code, e.g. UT, ASD",
+            "type": "string"
+          },
+          {
+            "name": "toStation",
+            "in": "query",
+            "description": "arrival station code, e.g. UT, ASD",
+            "type": "string"
+          },
+          {
+            "name": "plannedFromTime",
+            "in": "query",
+            "description": "departure date time in ISO8601",
+            "type": "string"
+          },
+          {
+            "name": "plannedArrivalTime",
+            "in": "query",
+            "description": "arrival date time in ISO8601",
+            "type": "string"
+          },
+          {
+            "name": "travelClass",
+            "in": "query",
+            "description": "The class to travel.",
+            "type": "string",
+            "default": "2",
+            "enum": [
+              "1",
+              "2"
+            ]
+          },
+          {
+            "name": "travelType",
+            "in": "query",
+            "description": "The type, single or return for a trip",
+            "type": "string",
+            "default": "single",
+            "enum": [
+              "single",
+              "return"
+            ]
+          },
+          {
+            "name": "adults",
+            "in": "query",
+            "description": "Format - int32. Number of adults to take into account.",
+            "type": "integer",
+            "default": "1"
+          },
+          {
+            "name": "children",
+            "in": "query",
+            "description": "Format - int32. Number of children to take into account.",
+            "type": "integer",
+            "default": "0"
+          },
+          {
+            "name": "routeId",
+            "in": "query",
+            "description": "filter trip by routeId",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "The price of the journey."
+          },
+          "400": {
+            "description": "The price of the journey."
+          },
+          "500": {
+            "description": "The price of the journey."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/api/v2/price/international": {
+      "get": {
+        "description": "Get the price for a specified international trip, by using fromStation, toStation and plannedFromTime",
+        "operationId": "getInternationalPrice",
+        "summary": "getInternationalPrice",
+        "tags": [
+          "International Price"
+        ],
+        "responses": {
+          "200": {
+            "description": "The price of the journey."
+          },
+          "400": {
+            "description": "The price of the journey."
+          },
+          "500": {
+            "description": "The price of the journey."
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/api/v2/stations": {
+      "get": {
+        "description": "List of stations",
+        "operationId": "getAllStations",
+        "summary": "getAllStations",
+        "tags": [
+          "Stations"
+        ],
+        "responses": {
+          "200": {
+            "description": "List of stations"
+          },
+          "400": {
+            "description": "List of stations"
+          },
+          "500": {
+            "description": "List of stations"
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/api/v2/arrivals": {
+      "get": {
+        "description": "Arrival times for a specified station. Either the UIC code or station is required",
+        "operationId": "getArrivals",
+        "summary": "getArrivals",
+        "tags": [
+          "Arrivals"
+        ],
+        "parameters": [
+          {
+            "name": "dateTime",
+            "in": "query",
+            "description": "Format - date-time (as date-time in RFC3339). return departures or arrivals starting at a given dateTime in ISO8601",
+            "type": "string"
+          },
+          {
+            "name": "maxJourneys",
+            "in": "query",
+            "description": "Format - int32. number of departures or arrivals to return",
+            "type": "integer",
+            "default": "25"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "description": "language to use for translatable messages. Note that not all messages are translated.",
+            "type": "string",
+            "default": "nl",
+            "enum": [
+              "nl",
+              "en"
+            ]
+          },
+          {
+            "name": "station",
+            "in": "query",
+            "description": "specify a station by NS abbreviation/code (e.g. ASD or UT)",
+            "type": "string"
+          },
+          {
+            "name": "uicCode",
+            "in": "query",
+            "description": "specify a station by UIC code (84xxxxx)",
+            "type": "string"
+          },
+          {
+            "name": "source",
+            "in": "query",
+            "description": "forces to use a certain source",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of arrival times"
+          },
+          "400": {
+            "description": "List of arrival times"
+          },
+          "500": {
+            "description": "List of arrival times"
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/api/v2/departures": {
+      "get": {
+        "description": "Departure times for a specified station. Either the UIC code or station is required.",
+        "operationId": "getDepartures",
+        "summary": "getDepartures",
+        "tags": [
+          "Departures"
+        ],
+        "parameters": [
+          {
+            "name": "dateTime",
+            "in": "query",
+            "description": "Format - date-time (as date-time in RFC3339). return departures or arrivals starting at a given dateTime in ISO8601",
+            "type": "string"
+          },
+          {
+            "name": "maxJourneys",
+            "in": "query",
+            "description": "Format - int32. number of departures or arrivals to return",
+            "type": "integer",
+            "default": "25"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "description": "language to use for translatable messages. Note that not all messages are translated.",
+            "type": "string",
+            "default": "nl",
+            "enum": [
+              "nl",
+              "en"
+            ]
+          },
+          {
+            "name": "station",
+            "in": "query",
+            "description": "specify a station by NS abbreviation/code (e.g. ASD or UT)",
+            "type": "string"
+          },
+          {
+            "name": "uicCode",
+            "in": "query",
+            "description": "specify a station by UIC code (84xxxxx)",
+            "type": "string"
+          },
+          {
+            "name": "source",
+            "in": "query",
+            "description": "forces to use a certain source",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of departure times"
+          },
+          "400": {
+            "description": "List of departure times"
+          },
+          "500": {
+            "description": "List of departure times"
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/api/v3/trips": {
+      "get": {
+        "description": "Searches for a travel advice with the specified options between the possible backends (HARP, 9292 or PAS/AVG). Defaults to legacy XML implementation, specify header in order to get JSON",
+        "operationId": "getTrips",
+        "summary": "getTrips",
+        "tags": [
+          "Trips"
+        ],
+        "parameters": [
+          {
+            "name": "originLat",
+            "in": "query",
+            "description": "Latitude of station/stop coordinate of the trip’s origin",
+            "type": "string"
+          },
+          {
+            "name": "originLng",
+            "in": "query",
+            "description": "Longitude of station/stop coordinate of the trip’s origin",
+            "type": "string"
+          },
+          {
+            "name": "destinationLat",
+            "in": "query",
+            "description": "Latitude of station/stop coordinate of the trip’s destination",
+            "type": "string"
+          },
+          {
+            "name": "destinationLng",
+            "in": "query",
+            "description": "Longitude of station/stop coordinate of the trip’s destination",
+            "type": "string"
+          },
+          {
+            "name": "viaLat",
+            "in": "query",
+            "description": "Latitude of station/stop coordinate of the trip’s via point",
+            "type": "string"
+          },
+          {
+            "name": "viaLng",
+            "in": "query",
+            "description": "Longitude of station/stop coordinate of the trip’s via point",
+            "type": "string"
+          },
+          {
+            "name": "viaWaitTime",
+            "in": "query",
+            "description": "Format - int32. Waiting time at the via location, exclusive of transfer time",
+            "type": "integer"
+          },
+          {
+            "name": "dateTime",
+            "in": "query",
+            "description": "Format - date-time (as date-time in RFC3339). Departure date / time for the search. defaults to server time (Europe/Amsterdam)",
+            "type": "string"
+          },
+          {
+            "name": "searchForArrival",
+            "in": "query",
+            "description": "If set, the date and time parameters specify the arrival time for the trip search instead of the departure time",
+            "type": "boolean"
+          },
+          {
+            "name": "previousAdvices",
+            "in": "query",
+            "description": "Format - int32. Minimum number of advices before the search time",
+            "type": "integer"
+          },
+          {
+            "name": "nextAdvices",
+            "in": "query",
+            "description": "Format - int32. Minimum number of trips after the search time",
+            "type": "integer"
+          },
+          {
+            "name": "context",
+            "in": "query",
+            "description": "Defines the starting point for the scroll back or forth operation. Use the scrB value from a previous result to scroll backwards in time and use the scrF value to scroll forward",
+            "type": "string"
+          },
+          {
+            "name": "addChangeTime",
+            "in": "query",
+            "description": "Format - int32. Extra time required at all transfers to change trains",
+            "type": "integer"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "description": "Language to return information for (only a small subset of text is translated, mainly notes)",
+            "type": "string"
+          },
+          {
+            "name": "polylines",
+            "in": "query",
+            "description": "Language to return information for (only a small subset of text is translated, mainly notes)",
+            "type": "boolean"
+          },
+          {
+            "name": "fromZip",
+            "in": "query",
+            "description": "(legacy parameter, not supported for JSON) zip code for origin",
+            "type": "string"
+          },
+          {
+            "name": "toZip",
+            "in": "query",
+            "description": "(legacy parameter, not supported for JSON) zip code for destination",
+            "type": "string"
+          },
+          {
+            "name": "travelMethodFrom",
+            "in": "query",
+            "description": "(legacy parameter, not supported for JSON) travel method for origin",
+            "type": "string"
+          },
+          {
+            "name": "travelMethodTo",
+            "in": "query",
+            "description": "(legacy parameter, not supported for JSON) travel method for destination",
+            "type": "string"
+          },
+          {
+            "name": "product",
+            "in": "query",
+            "description": "Name/constant of product customer will use in travel, if omitted defaults to ROS",
+            "type": "string",
+            "enum": [
+              "OVCHIPKAART_ENKELE_REIS",
+              "OVCHIPKAART_RETOUR",
+              "TRAJECT_VRIJ_MAAND",
+              "TRAJECT_VRIJ_JAAR",
+              "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+              "DAL_VOORDEEL",
+              "ALTIJD_VOORDEEL",
+              "DAL_VRIJ",
+              "WEEKEND_VRIJ",
+              "ALTIJD_VRIJ",
+              "BUSINESSCARD",
+              "BUSINESSCARD_DAL",
+              "STUDENT_WEEK",
+              "STUDENT_WEEKEND",
+              "VDU",
+              "SAMENREISKORTING",
+              "TRAJECT_VRIJ",
+              "RAILRUNNER",
+              "ETICKET_ENKELE_REIS",
+              "ETICKET_RETOUR",
+              "ETICKET_JOINT_JOURNEY_DISCOUNT_RETOUR",
+              "ETICKET_JOINT_JOURNEY_DISCOUNT_ENKELE_REIS",
+              "NSI"
+            ]
+          },
+          {
+            "name": "travelClass",
+            "in": "query",
+            "description": "class of travel to use when calculating product prices",
+            "type": "string",
+            "default": "SECOND_CLASS",
+            "enum": [
+              "FIRST_CLASS",
+              "SECOND_CLASS"
+            ]
+          },
+          {
+            "name": "discount",
+            "in": "query",
+            "description": "discount of travel to use when calculating product prices",
+            "type": "string",
+            "enum": [
+              "NO_CHARGE",
+              "DISCOUNT_40_PERCENT",
+              "DISCOUNT_20_PERCENT",
+              "FIP_DISCOUNT",
+              "NO_DISCOUNT"
+            ]
+          },
+          {
+            "name": "productStationFrom",
+            "in": "query",
+            "description": "Station from which a travel product has been purchased (intended for TrajectVrij)",
+            "type": "string"
+          },
+          {
+            "name": "productStationTo",
+            "in": "query",
+            "description": "Station to which a travel product has been purchased (intended for TrajectVrij)",
+            "type": "string"
+          },
+          {
+            "name": "yearCard",
+            "in": "query",
+            "description": "Show options which are only allowed with a year card",
+            "type": "boolean"
+          },
+          {
+            "name": "originTransit",
+            "in": "query",
+            "description": "Return trip advices with transit options to start travel from origin",
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "originWalk",
+            "in": "query",
+            "description": "Return trip advices with walking options to start travel from origin to a train station (first mile)",
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "originBike",
+            "in": "query",
+            "description": "Return trip advices with biking options to start travel from origin to a train station (first mile)",
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "originCar",
+            "in": "query",
+            "description": "Return trip advices with car options to start travel from origin to a train station (first mile)",
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "originName",
+            "in": "query",
+            "description": "A name that is returned as the origin in a trip",
+            "type": "string"
+          },
+          {
+            "name": "travelAssistanceTransferTime",
+            "in": "query",
+            "description": "Format - int32. Extra transfertime for the trip assistance booking engine PAS",
+            "type": "integer",
+            "default": "0"
+          },
+          {
+            "name": "searchForAccessibleTrip",
+            "in": "query",
+            "description": "Return trip advices that are accessible. (might be bookable too)",
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "destinationTransit",
+            "in": "query",
+            "description": "Return trip advices with transit options to finish travel to the destination",
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "destinationWalk",
+            "in": "query",
+            "description": "Return trip advices with walking options to finish travel to the destination (last mile)",
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "destinationBike",
+            "in": "query",
+            "description": "Return trip advices with biking options to finish travel to the destination (last mile)",
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "destinationCar",
+            "in": "query",
+            "description": "Return trip advices with car options to finish travel to the destination (last mile)",
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "destinationName",
+            "in": "query",
+            "description": "A name that is returned as the destination in a trip",
+            "type": "string"
+          },
+          {
+            "name": "accessibilityEquipment1",
+            "in": "query",
+            "description": "Accesibility equipment to use when searching for trip assistance options (AVG/PAS)",
+            "type": "string"
+          },
+          {
+            "name": "accessibilityEquipment2",
+            "in": "query",
+            "description": "Secondary accesibility equipment to use when searching for trip assistance options (AVG/PAS)",
+            "type": "string"
+          },
+          {
+            "name": "excludeHighSpeedTrains",
+            "in": "query",
+            "description": "Exclude high speed trains from results (including those with a required reservation)",
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "excludeReservationRequired",
+            "in": "query",
+            "description": "Exclude trains for domestic trips that require a reservation (e.g. Thalys)",
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "localTrainsOnly",
+            "in": "query",
+            "description": "Search only for local train options, i.e. sprinter/sneltrein/stoptrein",
+            "type": "boolean"
+          },
+          {
+            "name": "filterTransportMode",
+            "in": "query",
+            "description": "Search for specified product classes, i.e. SPR, ST, IC, ICE",
+            "type": "string"
+          },
+          {
+            "name": "excludeTransportMode",
+            "in": "query",
+            "description": "Search for trips excluding the specified product classes, i.e. SPR, ST, IC, ICE",
+            "type": "string"
+          },
+          {
+            "name": "passing",
+            "in": "query",
+            "description": "Show intermediate stops that the journey passes but doesn't stop at",
+            "type": "boolean",
+            "default": "false"
+          },
+          {
+            "name": "travelRequestType",
+            "in": "query",
+            "description": "directionsOnly only plans a google directions (walk/bike/car) advice",
+            "type": "string",
+            "enum": [
+              "DIRECTIONS_ONLY",
+              "DIRECTIONS",
+              "DEFAULT"
+            ]
+          },
+          {
+            "name": "originEVACode",
+            "in": "query",
+            "description": "EVA code of the station of the trips origin",
+            "type": "string"
+          },
+          {
+            "name": "destinationEVACode",
+            "in": "query",
+            "description": "EVA code of the station of the trips destination",
+            "type": "string"
+          },
+          {
+            "name": "viaEVACode",
+            "in": "query",
+            "description": "EVA code of the station of the trips via point",
+            "type": "string"
+          },
+          {
+            "name": "shorterChange",
+            "in": "query",
+            "description": "Changes the CHANGE_NOT_POSSIBLE status to CHANGE_COULD_BE_POSSIBLE if the traveler can walk twice as fast",
+            "type": "boolean"
+          },
+          {
+            "name": "routeId",
+            "in": "query",
+            "description": "The preferred routeId (optional) if the trip has multiple routes.",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "name": "fromStation",
+            "in": "query",
+            "description": "Station code of the trips origin",
+            "type": "string"
+          },
+          {
+            "name": "toStation",
+            "in": "query",
+            "description": "Station code of the trips destination",
+            "type": "string"
+          },
+          {
+            "name": "originUicCode",
+            "in": "query",
+            "description": "UIC code of the station of the trips origin",
+            "type": "string"
+          },
+          {
+            "name": "destinationUicCode",
+            "in": "query",
+            "description": "UIC code of the station of the trips destination",
+            "type": "string"
+          },
+          {
+            "name": "viaUicCode",
+            "in": "query",
+            "description": "UIC code of the station of the trips via point",
+            "type": "string"
+          },
+          {
+            "name": "bikeCarriageRequired",
+            "in": "query",
+            "description": "Whether a bike space is required on the train(s).",
+            "type": "boolean"
+          },
+          {
+            "name": "viaStation",
+            "in": "query",
+            "description": "Station code of the trips via point",
+            "type": "string"
+          },
+          {
+            "name": "departure",
+            "in": "query",
+            "description": "Whether the provided time is the departure time.",
+            "type": "boolean"
+          },
+          {
+            "name": "minimalChangeTime",
+            "in": "query",
+            "description": "Format - int32. The minimum change time between transfers in minutes.",
+            "type": "integer"
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "description": "Content type to return",
+            "type": "string",
+            "enum": [
+              "application/json",
+              "text/xml"
+            ]
+          },
+          {
+            "name": "X-Request-ID",
+            "in": "header",
+            "description": "Unique request id to be specified in the places",
+            "type": "string"
+          },
+          {
+            "name": "X-Caller-ID",
+            "in": "header",
+            "description": "The caller of the API",
+            "type": "string"
+          },
+          {
+            "name": "x-api-key",
+            "in": "header",
+            "type": "string"
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "description": "Account details to use when querying trip assistance options",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "List of available trips"
+          },
+          "400": {
+            "description": "List of available trips"
+          },
+          "500": {
+            "description": "List of available trips"
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    },
+    "/api/v3/trips/trip": {
+      "get": {
+        "description": "Reconstruct a trip if possible using the given reconCtx (representation of a trip found in a travel advice)",
+        "operationId": "getTrip",
+        "summary": "getTrip",
+        "tags": [
+          "Trips"
+        ],
+        "parameters": [
+          {
+            "name": "ctxRecon",
+            "in": "query",
+            "description": "reconstruction context to use as basis for finding trip",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "date",
+            "in": "query",
+            "description": "date to use when reconstructing trip, may be a different date than the trip was originally planned",
+            "type": "string"
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "description": "language to return text in (not all texts are translated)",
+            "type": "string",
+            "default": "nl"
+          },
+          {
+            "name": "product",
+            "in": "query",
+            "description": "name/constant of product customer will use in travel, if omitted defaults to ROS",
+            "type": "string"
+          },
+          {
+            "name": "travelClass",
+            "in": "query",
+            "description": "class of travel to use when calculating product prices",
+            "type": "string",
+            "default": "2"
+          },
+          {
+            "name": "discount",
+            "in": "query",
+            "description": "discount of travel to use when calculating product prices",
+            "type": "string"
+          },
+          {
+            "name": "travelRequestType",
+            "in": "query",
+            "description": "Type of travelRequest, with or without directions",
+            "type": "string",
+            "default": ""
+          },
+          {
+            "name": "Accept",
+            "in": "header",
+            "description": "Content type to return (application/json or text/xml)",
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "A list of available trips"
+          },
+          "400": {
+            "description": "A list of available trips"
+          },
+          "500": {
+            "description": "A list of available trips"
+          }
+        },
+        "produces": [
+          "application/json"
+        ]
+      }
+    }
+  },
+  "tags": [],
+  "x-ms-export-notes": [
+    "The exported API contains schemas that aren't of content type 'application/vnd.ms-azure-apim.swagger.definitions+json', and are hence not exported as Swagger definitions."
+  ]
+}
