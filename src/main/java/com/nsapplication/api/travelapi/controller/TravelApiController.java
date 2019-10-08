@@ -6,17 +6,14 @@ package com.nsapplication.api.travelapi.controller;
 //import org.springframework.context.annotation.Bean;
 //import org.springframework.http.HttpStatus;
 //import org.springframework.http.ResponseEntity;
-import com.fasterxml.jackson.databind.JsonNode;
-import com.nsapplication.api.travelapi.model.TravelApi;
+
 import com.nsapplication.api.travelapi.model.TravelRequest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.*;
-import org.springframework.web.bind.annotation.*;
-import org.springframework.web.client.RestTemplate;
-
-import java.util.Arrays;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController("/api/")
 public class TravelApiController {
@@ -26,12 +23,11 @@ public class TravelApiController {
 //    @Autowired
 //    RestTemplate restTemplate;
 
-   // @RequestMapping("/")
+    // @RequestMapping("/")
     @RequestMapping(name = "trips", method = RequestMethod.POST, consumes = "application/json")
-    public void processUserRequest(@RequestBody TravelRequest travelRequest)
-    {
-       logger.info("Inside controller");
-       logger.info(travelRequest.getDateTime() +"  "+travelRequest.getOriginEVACode()+"  "+travelRequest.getDestinationEVACode());
+    public void processUserRequest(@RequestBody TravelRequest travelRequest) {
+        logger.info("Inside controller");
+        logger.info(travelRequest.getDateTime() + "  " + travelRequest.getOriginEVACode() + "  " + travelRequest.getDestinationEVACode());
 
     }
 
