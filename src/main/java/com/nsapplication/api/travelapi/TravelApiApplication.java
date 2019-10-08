@@ -2,6 +2,8 @@ package com.nsapplication.api.travelapi;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
+import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 public class TravelApiApplication {
@@ -10,7 +12,5 @@ public class TravelApiApplication {
 		SpringApplication.run(TravelApiApplication.class, args);
 		System.out.println("Hello world");
 	}
-
-
 
 }
