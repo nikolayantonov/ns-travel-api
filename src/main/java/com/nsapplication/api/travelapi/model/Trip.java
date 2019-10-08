@@ -7,7 +7,7 @@ import java.util.List;
 
 @Getter
 @Setter
-public class Trip {
+public class  masterTrip {
 
     private List<Object> trips;
     private String scrollRequestBackwardContext;
