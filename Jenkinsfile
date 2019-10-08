@@ -13,17 +13,16 @@ node {
         ]
     ])
 
-    stage 'Build & package'
+    stage 'Build & package'{
+        input {
+            message "Can we Proceed?"
+            ok "Yes"
+    }
+    steps {
     sh 'mvn clean package'
     def img = docker.build('ns-travel-api')
     //input'Continue to next stage?'
-    timeout(time:50,unit:'SECONDS'){
-        response=inputmessage:'User',
-        parameters:[string(defaultValue:'user1',
-        description:'Enter Userid:',name:'userid')]
     }
-       echo"Username = "+response
-
 
     stage 'Docker push'
     //docker.withRegistry('https://473293451041.dkr.ecr.eu-west-2.
