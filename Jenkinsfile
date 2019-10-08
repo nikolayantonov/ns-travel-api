@@ -9,7 +9,7 @@ node {
         extensions: [],
         submoduleCfg: [],
         userRemoteConfigs: [
-            [url: 'https://github.com/slychops/ns-travel-api.git']
+            [url: 'https://github.com/nikolayantonov/ns-travel-api.git']
         ]
     ])
 
