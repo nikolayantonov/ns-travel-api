@@ -16,6 +16,7 @@ node {
     stage 'Build & package'
     sh 'mvn clean package'
     def img = docker.build('ns-travel-api')
+    input'Continue to next stage?'
 
     stage 'Docker push'
     //docker.withRegistry('https://473293451041.dkr.ecr.eu-west-2.
