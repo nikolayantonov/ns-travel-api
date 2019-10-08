@@ -1,6 +1,9 @@
 package com.nsapplication.api.travelapi;
 
 import com.nsapplication.api.travelapi.model.TravelRequest;
+import com.nsapplication.api.travelapi.model.Trip;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
@@ -16,25 +19,20 @@ import java.util.Arrays;
 
 @Service
 public class TravelService {
+    private static Logger log = LoggerFactory.getLogger(TravelService.class);
+    private static final String KEY = "a3db7e8808944380b20408e9742c86ab";
+    private NsRestClient nsRestClient = new NsRestClient();
 
-    @Autowired
-    RestTemplate restTemplate;
-
-    public void  travelHandler(TravelRequest travelRequest)
+    public Trip  travelHandler(TravelRequest travelRequest)
     {
-
+        return nsRestClient.getTrips(generateURI(travelRequest), KEY);
     }
 
-    public URI generateURI(TravelRequest travelRequest) {
+
+    URI generateURI(TravelRequest travelRequest) {
 
         String baseUri = "gateway.apiportal.ns.nl/public-reisinformatie/api/v3";
         String path = "trips";
-        //URI uri = UriBuilder().path(baseUri).queryParam()
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
-        headers.add("Ocp-Apim-Subscription-Key","159fd1e47462416888a7e401af0a505c");
-
 
         UriComponents uriPath = UriComponentsBuilder.newInstance()
                 .scheme("https").host(baseUri).path(path)
@@ -42,18 +40,8 @@ public class TravelService {
                 .queryParam("destinationEVACode", travelRequest.getDestinationEVACode())
                 .queryParam("dateTime",travelRequest.getDateTime())
                 .build();
-//        UriComponents builder = UriComponentsBuilder.fromHttpUrl(baseUri)
-//                .queryParam("origincode", travelRequest.getOriginEVACode())
-//                .queryParam("destinationcode", travelRequest.getDestinationEVACode())
-//                .queryParam("datetime", travelRequest.getDateTime());
-//        HttpEntity<String> entity = new HttpEntity<String>(headers);
-//
-//        HttpEntity<String> response = restTemplate.exchange(
-//                builder.toUriString(),
-//                HttpMethod.GET,
-//                entity,
-//                String.class);
-//        System.out.println(response);
+
         return uriPath.toUri();
     }
+
 }
