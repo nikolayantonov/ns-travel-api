@@ -10,11 +10,7 @@ public class TravelApiApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TravelApiApplication.class, args);
-	}
-
-	@Bean
-	public RestTemplate getRestTemplate() {
-		return new RestTemplate();
+		System.out.println("Hello world");
 	}
 
 }
