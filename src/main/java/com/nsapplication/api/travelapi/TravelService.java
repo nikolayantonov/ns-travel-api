@@ -23,7 +23,7 @@ public class TravelService {
     private static final String KEY = "a3db7e8808944380b20408e9742c86ab";
     private NsRestClient nsRestClient = new NsRestClient();
 
-    public Trip  travelHandler(TravelRequest travelRequest)
+    public Trip travelHandler(TravelRequest travelRequest)
     {
         return nsRestClient.getTrips(generateURI(travelRequest), KEY);
     }
