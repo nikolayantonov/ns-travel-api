@@ -31,8 +31,9 @@ node {
       docker.image('473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod').push('latest')
     }
 
+    //export PATH=/usr/local/bin/helm:$PATH
+    
     sh '''
-        export PATH=/usr/local/bin/helm:$PATH
-        helm upgrade helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
+        /usr/local/bin/helm upgrade helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
     '''
 }
