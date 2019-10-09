@@ -32,9 +32,9 @@ node {
     }
 
     //export PATH=/usr/local/bin/helm:$PATH
+    ///usr/local/bin/helm init
 
     sh '''
-        /usr/local/bin/helm init
         /usr/local/bin/helm upgrade helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
     '''
 }
