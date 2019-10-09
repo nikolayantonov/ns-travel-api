@@ -36,7 +36,7 @@ node {
     //usr/local/bin/helm init --service-account tiller
 
     sh '''
-        who
+        whoami
         pwd
         /usr/local/bin/helm init --service-account tiller
         /usr/local/bin/helm version
