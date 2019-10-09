@@ -20,7 +20,8 @@ node {
     input'Continue to next stage?'
 
     stage 'Docker push'
-    sh 'eval $(aws ecr get-login --no-include-email --region eu-west-2 | sed 's|https://||')'
+    
+    //sh 'eval $(aws ecr get-login --no-include-email --region eu-west-2 | sed 's|https://||')'
     docker.withRegistry('https://473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod', 'ecr:eu-west-2:ns-travel-api-prod') {
       docker.image('473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod').push('latest')
     }
