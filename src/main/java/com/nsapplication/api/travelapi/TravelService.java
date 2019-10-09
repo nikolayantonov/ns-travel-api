@@ -1,21 +1,14 @@
 package com.nsapplication.api.travelapi;
 
 import com.nsapplication.api.travelapi.model.TravelRequest;
-import com.nsapplication.api.travelapi.model.Trip;
+import com.nsapplication.api.travelapi.model.GetTripResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
-import java.util.Arrays;
 
 @Service
 public class TravelService {
@@ -23,7 +16,7 @@ public class TravelService {
     private static final String KEY = "a3db7e8808944380b20408e9742c86ab";
     private NsRestClient nsRestClient = new NsRestClient();
 
-    public Trip travelHandler(TravelRequest travelRequest)
+    public GetTripResponse travelHandler(TravelRequest travelRequest)
     {
         return nsRestClient.getTrips(generateURI(travelRequest), KEY);
     }

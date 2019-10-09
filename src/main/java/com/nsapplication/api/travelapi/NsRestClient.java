@@ -1,6 +1,6 @@
 package com.nsapplication.api.travelapi;
 
-import com.nsapplication.api.travelapi.model.Trip;
+import com.nsapplication.api.travelapi.model.GetTripResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpEntity;
@@ -20,7 +20,7 @@ class NsRestClient {
 
     private RestTemplate restTemplate = new RestTemplate();
 
-    Trip getTrips(URI uri, String keyValue) {
+    GetTripResponse getTrips(URI uri, String keyValue) {
 
         MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
         map.add("Ocp-Apim-Subscription-Key", keyValue);
@@ -28,7 +28,7 @@ class NsRestClient {
         HttpHeaders httpHeaders = new HttpHeaders(map);
         HttpEntity<?> httpPackage = new HttpEntity<>(null, httpHeaders);
 
-        ResponseEntity<Trip> response = restTemplate.exchange(uri, HttpMethod.GET, httpPackage, Trip.class);
+        ResponseEntity<GetTripResponse> response = restTemplate.exchange(uri, HttpMethod.GET, httpPackage, GetTripResponse.class);
 
         log.info("GET request for Trips status :: " + response.getStatusCode().getReasonPhrase());
 

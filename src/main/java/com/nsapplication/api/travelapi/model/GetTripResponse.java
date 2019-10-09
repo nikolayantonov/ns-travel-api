@@ -7,9 +7,9 @@ import java.util.List;
 
 @Getter
 @Setter
-public class Trip {
+public class GetTripResponse {
 
-    private List<Object> trips;
+    private List<Route> trips;
     private String scrollRequestBackwardContext;
     private  String scrollRequestForwardContext;
 
