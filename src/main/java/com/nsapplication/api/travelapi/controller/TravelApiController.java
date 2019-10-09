@@ -2,7 +2,7 @@ package com.nsapplication.api.travelapi.controller;
 
 import com.nsapplication.api.travelapi.TravelService;
 import com.nsapplication.api.travelapi.model.TravelRequest;
-import com.nsapplication.api.travelapi.model.GetTripResponse;
+import com.nsapplication.api.travelapi.view.RoutesView;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,7 +18,7 @@ public class TravelApiController {
     private TravelService travelService = new TravelService();
 
     @RequestMapping(value = "trips", method = RequestMethod.POST, consumes = "application/json")
-    public GetTripResponse processUserRequest(@RequestBody TravelRequest travelRequest) {
+    public RoutesView processUserRequest(@RequestBody TravelRequest travelRequest) {
         logger.info("Inside controller");
         logger.info(travelRequest.getDateTime() + "  " + travelRequest.getOriginEVACode() + "  " + travelRequest.getDestinationEVACode());
 

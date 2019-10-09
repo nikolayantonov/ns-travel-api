@@ -1,6 +1,6 @@
 package com.nsapplication.api.travelapi;
 
-import com.nsapplication.api.travelapi.model.GetTripResponse;
+import com.nsapplication.api.travelapi.model.NsTripResponse;
 import org.junit.Test;
 
 import java.net.URI;
@@ -13,7 +13,7 @@ public class NsRestClientTest {
     @Test
     public void checkRestTemplateHasKey() {
         NsRestClient nsRestClient = new NsRestClient();
-        GetTripResponse trip;
+        NsTripResponse trip;
         String uriString = "https://gateway.apiportal.ns.nl/public-reisinformatie/api/v3/trips?originEVACode=8400282&destinationEVACode=8400056&dateTime=2019-10-07T16L25:00+0200";
         URI uri = URI.create(uriString);
 

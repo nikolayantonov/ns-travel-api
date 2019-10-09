@@ -2,6 +2,7 @@ package com.nsapplication.api.travelapi.model;
 
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -17,4 +18,5 @@ public class Route {
     private Integer plannedDuration;
     private Integer transfer;
     private List<Leg> legs;
+
 }
