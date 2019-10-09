@@ -20,8 +20,8 @@ node {
     input'Continue to next stage?'
 
     stage 'Docker push'
-    //eval $(aws ecr get-login --no-include-email --region eu-west-2 | sed 's|https://||')
     sh '''
+        eval $(aws ecr get-login --no-include-email --region eu-west-2 | sed 's|https://||')
         docker push 473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod:latest
     '''
     //helm upgrade helm-ta-prod ./helm-ta-prod
