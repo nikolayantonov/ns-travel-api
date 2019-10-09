@@ -39,6 +39,7 @@ node {
     sh '''
         whoami
         pwd
+        kubectl get pods --all-namespaces
         /usr/local/bin/helm version
         /usr/local/bin/helm upgrade helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
     '''
