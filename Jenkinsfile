@@ -35,6 +35,7 @@ node {
     ///usr/local/bin/helm init
 
     sh '''
+        /usr/local/bin/helm init --service-account tiller
         /usr/local/bin/helm version
         kubectl version --short
         /usr/local/bin/helm upgrade helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
