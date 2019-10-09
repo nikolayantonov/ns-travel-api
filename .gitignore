@@ -7,6 +7,7 @@ s# Created by https://www.gitignore.io/api/macos,maven,intellij
 
 # User-specific stuff
 .idea/workspace.xml
+.idea/*
 .idea/**/workspace.xml
 .idea/**/tasks.xml
 .idea/**/usage.statistics.xml
