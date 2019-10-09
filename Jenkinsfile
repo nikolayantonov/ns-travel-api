@@ -33,9 +33,10 @@ node {
 
     //export PATH=/usr/local/bin/helm:$PATH
     ///usr/local/bin/helm init
+    //usr/local/bin/helm init --service-account tiller
 
     sh '''
-        /usr/local/bin/helm init --service-account tiller
+        /usr/local/bin/helm init --service-account tiller --output yaml | sed 's@apiVersion: extensions/v1beta1@apiVersion: apps/v1@' | sed 's@  replicas: 1@  replicas: 1\n  selector: {"matchLabels": {"app": "helm", "name": "tiller"}}@' | kubectl apply -f -
         /usr/local/bin/helm version
         kubectl version --short
         /usr/local/bin/helm upgrade helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
