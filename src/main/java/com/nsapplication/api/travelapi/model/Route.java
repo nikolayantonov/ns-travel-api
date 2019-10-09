@@ -14,7 +14,7 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class Route {
     @JsonAlias("plannedDurationInMinutes")
-    private  Integer plannedDuration;
-    private   Integer transfer;
+    private Integer plannedDuration;
+    private Integer transfer;
     private List<Leg> legs;
 }

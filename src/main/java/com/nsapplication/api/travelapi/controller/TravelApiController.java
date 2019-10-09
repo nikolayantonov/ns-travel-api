@@ -10,12 +10,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-@RestController("/api/v1/")
+@RestController
+@RequestMapping(value = "/api/v1/")
 public class TravelApiController {
 
     private static Logger logger = LoggerFactory.getLogger(TravelApiController.class);
     private TravelService travelService = new TravelService();
-    @RequestMapping(name = "trips", method = RequestMethod.POST, consumes = "application/json")
+
+    @RequestMapping(value = "trips", method = RequestMethod.POST, consumes = "application/json")
     public GetTripResponse processUserRequest(@RequestBody TravelRequest travelRequest) {
         logger.info("Inside controller");
         logger.info(travelRequest.getDateTime() + "  " + travelRequest.getOriginEVACode() + "  " + travelRequest.getDestinationEVACode());
