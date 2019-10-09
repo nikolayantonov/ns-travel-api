@@ -34,11 +34,12 @@ node {
     //export PATH=/usr/local/bin/helm:$PATH
     ///usr/local/bin/helm init
     //usr/local/bin/helm init --service-account tiller
+    //    usr/local/bin/helm init --service-account tiller
 
     sh '''
         whoami
         pwd
-        //    /usr/local/bin/helm init --service-account tiller
+        //    usr/local/bin/helm init --service-account tiller
         /usr/local/bin/helm version
         /usr/local/bin/helm upgrade helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
     '''
