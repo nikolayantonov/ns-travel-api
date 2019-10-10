@@ -43,6 +43,10 @@ node {
         echo $PATH
         export KUBECONFIG=$KUBECONFIG:/var/lib/jenkins/.kube/config
         /usr/local/bin/kubectl config view
+        ls /home
+        ls /home/ec2-user/
+        ls /home/ec2-user/bin
+        ls /home/ec2-user/bin/aws-iam-authenticator
         /home/ec2-user/bin/aws-iam-authenticator
         /usr/local/bin/kubectl get pods --all-namespaces
         /usr/local/bin/helm version
