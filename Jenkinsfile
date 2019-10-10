@@ -35,6 +35,7 @@ node {
     ///usr/local/bin/helm init
     //usr/local/bin/helm init --service-account tiller
     //    usr/local/bin/helm init --service-account tiller
+    //    /usr/local/bin/kubectl get pods --all-namespaces
 
     sh '''
         whoami
@@ -49,7 +50,6 @@ node {
         ls /home/ec2-user/bin
         ls /home/ec2-user/bin/aws-iam-authenticator
         /home/ec2-user/bin/aws-iam-authenticator
-        /usr/local/bin/kubectl get pods --all-namespaces
         /usr/local/bin/helm version
         /usr/local/bin/helm upgrade helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
     '''
