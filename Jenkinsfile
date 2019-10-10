@@ -40,7 +40,7 @@ node {
         whoami
         pwd
         export KUBECONFIG=$KUBECONFIG:/var/lib/jenkins/.kube/config
-        kubectl config view
+        /usr/local/bin/kubectl config view
         /usr/local/bin/kubectl get pods --all-namespaces
         /usr/local/bin/helm version
         /usr/local/bin/helm upgrade helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
