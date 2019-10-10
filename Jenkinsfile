@@ -39,6 +39,7 @@ node {
     sh '''
         whoami
         pwd
+        export PATH=/home/ec2-user/aws-iam-authenticator:$PATH
         export PATH=/home/ec2-user/bin/aws-iam-authenticator:$PATH
         echo $PATH
         export KUBECONFIG=$KUBECONFIG:/var/lib/jenkins/.kube/config
