@@ -12,9 +12,9 @@ public class NsTripResponse {
 
     @JsonAlias("trips")
     private List<Route> routes;
-    private String scrollRequestBackwardContext;
-    private  String scrollRequestForwardContext;
-    @JsonAlias("firstDeparture") private String startStation;
-    @JsonAlias("lastTripArrival") private String endStation;
+//    private String scrollRequestBackwardContext;
+//    private  String scrollRequestForwardContext;
+//    @JsonAlias("firstDeparture") private String startStation;
+//    @JsonAlias("lastTripArrival") private String endStation;
 
 }

@@ -5,6 +5,7 @@ import com.nsapplication.api.travelapi.model.TravelRequest;
 import com.nsapplication.api.travelapi.view.RoutesView;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,7 +16,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class TravelApiController {
 
     private static Logger logger = LoggerFactory.getLogger(TravelApiController.class);
-    private TravelService travelService = new TravelService();
+
+    @Autowired
+    private TravelService travelService;
 
     @RequestMapping(value = "trips", method = RequestMethod.POST, consumes = "application/json")
     public RoutesView processUserRequest(@RequestBody TravelRequest travelRequest) {
