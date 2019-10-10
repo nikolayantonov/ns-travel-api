@@ -39,6 +39,8 @@ node {
     sh '''
         whoami
         pwd
+        export PATH=/home/ec2-user/bin/aws-iam-authenticator:$PATH
+        echo $PATH
         export KUBECONFIG=$KUBECONFIG:/var/lib/jenkins/.kube/config
         /usr/local/bin/kubectl config view
         /usr/local/bin/kubectl get pods --all-namespaces
