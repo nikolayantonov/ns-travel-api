@@ -43,6 +43,7 @@ node {
         echo $PATH
         export KUBECONFIG=$KUBECONFIG:/var/lib/jenkins/.kube/config
         /usr/local/bin/kubectl config view
+        /home/ec2-user/bin/aws-iam-authenticator
         /usr/local/bin/kubectl get pods --all-namespaces
         /usr/local/bin/helm version
         /usr/local/bin/helm upgrade helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
