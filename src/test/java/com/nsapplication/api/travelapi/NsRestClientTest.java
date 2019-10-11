@@ -10,6 +10,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 import java.net.URI;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class NsRestClientTest {
