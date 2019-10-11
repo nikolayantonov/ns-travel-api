@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class TravelApiController {
 
     private static Logger logger = LoggerFactory.getLogger(TravelApiController.class);
-
     @Autowired
     private TravelService travelService;
 
