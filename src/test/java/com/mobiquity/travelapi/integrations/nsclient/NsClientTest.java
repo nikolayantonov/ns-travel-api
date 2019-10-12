@@ -1,8 +1,8 @@
 package com.mobiquity.travelapi.integrations.nsclient;
-import com.mobiquity.travelapi.rest.model.TravelRequest;
 
-import org.junit.jupiter.api.Test;
+import com.mobiquity.travelapi.rest.model.TravelRequest;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 import java.util.UUID;
 
@@ -88,6 +88,7 @@ class NsClientTest {
         assertEquals(expectedKeyValue, nsClient.getHttpEntity()
                 .getHeaders().getFirst(expectedKeyName));
     }
+
     @Test
     void testThatHeaderIsNotNull() {
         assertFalse(nsClient.getHttpEntity().getHeaders().isEmpty());

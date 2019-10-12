@@ -16,8 +16,6 @@ import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
-import java.util.HashMap;
-import java.util.Map;
 
 @Component
 @Getter
@@ -60,7 +58,7 @@ public class NsClient {
         return uri.toUri();
     }
 
-    public ResponseEntity get(TravelRequest travelRequest){
+    public ResponseEntity get(TravelRequest travelRequest) {
         //Call endpoint
 
         return restTemplate.exchange(buildUri(travelRequest), HttpMethod.GET, httpEntity, String.class);
