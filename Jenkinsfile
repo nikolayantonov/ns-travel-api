@@ -40,7 +40,6 @@ node {
          export KUBECONFIG=/var/lib/jenkins/.kube/config
          export PATH=/usr/local/bin/aws-iam-authenticator:$PATH
          /usr/local/bin/kubectl apply -f /var/lib/jenkins/.kube/aws-auth-cm.yaml
-         aws eks update-kubeconfig --region eu-west-2 --name niko-travelapp-eks-cluster
          /usr/local/bin/kubectl version
          /usr/local/bin/kubectl get nodes
          /usr/local/bin/helm upgrade --install helm-ta-prod ./helm-ta-prod
