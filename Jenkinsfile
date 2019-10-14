@@ -39,6 +39,7 @@ node {
     sh '''
          export KUBECONFIG=/var/lib/jenkins/.kube/config
          /usr/local/bin/kubectl version
+         export PATH=/usr/local/bin/aws-iam-authenticator:$PATH
          /usr/local/bin/kubectl get nodes
          /usr/local/bin/helm upgrade --install helm-ta-prod ./helm-ta-prod
     '''
