@@ -37,7 +37,8 @@ node {
     //    usr/local/bin/helm init --service-account tiller
     //    /usr/local/bin/kubectl get pods --all-namespaces
     sh '''
-         /usr/local/bin/helm upgrade --install helm-ta-prod /home/ec2-user/ns-travel-api/helm-ta-prod
+         cd /home/ec2-user/ns-travel-api
+         /usr/local/bin/helm upgrade --install helm-ta-prod ./helm-ta-prod
     '''
     //sh '''
     //    /usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
