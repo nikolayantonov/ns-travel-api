@@ -1,5 +1,8 @@
 package com.mobiquity.travelapi.integrations.nsclient;
 
+import com.mobiquity.travelapi.integrations.nsclient.responsemodel.MapNsResponseToModel;
+import com.mobiquity.travelapi.integrations.nsclient.responsemodel.NsResponse;
+import com.mobiquity.travelapi.integrations.stereotype.TravelPlan;
 import com.mobiquity.travelapi.rest.model.TravelRequest;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,7 +30,7 @@ public class NsClient {
     private String uriPath;
     private HttpEntity httpEntity;
 
-    public NsClient(@Value("${authentication.key.name.ns}") String keyName,
+    NsClient(@Value("${authentication.key.name.ns}") String keyName,
                     @Value("${authentication.key.value.ns}") String keyValue,
                     @Value("${urls.base.ns}") String uriBase,
                     @Value("${urls.path.ns}") String uriPath) {
@@ -46,6 +49,24 @@ public class NsClient {
         return new HttpHeaders(map);
     }
 
+    public TravelPlan get(NsResponse nsResponse) {
+
+        return MapNsResponseToModel.map(nsResponse);
+    }
+
+
+
+    ResponseEntity<NsResponse> getNsResponse(TravelRequest travelRequest) {
+        //Call endpoint
+
+
+        return restTemplate.exchange(buildUri(travelRequest), HttpMethod.GET, httpEntity, NsResponse.class);
+
+
+        //return response
+        //map response
+    }
+
     URI buildUri(TravelRequest travelRequest) {
 
         UriComponents uri = UriComponentsBuilder.newInstance()
@@ -58,11 +79,4 @@ public class NsClient {
         return uri.toUri();
     }
 
-    public ResponseEntity get(TravelRequest travelRequest) {
-        //Call endpoint
-
-        return restTemplate.exchange(buildUri(travelRequest), HttpMethod.GET, httpEntity, String.class);
-        //return response
-        //map response
-    }
 }
