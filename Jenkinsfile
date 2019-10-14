@@ -38,7 +38,7 @@ node {
     //    /usr/local/bin/kubectl get pods --all-namespaces
     sh '''
          export KUBECONFIG=/var/lib/jenkins/.kube/config
-         /usr/local/bin/kubectl --version
+         /usr/local/bin/kubectl version
          /usr/local/bin/kubectl get nodes
          /usr/local/bin/helm upgrade --install helm-ta-prod ./helm-ta-prod
     '''
