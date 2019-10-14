@@ -39,7 +39,6 @@ node {
     sh '''
          export KUBECONFIG=/var/lib/jenkins/.kube/config
          export PATH=/usr/local/bin/aws-iam-authenticator:$PATH
-         aws configure
          aws eks update-kubeconfig --region eu-west-2 --name niko-travelapp-eks-cluster
          /usr/local/bin/kubectl version
          /usr/local/bin/kubectl get nodes
