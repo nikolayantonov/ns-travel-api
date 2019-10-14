@@ -20,10 +20,8 @@ public class MapToRoutesViewFromTripResponse {
     public RoutesView map(NsTripResponse nsTripResponse) {
         log.info ( "Attempting to map " + nsTripResponse.getClass ().getCanonicalName () );
         routesView.setRouteList ( getListOfRoutes(nsTripResponse.getRoutes ()) );
-        routesView.setStartStation ( nsTripResponse.getRoutes ().get ( 0 ).getLegs ().get ( 0 ).getStartStation ().getName () );
-
+        routesView.setStartStation ( nsTripResponse.getRoutes().get ( 0 ).getLegs ().get ( 0 ).getStartStation ().getName () );
         routesView.setEndStation ( nsTripResponse.getRoutes ().get ( 0 ).getLegs ().get ( nsTripResponse.getRoutes().get( 0 ).getLegs().size () -1 ).getEndStation ().getName () );
-
         return this.routesView;
     }
 
