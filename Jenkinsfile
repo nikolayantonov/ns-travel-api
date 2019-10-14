@@ -15,36 +15,25 @@ node {
 
     stage 'Build & package'
     sh 'mvn clean package'
-    //def img = docker.build('ns-travel-api-prod')
     def img = docker.build('473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod')
     input'Continue to next stage?'
 
     stage 'Docker push'
-
-
-    //sh '''
     //    eval $(aws ecr get-login --no-include-email --region eu-west-2 | sed 's|https://||')
-    //    docker push 473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod:latest
-    //'''
+
 
     docker.withRegistry('https://473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod', 'ecr:eu-west-2:ns-travel-api-prod') {
       docker.image('473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod').push('latest')
     }
 
-    //export PATH=/usr/local/bin/helm:$PATH
-    ///usr/local/bin/helm init
-    //usr/local/bin/helm init --service-account tiller
-    //    usr/local/bin/helm init --service-account tiller
-    //    /usr/local/bin/kubectl get pods --all-namespaces
+
     ///usr/local/bin/kubectl apply -f /var/lib/jenkins/.kube/aws-auth-cm.yaml
     sh '''
          export KUBECONFIG=/var/lib/jenkins/.kube/config
-         export PATH=/usr/local/bin/aws-iam-authenticator:$PATH
+         aws eks --region eu-west-2 update-kubeconfig --name cluster_name
          /usr/local/bin/kubectl version
          /usr/local/bin/kubectl get nodes
          /usr/local/bin/helm upgrade --install helm-ta-prod ./helm-ta-prod
     '''
-    //sh '''
     //    /usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
-    //'''
 }
