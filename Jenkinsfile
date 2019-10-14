@@ -37,20 +37,7 @@ node {
     //    usr/local/bin/helm init --service-account tiller
     //    /usr/local/bin/kubectl get pods --all-namespaces
 
-    sh '''
-        whoami
-        pwd
-        export PATH=/home/ec2-user/aws-iam-authenticator:$PATH
-        export PATH=/home/ec2-user/bin/aws-iam-authenticator:$PATH
-        echo $PATH
-        export KUBECONFIG=$KUBECONFIG:/var/lib/jenkins/.kube/config
-        /usr/local/bin/kubectl config view
-        ls /home
-        ls /home/ec2-user/
-        ls /home/ec2-user/bin
-        ls /home/ec2-user/bin/aws-iam-authenticator
-        /home/ec2-user/bin/aws-iam-authenticator
-        /usr/local/bin/helm version
-        /usr/local/bin/helm upgrade helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
-    '''
+    //sh '''
+    //    /usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
+    //'''
 }
