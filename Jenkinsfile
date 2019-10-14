@@ -27,7 +27,7 @@ node {
     //    docker push 473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod:latest
     //'''
 
-    docker.withRegistry('https://473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod', 'ecr:eu-west-2:ecr:eu-west-2:ns-travel-api-prod') {
+    docker.withRegistry('https://473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod', 'ecr:eu-west-2:ns-travel-api-prod') {
       docker.image('473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod').push('latest')
     }
 
