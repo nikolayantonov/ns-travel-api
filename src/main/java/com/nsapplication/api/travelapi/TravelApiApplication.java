@@ -5,12 +5,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 
-@SpringBootApplication
+//@SpringBootApplication
 public class TravelApiApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(TravelApiApplication.class, args);
-		System.out.println("Hello world");
-	}
+//	public static void main(String[] args) {
+//		SpringApplication.run(TravelApiApplication.class, args);
+//		System.out.println("Hello world");
+//	}
 
 }
