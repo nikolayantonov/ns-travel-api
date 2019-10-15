@@ -13,4 +13,6 @@ public class TravelPlan {
     private String destination;
 
     private List<Route> routes;
+
+
 }
