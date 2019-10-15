@@ -1,7 +1,6 @@
 package com.mobiquity.travelapi.integrations.nsclient.responsemodel;
 
 import com.mobiquity.travelapi.integrations.travelmodel.*;
-import edu.emory.mathcs.backport.java.util.Collections;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -24,7 +23,7 @@ public class TravelModelMapper {
         }};
     }
 
-    private List<Leg> getListOfLegs(List<NsLeg> nsLegs) {
+    private List<Leg> getListOfLegs(List<NsResponse.NsRoute.NsLeg> nsLegs) {
         return new ArrayList<Leg>() {{
             nsLegs.forEach(
                     nsLeg -> add(buildLeg(nsLeg))
@@ -32,7 +31,7 @@ public class TravelModelMapper {
         }};
     }
 
-    private List<Stop> getNsStops(List<NsStop> nsStops) {
+    private List<Stop> getNsStops(List<NsResponse.NsRoute.NsLeg.NsStop> nsStops) {
         return new ArrayList<Stop>() {{
             nsStops.forEach(
                     nsStop -> add(buildStop(nsStop))
@@ -40,7 +39,7 @@ public class TravelModelMapper {
         }};
     }
 
-    private Route buildRoute(NsRoute nsRoute) {
+    private Route buildRoute(NsResponse.NsRoute nsRoute) {
         return Route.builder()
                 .origin( getTripDetailForOrigin( nsRoute) )
                 .destination( getTripDetailForDestination( nsRoute) )
@@ -51,7 +50,7 @@ public class TravelModelMapper {
                 .build();
     }
 
-    private Leg buildLeg(NsLeg nsLeg) {
+    private Leg buildLeg(NsResponse.NsRoute.NsLeg nsLeg) {
         return Leg.builder()
                 .arrivalPlatform( nsLeg.getEndNsStation().getPlannedTrack() )
                 .departurePlatform( nsLeg.getStartNsStation().getPlannedTrack() )
@@ -63,14 +62,14 @@ public class TravelModelMapper {
                 .build();
     }
 
-    private Stop buildStop(NsStop nsStop) {
+    private Stop buildStop(NsResponse.NsRoute.NsLeg.NsStop nsStop) {
         return Stop.builder()
                 .name(nsStop.getName())
                 .build();
     }
 
-    private TripDetail getTripDetailForOrigin(NsRoute nsRoute) {
-        NsLeg firstLeg = getNsLegFromRoute(nsRoute, 0);
+    private TripDetail getTripDetailForOrigin(NsResponse.NsRoute nsRoute) {
+        NsResponse.NsRoute.NsLeg firstLeg = getNsLegFromRoute(nsRoute, 0);
         return TripDetail.builder()
                 .stationName( firstLeg.getStartNsStation().getName() )
                 .plannedDepartureTime( firstLeg.getStartNsStation().getPlannedDateTime() )
@@ -79,8 +78,8 @@ public class TravelModelMapper {
                 .build();
     }
 
-    private TripDetail getTripDetailForDestination(NsRoute nsRoute) {
-        NsLeg lastLeg = getNsLegFromRoute(nsRoute, nsRoute.getLegs().size() - 1);
+    private TripDetail getTripDetailForDestination(NsResponse.NsRoute nsRoute) {
+        NsResponse.NsRoute.NsLeg lastLeg = getNsLegFromRoute(nsRoute, nsRoute.getLegs().size() - 1);
         return TripDetail.builder()
                 .stationName( lastLeg.getStops().get(lastLeg.getStops().size() - 1) .getName())
                 .plannedDepartureTime( lastLeg.getEndNsStation().getPlannedDateTime() )
@@ -89,7 +88,7 @@ public class TravelModelMapper {
                 .build();
     }
 
-    private NsLeg getNsLegFromRoute(NsRoute nsRoute, int legLocation) {
+    private NsResponse.NsRoute.NsLeg getNsLegFromRoute(NsResponse.NsRoute nsRoute, int legLocation) {
         return nsRoute.getLegs().get(legLocation);
     }
 
