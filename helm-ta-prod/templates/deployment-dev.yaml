@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: travelappdeployment-prod
+  name: travelappdeployment-dev
   labels:
     app: {{ .Values.app }}
 spec:
