@@ -11,7 +11,6 @@ public class TravelPlan {
 
     private String origin;
     private String destination;
-    private String dateTime;
 
     private List<Route> routes;
 }

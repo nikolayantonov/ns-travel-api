@@ -1,0 +1,4437 @@
+{
+  "trips": [
+    {
+      "plannedDurationInMinutes": 45,
+      "transfers": 2,
+      "status": "NORMAL",
+      "legs": [
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Amsterdam Centraal",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T15:17:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T15:17:00+0200",
+            "plannedTrack": "10",
+            "checkinStatus": "CHECKIN",
+            "name": "Den Haag Centraal",
+            "lng": 4.323416,
+            "lat": 52.081436,
+            "countryCode": "NL",
+            "uicCode": "8400282"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T15:29:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T15:29:00+0200",
+            "plannedTrack": "4b",
+            "checkinStatus": "NOTHING",
+            "name": "Leiden Centraal",
+            "lng": 4.48253,
+            "lat": 52.166447,
+            "countryCode": "NL",
+            "uicCode": "8400390"
+          },
+          "product": {
+            "number": "2146",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "NS",
+            "operatorName": "NS",
+            "type": "TRAIN",
+            "displayName": "NS Intercity"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T15:17:00+0200",
+              "plannedDepartureTrack": "10",
+              "actualDepartureTrack": "10",
+              "plannedArrivalTrack": "10",
+              "actualArrivalTrack": "10",
+              "cancelled": false,
+              "name": "Den Haag Centraal",
+              "lng": 4.323416,
+              "lat": 52.081436,
+              "countryCode": "NL",
+              "uicCode": "8400282"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T15:34:00+0200",
+              "plannedDepartureTrack": "4b",
+              "actualDepartureTrack": "4b",
+              "plannedArrivalDateTime": "2019-10-14T15:29:00+0200",
+              "plannedArrivalTrack": "4b",
+              "actualArrivalTrack": "4b",
+              "cancelled": false,
+              "name": "Leiden Centraal",
+              "lng": 4.48253,
+              "lat": 52.166447,
+              "countryCode": "NL",
+              "uicCode": "8400390"
+            }
+          ],
+          "steps": [],
+          "crowdForecast": "LOW",
+          "punctuality": 91.7,
+          "crossPlatformTransfer": true,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "https://ews-rpx.ns.nl/mobile-api-serviceinfo?companycode=ns&ritnummer=2146&datetime=2019-10-14T15:17:00+02:00"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Lelystad Centrum",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T15:31:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T15:31:00+0200",
+            "plannedTrack": "5b",
+            "checkinStatus": "NOTHING",
+            "name": "Leiden Centraal",
+            "lng": 4.48253,
+            "lat": 52.166447,
+            "countryCode": "NL",
+            "uicCode": "8400390"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T15:54:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T15:54:00+0200",
+            "plannedTrack": "1",
+            "exitSide": "LEFT",
+            "checkinStatus": "CHECKOUT",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "product": {
+            "number": "2446",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "NS",
+            "operatorName": "NS",
+            "type": "TRAIN",
+            "displayName": "NS Intercity"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T15:31:00+0200",
+              "plannedDepartureTrack": "5b",
+              "actualDepartureTrack": "5b",
+              "plannedArrivalDateTime": "2019-10-14T15:31:00+0200",
+              "plannedArrivalTrack": "5b",
+              "actualArrivalTrack": "5b",
+              "cancelled": false,
+              "name": "Leiden Centraal",
+              "lng": 4.48253,
+              "lat": 52.166447,
+              "countryCode": "NL",
+              "uicCode": "8400390"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T15:48:00+0200",
+              "plannedDepartureTrack": "1-2",
+              "actualDepartureTrack": "1-2",
+              "plannedArrivalDateTime": "2019-10-14T15:46:00+0200",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "name": "Schiphol",
+              "lng": 4.761818,
+              "lat": 52.30901,
+              "countryCode": "NL",
+              "uicCode": "8400561"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T15:56:00+0200",
+              "plannedDepartureTrack": "1",
+              "actualDepartureTrack": "1",
+              "plannedArrivalDateTime": "2019-10-14T15:54:00+0200",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            }
+          ],
+          "steps": [],
+          "crowdForecast": "LOW",
+          "punctuality": 100.0,
+          "crossPlatformTransfer": false,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "https://ews-rpx.ns.nl/mobile-api-serviceinfo?companycode=ns&ritnummer=2446&datetime=2019-10-14T15:31:00+02:00"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T15:54:00+0200",
+            "actualDateTime": "2019-10-14T15:54:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T15:58:00+0200",
+            "actualDateTime": "2019-10-14T15:58:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Gein",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T15:59:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T15:59:00+0200",
+            "checkinStatus": "CHECKIN",
+            "quayCode": "NL:Q:30009562",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:01:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:01:00+0200",
+            "checkinStatus": "CHECKOUT",
+            "quayCode": "NL:Q:30007404",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "number": "50",
+            "categoryCode": "SUBWAY",
+            "shortCategoryName": "Metro",
+            "longCategoryName": "Metro",
+            "operatorCode": "GVB",
+            "operatorName": "GVB",
+            "type": "SUBWAY"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T15:59:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T15:59:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30009562",
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:01:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T16:01:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30007404",
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            }
+          ],
+          "steps": [],
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "BTM",
+              "link": {
+                "uri": "https://btm.ns-mlab.nl/api/v1/trips?agency=GVB&lineNumber=50&departureStopLat=52.339118&departureStopLng=4.873352&arrivalStopLat=52.33739&arrivalStopLng=4.889805&dateTime=2019-10-14T13:59:00Z"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T16:01:00+0200",
+            "actualDateTime": "2019-10-14T16:01:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T16:02:00+0200",
+            "actualDateTime": "2019-10-14T16:02:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "",
+            "lng": 4.889956,
+            "lat": 52.337031,
+            "countryCode": "NL",
+            "uicCode": "8400056"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam RAI",
+              "lng": 4.889956,
+              "lat": 52.337031,
+              "countryCode": "NL",
+              "uicCode": "8400056"
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        }
+      ],
+      "overviewPolyLine": [],
+      "crowdForecast": "LOW",
+      "punctuality": 91.7,
+      "ctxRecon": "9292|fromStation=8400282|toStation=8400056|plannedFromTime=2019-10-14T15:17:00+02:00|plannedArrivalTime=2019-10-14T16:02:00+02:00|yearCard=false|excludeHighSpeedTrains=false",
+      "actualDurationInMinutes": 45,
+      "idx": 0,
+      "optimal": false,
+      "fares": [
+        {
+          "priceInCents": 1760,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1320,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 567672,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1452,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 59000,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1100,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1089,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 880,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 2904,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2178,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1196,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true
+      },
+      "type": "NEGENTWEE",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=9292%7CfromStation%3D8400282%7CtoStation%3D8400056%7CplannedFromTime%3D2019-10-14T15%3A17%3A00%2B02%3A00%7CplannedArrivalTime%3D2019-10-14T16%3A02%3A00%2B02%3A00%7CyearCard%3Dfalse%7CexcludeHighSpeedTrains%3Dfalse"
+      },
+      "realtime": true
+    },
+    {
+      "plannedDurationInMinutes": 45,
+      "transfers": 1,
+      "status": "NORMAL",
+      "legs": [
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Groningen",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T15:33:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T15:33:00+0200",
+            "plannedTrack": "9",
+            "checkinStatus": "CHECKIN",
+            "name": "Den Haag Centraal",
+            "lng": 4.323416,
+            "lat": 52.081436,
+            "countryCode": "NL",
+            "uicCode": "8400282"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:11:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:11:00+0200",
+            "plannedTrack": "1",
+            "exitSide": "LEFT",
+            "checkinStatus": "CHECKOUT",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "product": {
+            "number": "757",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "NS",
+            "operatorName": "NS",
+            "type": "TRAIN",
+            "displayName": "NS Intercity"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T15:33:00+0200",
+              "plannedDepartureTrack": "9",
+              "actualDepartureTrack": "9",
+              "plannedArrivalTrack": "9",
+              "actualArrivalTrack": "9",
+              "cancelled": false,
+              "name": "Den Haag Centraal",
+              "lng": 4.323416,
+              "lat": 52.081436,
+              "countryCode": "NL",
+              "uicCode": "8400282"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T15:47:00+0200",
+              "plannedDepartureTrack": "4b",
+              "actualDepartureTrack": "4b",
+              "plannedArrivalDateTime": "2019-10-14T15:45:00+0200",
+              "plannedArrivalTrack": "4b",
+              "actualArrivalTrack": "4b",
+              "cancelled": false,
+              "name": "Leiden Centraal",
+              "lng": 4.48253,
+              "lat": 52.166447,
+              "countryCode": "NL",
+              "uicCode": "8400390"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:04:00+0200",
+              "plannedDepartureTrack": "1-2",
+              "actualDepartureTrack": "1-2",
+              "plannedArrivalDateTime": "2019-10-14T16:02:00+0200",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "name": "Schiphol",
+              "lng": 4.761818,
+              "lat": 52.30901,
+              "countryCode": "NL",
+              "uicCode": "8400561"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:12:00+0200",
+              "plannedDepartureTrack": "1",
+              "actualDepartureTrack": "1",
+              "plannedArrivalDateTime": "2019-10-14T16:11:00+0200",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            }
+          ],
+          "steps": [],
+          "crowdForecast": "LOW",
+          "punctuality": 100.0,
+          "crossPlatformTransfer": false,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "https://ews-rpx.ns.nl/mobile-api-serviceinfo?companycode=ns&ritnummer=757&datetime=2019-10-14T15:33:00+02:00"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T16:11:00+0200",
+            "actualDateTime": "2019-10-14T16:11:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T16:15:00+0200",
+            "actualDateTime": "2019-10-14T16:15:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Gein",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:15:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:15:00+0200",
+            "checkinStatus": "CHECKIN",
+            "quayCode": "NL:Q:30009562",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:17:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:17:00+0200",
+            "checkinStatus": "CHECKOUT",
+            "quayCode": "NL:Q:30007404",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "number": "50",
+            "categoryCode": "SUBWAY",
+            "shortCategoryName": "Metro",
+            "longCategoryName": "Metro",
+            "operatorCode": "GVB",
+            "operatorName": "GVB",
+            "type": "SUBWAY"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:15:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T16:15:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30009562",
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:17:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T16:17:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30007404",
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            }
+          ],
+          "steps": [],
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "BTM",
+              "link": {
+                "uri": "https://btm.ns-mlab.nl/api/v1/trips?agency=GVB&lineNumber=50&departureStopLat=52.339118&departureStopLng=4.873352&arrivalStopLat=52.33739&arrivalStopLng=4.889805&dateTime=2019-10-14T14:15:00Z"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T16:17:00+0200",
+            "actualDateTime": "2019-10-14T16:17:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T16:18:00+0200",
+            "actualDateTime": "2019-10-14T16:18:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "",
+            "lng": 4.889956,
+            "lat": 52.337031,
+            "countryCode": "NL",
+            "uicCode": "8400056"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam RAI",
+              "lng": 4.889956,
+              "lat": 52.337031,
+              "countryCode": "NL",
+              "uicCode": "8400056"
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        }
+      ],
+      "overviewPolyLine": [],
+      "crowdForecast": "LOW",
+      "punctuality": 100.0,
+      "ctxRecon": "9292|fromStation=8400282|toStation=8400056|plannedFromTime=2019-10-14T15:33:00+02:00|plannedArrivalTime=2019-10-14T16:18:00+02:00|yearCard=false|excludeHighSpeedTrains=false",
+      "actualDurationInMinutes": 45,
+      "idx": 1,
+      "optimal": false,
+      "fares": [
+        {
+          "priceInCents": 1760,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1320,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 567672,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1452,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 59000,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1100,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1089,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 880,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 2904,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2178,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1196,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true
+      },
+      "type": "NEGENTWEE",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=9292%7CfromStation%3D8400282%7CtoStation%3D8400056%7CplannedFromTime%3D2019-10-14T15%3A33%3A00%2B02%3A00%7CplannedArrivalTime%3D2019-10-14T16%3A18%3A00%2B02%3A00%7CyearCard%3Dfalse%7CexcludeHighSpeedTrains%3Dfalse"
+      },
+      "realtime": true
+    },
+    {
+      "plannedDurationInMinutes": 47,
+      "transfers": 2,
+      "status": "NORMAL",
+      "legs": [
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Amsterdam Centraal",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T15:47:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T15:47:00+0200",
+            "plannedTrack": "9",
+            "checkinStatus": "CHECKIN",
+            "name": "Den Haag Centraal",
+            "lng": 4.323416,
+            "lat": 52.081436,
+            "countryCode": "NL",
+            "uicCode": "8400282"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T15:59:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T15:59:00+0200",
+            "plannedTrack": "4b",
+            "checkinStatus": "NOTHING",
+            "name": "Leiden Centraal",
+            "lng": 4.48253,
+            "lat": 52.166447,
+            "countryCode": "NL",
+            "uicCode": "8400390"
+          },
+          "product": {
+            "number": "2148",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "NS",
+            "operatorName": "NS",
+            "type": "TRAIN",
+            "displayName": "NS Intercity"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T15:47:00+0200",
+              "plannedDepartureTrack": "9",
+              "actualDepartureTrack": "9",
+              "plannedArrivalTrack": "9",
+              "actualArrivalTrack": "9",
+              "cancelled": false,
+              "name": "Den Haag Centraal",
+              "lng": 4.323416,
+              "lat": 52.081436,
+              "countryCode": "NL",
+              "uicCode": "8400282"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:04:00+0200",
+              "plannedDepartureTrack": "4b",
+              "actualDepartureTrack": "4b",
+              "plannedArrivalDateTime": "2019-10-14T15:59:00+0200",
+              "plannedArrivalTrack": "4b",
+              "actualArrivalTrack": "4b",
+              "cancelled": false,
+              "name": "Leiden Centraal",
+              "lng": 4.48253,
+              "lat": 52.166447,
+              "countryCode": "NL",
+              "uicCode": "8400390"
+            }
+          ],
+          "steps": [],
+          "crowdForecast": "LOW",
+          "punctuality": 100.0,
+          "crossPlatformTransfer": true,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "https://ews-rpx.ns.nl/mobile-api-serviceinfo?companycode=ns&ritnummer=2148&datetime=2019-10-14T15:47:00+02:00"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Lelystad Centrum",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:01:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:01:00+0200",
+            "plannedTrack": "5b",
+            "checkinStatus": "NOTHING",
+            "name": "Leiden Centraal",
+            "lng": 4.48253,
+            "lat": 52.166447,
+            "countryCode": "NL",
+            "uicCode": "8400390"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:24:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:24:00+0200",
+            "plannedTrack": "1",
+            "exitSide": "LEFT",
+            "checkinStatus": "CHECKOUT",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "product": {
+            "number": "2448",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "NS",
+            "operatorName": "NS",
+            "type": "TRAIN",
+            "displayName": "NS Intercity"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:01:00+0200",
+              "plannedDepartureTrack": "5b",
+              "actualDepartureTrack": "5b",
+              "plannedArrivalDateTime": "2019-10-14T16:01:00+0200",
+              "plannedArrivalTrack": "5b",
+              "actualArrivalTrack": "5b",
+              "cancelled": false,
+              "name": "Leiden Centraal",
+              "lng": 4.48253,
+              "lat": 52.166447,
+              "countryCode": "NL",
+              "uicCode": "8400390"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:18:00+0200",
+              "plannedDepartureTrack": "1-2",
+              "actualDepartureTrack": "1-2",
+              "plannedArrivalDateTime": "2019-10-14T16:16:00+0200",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "name": "Schiphol",
+              "lng": 4.761818,
+              "lat": 52.30901,
+              "countryCode": "NL",
+              "uicCode": "8400561"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:26:00+0200",
+              "plannedDepartureTrack": "1",
+              "actualDepartureTrack": "1",
+              "plannedArrivalDateTime": "2019-10-14T16:24:00+0200",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            }
+          ],
+          "steps": [],
+          "crowdForecast": "LOW",
+          "punctuality": 100.0,
+          "crossPlatformTransfer": false,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "https://ews-rpx.ns.nl/mobile-api-serviceinfo?companycode=ns&ritnummer=2448&datetime=2019-10-14T16:01:00+02:00"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T16:24:00+0200",
+            "actualDateTime": "2019-10-14T16:24:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T16:28:00+0200",
+            "actualDateTime": "2019-10-14T16:28:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Gein",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:31:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:31:00+0200",
+            "checkinStatus": "CHECKIN",
+            "quayCode": "NL:Q:30009562",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:33:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:33:00+0200",
+            "checkinStatus": "CHECKOUT",
+            "quayCode": "NL:Q:30007404",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "number": "50",
+            "categoryCode": "SUBWAY",
+            "shortCategoryName": "Metro",
+            "longCategoryName": "Metro",
+            "operatorCode": "GVB",
+            "operatorName": "GVB",
+            "type": "SUBWAY"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:31:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T16:31:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30009562",
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:33:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T16:33:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30007404",
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            }
+          ],
+          "steps": [],
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "BTM",
+              "link": {
+                "uri": "https://btm.ns-mlab.nl/api/v1/trips?agency=GVB&lineNumber=50&departureStopLat=52.339118&departureStopLng=4.873352&arrivalStopLat=52.33739&arrivalStopLng=4.889805&dateTime=2019-10-14T14:31:00Z"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T16:33:00+0200",
+            "actualDateTime": "2019-10-14T16:33:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T16:34:00+0200",
+            "actualDateTime": "2019-10-14T16:34:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "",
+            "lng": 4.889956,
+            "lat": 52.337031,
+            "countryCode": "NL",
+            "uicCode": "8400056"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam RAI",
+              "lng": 4.889956,
+              "lat": 52.337031,
+              "countryCode": "NL",
+              "uicCode": "8400056"
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        }
+      ],
+      "overviewPolyLine": [],
+      "crowdForecast": "LOW",
+      "punctuality": 100.0,
+      "ctxRecon": "9292|fromStation=8400282|toStation=8400056|plannedFromTime=2019-10-14T15:47:00+02:00|plannedArrivalTime=2019-10-14T16:34:00+02:00|yearCard=false|excludeHighSpeedTrains=false",
+      "actualDurationInMinutes": 47,
+      "idx": 2,
+      "optimal": true,
+      "fares": [
+        {
+          "priceInCents": 1760,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1320,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 567672,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1452,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 59000,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1100,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1089,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 880,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 2904,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2178,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1196,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true
+      },
+      "type": "NEGENTWEE",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=9292%7CfromStation%3D8400282%7CtoStation%3D8400056%7CplannedFromTime%3D2019-10-14T15%3A47%3A00%2B02%3A00%7CplannedArrivalTime%3D2019-10-14T16%3A34%3A00%2B02%3A00%7CyearCard%3Dfalse%7CexcludeHighSpeedTrains%3Dfalse"
+      },
+      "realtime": true
+    },
+    {
+      "plannedDurationInMinutes": 47,
+      "transfers": 1,
+      "status": "NORMAL",
+      "legs": [
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Leeuwarden",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:03:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:03:00+0200",
+            "plannedTrack": "10",
+            "checkinStatus": "CHECKIN",
+            "name": "Den Haag Centraal",
+            "lng": 4.323416,
+            "lat": 52.081436,
+            "countryCode": "NL",
+            "uicCode": "8400282"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:41:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:41:00+0200",
+            "plannedTrack": "1",
+            "exitSide": "LEFT",
+            "checkinStatus": "CHECKOUT",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "product": {
+            "number": "1859",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "NS",
+            "operatorName": "NS",
+            "type": "TRAIN",
+            "displayName": "NS Intercity"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:03:00+0200",
+              "plannedDepartureTrack": "10",
+              "actualDepartureTrack": "10",
+              "plannedArrivalTrack": "10",
+              "actualArrivalTrack": "10",
+              "cancelled": false,
+              "name": "Den Haag Centraal",
+              "lng": 4.323416,
+              "lat": 52.081436,
+              "countryCode": "NL",
+              "uicCode": "8400282"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:17:00+0200",
+              "plannedDepartureTrack": "4b",
+              "actualDepartureTrack": "4b",
+              "plannedArrivalDateTime": "2019-10-14T16:15:00+0200",
+              "plannedArrivalTrack": "4b",
+              "actualArrivalTrack": "4b",
+              "cancelled": false,
+              "name": "Leiden Centraal",
+              "lng": 4.48253,
+              "lat": 52.166447,
+              "countryCode": "NL",
+              "uicCode": "8400390"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:34:00+0200",
+              "plannedDepartureTrack": "1-2",
+              "actualDepartureTrack": "1-2",
+              "plannedArrivalDateTime": "2019-10-14T16:32:00+0200",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "name": "Schiphol",
+              "lng": 4.761818,
+              "lat": 52.30901,
+              "countryCode": "NL",
+              "uicCode": "8400561"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:42:00+0200",
+              "plannedDepartureTrack": "1",
+              "actualDepartureTrack": "1",
+              "plannedArrivalDateTime": "2019-10-14T16:41:00+0200",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            }
+          ],
+          "steps": [],
+          "crowdForecast": "MEDIUM",
+          "punctuality": 100.0,
+          "crossPlatformTransfer": false,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "https://ews-rpx.ns.nl/mobile-api-serviceinfo?companycode=ns&ritnummer=1859&datetime=2019-10-14T16:03:00+02:00"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T16:41:00+0200",
+            "actualDateTime": "2019-10-14T16:41:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T16:45:00+0200",
+            "actualDateTime": "2019-10-14T16:45:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Gein",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:47:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:47:00+0200",
+            "checkinStatus": "CHECKIN",
+            "quayCode": "NL:Q:30009562",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:49:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:49:00+0200",
+            "checkinStatus": "CHECKOUT",
+            "quayCode": "NL:Q:30007404",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "number": "50",
+            "categoryCode": "SUBWAY",
+            "shortCategoryName": "Metro",
+            "longCategoryName": "Metro",
+            "operatorCode": "GVB",
+            "operatorName": "GVB",
+            "type": "SUBWAY"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:47:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T16:47:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30009562",
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:49:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T16:49:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30007404",
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            }
+          ],
+          "steps": [],
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "BTM",
+              "link": {
+                "uri": "https://btm.ns-mlab.nl/api/v1/trips?agency=GVB&lineNumber=50&departureStopLat=52.339118&departureStopLng=4.873352&arrivalStopLat=52.33739&arrivalStopLng=4.889805&dateTime=2019-10-14T14:47:00Z"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T16:49:00+0200",
+            "actualDateTime": "2019-10-14T16:49:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T16:50:00+0200",
+            "actualDateTime": "2019-10-14T16:50:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "",
+            "lng": 4.889956,
+            "lat": 52.337031,
+            "countryCode": "NL",
+            "uicCode": "8400056"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam RAI",
+              "lng": 4.889956,
+              "lat": 52.337031,
+              "countryCode": "NL",
+              "uicCode": "8400056"
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        }
+      ],
+      "overviewPolyLine": [],
+      "crowdForecast": "MEDIUM",
+      "punctuality": 100.0,
+      "ctxRecon": "9292|fromStation=8400282|toStation=8400056|plannedFromTime=2019-10-14T16:03:00+02:00|plannedArrivalTime=2019-10-14T16:50:00+02:00|yearCard=false|excludeHighSpeedTrains=false",
+      "actualDurationInMinutes": 47,
+      "idx": 3,
+      "optimal": false,
+      "fares": [
+        {
+          "priceInCents": 1760,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1320,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 567672,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1452,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 59000,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1100,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1089,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 880,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 2904,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2178,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1196,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true
+      },
+      "type": "NEGENTWEE",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=9292%7CfromStation%3D8400282%7CtoStation%3D8400056%7CplannedFromTime%3D2019-10-14T16%3A03%3A00%2B02%3A00%7CplannedArrivalTime%3D2019-10-14T16%3A50%3A00%2B02%3A00%7CyearCard%3Dfalse%7CexcludeHighSpeedTrains%3Dfalse"
+      },
+      "realtime": true
+    },
+    {
+      "plannedDurationInMinutes": 45,
+      "transfers": 2,
+      "status": "NORMAL",
+      "legs": [
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Amsterdam Centraal",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:17:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:17:00+0200",
+            "plannedTrack": "10",
+            "checkinStatus": "CHECKIN",
+            "name": "Den Haag Centraal",
+            "lng": 4.323416,
+            "lat": 52.081436,
+            "countryCode": "NL",
+            "uicCode": "8400282"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:29:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:29:00+0200",
+            "plannedTrack": "4b",
+            "checkinStatus": "NOTHING",
+            "name": "Leiden Centraal",
+            "lng": 4.48253,
+            "lat": 52.166447,
+            "countryCode": "NL",
+            "uicCode": "8400390"
+          },
+          "product": {
+            "number": "2150",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "NS",
+            "operatorName": "NS",
+            "type": "TRAIN",
+            "displayName": "NS Intercity"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:17:00+0200",
+              "plannedDepartureTrack": "10",
+              "actualDepartureTrack": "10",
+              "plannedArrivalTrack": "10",
+              "actualArrivalTrack": "10",
+              "cancelled": false,
+              "name": "Den Haag Centraal",
+              "lng": 4.323416,
+              "lat": 52.081436,
+              "countryCode": "NL",
+              "uicCode": "8400282"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:34:00+0200",
+              "plannedDepartureTrack": "4b",
+              "actualDepartureTrack": "4b",
+              "plannedArrivalDateTime": "2019-10-14T16:29:00+0200",
+              "plannedArrivalTrack": "4b",
+              "actualArrivalTrack": "4b",
+              "cancelled": false,
+              "name": "Leiden Centraal",
+              "lng": 4.48253,
+              "lat": 52.166447,
+              "countryCode": "NL",
+              "uicCode": "8400390"
+            }
+          ],
+          "steps": [],
+          "crowdForecast": "LOW",
+          "punctuality": 100.0,
+          "crossPlatformTransfer": true,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "https://ews-rpx.ns.nl/mobile-api-serviceinfo?companycode=ns&ritnummer=2150&datetime=2019-10-14T16:17:00+02:00"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Lelystad Centrum",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:31:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:31:00+0200",
+            "plannedTrack": "5b",
+            "checkinStatus": "NOTHING",
+            "name": "Leiden Centraal",
+            "lng": 4.48253,
+            "lat": 52.166447,
+            "countryCode": "NL",
+            "uicCode": "8400390"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:54:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:54:00+0200",
+            "plannedTrack": "1",
+            "exitSide": "LEFT",
+            "checkinStatus": "CHECKOUT",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "product": {
+            "number": "2450",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "NS",
+            "operatorName": "NS",
+            "type": "TRAIN",
+            "displayName": "NS Intercity"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:31:00+0200",
+              "plannedDepartureTrack": "5b",
+              "actualDepartureTrack": "5b",
+              "plannedArrivalDateTime": "2019-10-14T16:31:00+0200",
+              "plannedArrivalTrack": "5b",
+              "actualArrivalTrack": "5b",
+              "cancelled": false,
+              "name": "Leiden Centraal",
+              "lng": 4.48253,
+              "lat": 52.166447,
+              "countryCode": "NL",
+              "uicCode": "8400390"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:48:00+0200",
+              "plannedDepartureTrack": "1-2",
+              "actualDepartureTrack": "1-2",
+              "plannedArrivalDateTime": "2019-10-14T16:46:00+0200",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "name": "Schiphol",
+              "lng": 4.761818,
+              "lat": 52.30901,
+              "countryCode": "NL",
+              "uicCode": "8400561"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:56:00+0200",
+              "plannedDepartureTrack": "1",
+              "actualDepartureTrack": "1",
+              "plannedArrivalDateTime": "2019-10-14T16:54:00+0200",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            }
+          ],
+          "steps": [],
+          "crowdForecast": "LOW",
+          "punctuality": 100.0,
+          "crossPlatformTransfer": false,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "https://ews-rpx.ns.nl/mobile-api-serviceinfo?companycode=ns&ritnummer=2450&datetime=2019-10-14T16:31:00+02:00"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T16:54:00+0200",
+            "actualDateTime": "2019-10-14T16:54:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T16:58:00+0200",
+            "actualDateTime": "2019-10-14T16:58:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Centraal Station",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:59:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:59:00+0200",
+            "checkinStatus": "CHECKIN",
+            "quayCode": "NL:Q:30009562",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:01:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:01:00+0200",
+            "checkinStatus": "CHECKOUT",
+            "quayCode": "NL:Q:30007404",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "number": "51",
+            "categoryCode": "SUBWAY",
+            "shortCategoryName": "Metro",
+            "longCategoryName": "Metro",
+            "operatorCode": "GVB",
+            "operatorName": "GVB",
+            "type": "SUBWAY"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:59:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T16:59:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30009562",
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:01:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T17:01:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30007404",
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            }
+          ],
+          "steps": [],
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "BTM",
+              "link": {
+                "uri": "https://btm.ns-mlab.nl/api/v1/trips?agency=GVB&lineNumber=51&departureStopLat=52.339118&departureStopLng=4.873352&arrivalStopLat=52.33739&arrivalStopLng=4.889805&dateTime=2019-10-14T14:59:00Z"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T17:01:00+0200",
+            "actualDateTime": "2019-10-14T17:01:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T17:02:00+0200",
+            "actualDateTime": "2019-10-14T17:02:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "",
+            "lng": 4.889956,
+            "lat": 52.337031,
+            "countryCode": "NL",
+            "uicCode": "8400056"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam RAI",
+              "lng": 4.889956,
+              "lat": 52.337031,
+              "countryCode": "NL",
+              "uicCode": "8400056"
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        }
+      ],
+      "overviewPolyLine": [],
+      "crowdForecast": "LOW",
+      "punctuality": 100.0,
+      "ctxRecon": "9292|fromStation=8400282|toStation=8400056|plannedFromTime=2019-10-14T16:17:00+02:00|plannedArrivalTime=2019-10-14T17:02:00+02:00|yearCard=false|excludeHighSpeedTrains=false",
+      "actualDurationInMinutes": 45,
+      "idx": 4,
+      "optimal": false,
+      "fares": [
+        {
+          "priceInCents": 1760,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1320,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 567672,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1452,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 59000,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1100,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1089,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 880,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 2904,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2178,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1196,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true
+      },
+      "type": "NEGENTWEE",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=9292%7CfromStation%3D8400282%7CtoStation%3D8400056%7CplannedFromTime%3D2019-10-14T16%3A17%3A00%2B02%3A00%7CplannedArrivalTime%3D2019-10-14T17%3A02%3A00%2B02%3A00%7CyearCard%3Dfalse%7CexcludeHighSpeedTrains%3Dfalse"
+      },
+      "realtime": true
+    },
+    {
+      "plannedDurationInMinutes": 45,
+      "transfers": 1,
+      "status": "NORMAL",
+      "legs": [
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Groningen",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:33:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:33:00+0200",
+            "plannedTrack": "9",
+            "checkinStatus": "CHECKIN",
+            "name": "Den Haag Centraal",
+            "lng": 4.323416,
+            "lat": 52.081436,
+            "countryCode": "NL",
+            "uicCode": "8400282"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:11:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:11:00+0200",
+            "plannedTrack": "1",
+            "exitSide": "LEFT",
+            "checkinStatus": "CHECKOUT",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "product": {
+            "number": "761",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "NS",
+            "operatorName": "NS",
+            "type": "TRAIN",
+            "displayName": "NS Intercity"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:33:00+0200",
+              "plannedDepartureTrack": "9",
+              "actualDepartureTrack": "9",
+              "plannedArrivalTrack": "9",
+              "actualArrivalTrack": "9",
+              "cancelled": false,
+              "name": "Den Haag Centraal",
+              "lng": 4.323416,
+              "lat": 52.081436,
+              "countryCode": "NL",
+              "uicCode": "8400282"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:47:00+0200",
+              "plannedDepartureTrack": "4b",
+              "actualDepartureTrack": "4b",
+              "plannedArrivalDateTime": "2019-10-14T16:45:00+0200",
+              "plannedArrivalTrack": "4b",
+              "actualArrivalTrack": "4b",
+              "cancelled": false,
+              "name": "Leiden Centraal",
+              "lng": 4.48253,
+              "lat": 52.166447,
+              "countryCode": "NL",
+              "uicCode": "8400390"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:04:00+0200",
+              "plannedDepartureTrack": "1-2",
+              "actualDepartureTrack": "1-2",
+              "plannedArrivalDateTime": "2019-10-14T17:02:00+0200",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "name": "Schiphol",
+              "lng": 4.761818,
+              "lat": 52.30901,
+              "countryCode": "NL",
+              "uicCode": "8400561"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:12:00+0200",
+              "plannedDepartureTrack": "1",
+              "actualDepartureTrack": "1",
+              "plannedArrivalDateTime": "2019-10-14T17:11:00+0200",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            }
+          ],
+          "steps": [],
+          "crowdForecast": "HIGH",
+          "punctuality": 91.7,
+          "crossPlatformTransfer": false,
+          "shorterStock": true,
+          "shorterStockWarning": "Kortere trein, extra druk",
+          "shorterStockClassification": "BUSY",
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "https://ews-rpx.ns.nl/mobile-api-serviceinfo?companycode=ns&ritnummer=761&datetime=2019-10-14T16:33:00+02:00"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T17:11:00+0200",
+            "actualDateTime": "2019-10-14T17:11:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T17:15:00+0200",
+            "actualDateTime": "2019-10-14T17:15:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Centraal Station",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:15:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:15:00+0200",
+            "checkinStatus": "CHECKIN",
+            "quayCode": "NL:Q:30009562",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:17:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:17:00+0200",
+            "checkinStatus": "CHECKOUT",
+            "quayCode": "NL:Q:30007404",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "number": "51",
+            "categoryCode": "SUBWAY",
+            "shortCategoryName": "Metro",
+            "longCategoryName": "Metro",
+            "operatorCode": "GVB",
+            "operatorName": "GVB",
+            "type": "SUBWAY"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:15:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T17:15:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30009562",
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:17:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T17:17:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30007404",
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            }
+          ],
+          "steps": [],
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "BTM",
+              "link": {
+                "uri": "https://btm.ns-mlab.nl/api/v1/trips?agency=GVB&lineNumber=51&departureStopLat=52.339118&departureStopLng=4.873352&arrivalStopLat=52.33739&arrivalStopLng=4.889805&dateTime=2019-10-14T15:15:00Z"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T17:17:00+0200",
+            "actualDateTime": "2019-10-14T17:17:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T17:18:00+0200",
+            "actualDateTime": "2019-10-14T17:18:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "",
+            "lng": 4.889956,
+            "lat": 52.337031,
+            "countryCode": "NL",
+            "uicCode": "8400056"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam RAI",
+              "lng": 4.889956,
+              "lat": 52.337031,
+              "countryCode": "NL",
+              "uicCode": "8400056"
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        }
+      ],
+      "overviewPolyLine": [],
+      "crowdForecast": "HIGH",
+      "punctuality": 91.7,
+      "ctxRecon": "9292|fromStation=8400282|toStation=8400056|plannedFromTime=2019-10-14T16:33:00+02:00|plannedArrivalTime=2019-10-14T17:18:00+02:00|yearCard=false|excludeHighSpeedTrains=false",
+      "actualDurationInMinutes": 45,
+      "idx": 5,
+      "optimal": false,
+      "fares": [
+        {
+          "priceInCents": 1760,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1320,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 567672,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1452,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 59000,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1100,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1089,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 880,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 2904,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2178,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1196,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true
+      },
+      "type": "NEGENTWEE",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=9292%7CfromStation%3D8400282%7CtoStation%3D8400056%7CplannedFromTime%3D2019-10-14T16%3A33%3A00%2B02%3A00%7CplannedArrivalTime%3D2019-10-14T17%3A18%3A00%2B02%3A00%7CyearCard%3Dfalse%7CexcludeHighSpeedTrains%3Dfalse"
+      },
+      "realtime": true
+    },
+    {
+      "plannedDurationInMinutes": 47,
+      "transfers": 2,
+      "status": "NORMAL",
+      "legs": [
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Amsterdam Centraal",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:47:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:47:00+0200",
+            "plannedTrack": "9",
+            "checkinStatus": "CHECKIN",
+            "name": "Den Haag Centraal",
+            "lng": 4.323416,
+            "lat": 52.081436,
+            "countryCode": "NL",
+            "uicCode": "8400282"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T16:59:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T16:59:00+0200",
+            "plannedTrack": "4b",
+            "checkinStatus": "NOTHING",
+            "name": "Leiden Centraal",
+            "lng": 4.48253,
+            "lat": 52.166447,
+            "countryCode": "NL",
+            "uicCode": "8400390"
+          },
+          "product": {
+            "number": "2152",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "NS",
+            "operatorName": "NS",
+            "type": "TRAIN",
+            "displayName": "NS Intercity"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T16:47:00+0200",
+              "plannedDepartureTrack": "9",
+              "actualDepartureTrack": "9",
+              "plannedArrivalTrack": "9",
+              "actualArrivalTrack": "9",
+              "cancelled": false,
+              "name": "Den Haag Centraal",
+              "lng": 4.323416,
+              "lat": 52.081436,
+              "countryCode": "NL",
+              "uicCode": "8400282"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:04:00+0200",
+              "plannedDepartureTrack": "4b",
+              "actualDepartureTrack": "4b",
+              "plannedArrivalDateTime": "2019-10-14T16:59:00+0200",
+              "plannedArrivalTrack": "4b",
+              "actualArrivalTrack": "4b",
+              "cancelled": false,
+              "name": "Leiden Centraal",
+              "lng": 4.48253,
+              "lat": 52.166447,
+              "countryCode": "NL",
+              "uicCode": "8400390"
+            }
+          ],
+          "steps": [],
+          "crowdForecast": "LOW",
+          "punctuality": 100.0,
+          "crossPlatformTransfer": true,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "https://ews-rpx.ns.nl/mobile-api-serviceinfo?companycode=ns&ritnummer=2152&datetime=2019-10-14T16:47:00+02:00"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Lelystad Centrum",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:01:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:01:00+0200",
+            "plannedTrack": "5b",
+            "checkinStatus": "NOTHING",
+            "name": "Leiden Centraal",
+            "lng": 4.48253,
+            "lat": 52.166447,
+            "countryCode": "NL",
+            "uicCode": "8400390"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:24:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:24:00+0200",
+            "plannedTrack": "1",
+            "exitSide": "LEFT",
+            "checkinStatus": "CHECKOUT",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "product": {
+            "number": "2452",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "NS",
+            "operatorName": "NS",
+            "type": "TRAIN",
+            "displayName": "NS Intercity"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:01:00+0200",
+              "plannedDepartureTrack": "5b",
+              "actualDepartureTrack": "5b",
+              "plannedArrivalDateTime": "2019-10-14T17:01:00+0200",
+              "plannedArrivalTrack": "5b",
+              "actualArrivalTrack": "5b",
+              "cancelled": false,
+              "name": "Leiden Centraal",
+              "lng": 4.48253,
+              "lat": 52.166447,
+              "countryCode": "NL",
+              "uicCode": "8400390"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:18:00+0200",
+              "plannedDepartureTrack": "1-2",
+              "actualDepartureTrack": "1-2",
+              "plannedArrivalDateTime": "2019-10-14T17:16:00+0200",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "name": "Schiphol",
+              "lng": 4.761818,
+              "lat": 52.30901,
+              "countryCode": "NL",
+              "uicCode": "8400561"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:26:00+0200",
+              "plannedDepartureTrack": "1",
+              "actualDepartureTrack": "1",
+              "plannedArrivalDateTime": "2019-10-14T17:24:00+0200",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            }
+          ],
+          "steps": [],
+          "punctuality": 91.7,
+          "crossPlatformTransfer": false,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "https://ews-rpx.ns.nl/mobile-api-serviceinfo?companycode=ns&ritnummer=2452&datetime=2019-10-14T17:01:00+02:00"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T17:24:00+0200",
+            "actualDateTime": "2019-10-14T17:24:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T17:28:00+0200",
+            "actualDateTime": "2019-10-14T17:28:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Centraal Station",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:31:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:31:00+0200",
+            "checkinStatus": "CHECKIN",
+            "quayCode": "NL:Q:30009562",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:33:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:33:00+0200",
+            "checkinStatus": "CHECKOUT",
+            "quayCode": "NL:Q:30007404",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "number": "51",
+            "categoryCode": "SUBWAY",
+            "shortCategoryName": "Metro",
+            "longCategoryName": "Metro",
+            "operatorCode": "GVB",
+            "operatorName": "GVB",
+            "type": "SUBWAY"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:31:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T17:31:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30009562",
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:33:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T17:33:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30007404",
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            }
+          ],
+          "steps": [],
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "BTM",
+              "link": {
+                "uri": "https://btm.ns-mlab.nl/api/v1/trips?agency=GVB&lineNumber=51&departureStopLat=52.339118&departureStopLng=4.873352&arrivalStopLat=52.33739&arrivalStopLng=4.889805&dateTime=2019-10-14T15:31:00Z"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T17:33:00+0200",
+            "actualDateTime": "2019-10-14T17:33:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T17:34:00+0200",
+            "actualDateTime": "2019-10-14T17:34:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "",
+            "lng": 4.889956,
+            "lat": 52.337031,
+            "countryCode": "NL",
+            "uicCode": "8400056"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam RAI",
+              "lng": 4.889956,
+              "lat": 52.337031,
+              "countryCode": "NL",
+              "uicCode": "8400056"
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        }
+      ],
+      "overviewPolyLine": [],
+      "crowdForecast": "LOW",
+      "punctuality": 91.7,
+      "ctxRecon": "9292|fromStation=8400282|toStation=8400056|plannedFromTime=2019-10-14T16:47:00+02:00|plannedArrivalTime=2019-10-14T17:34:00+02:00|yearCard=false|excludeHighSpeedTrains=false",
+      "actualDurationInMinutes": 47,
+      "idx": 6,
+      "optimal": false,
+      "fares": [
+        {
+          "priceInCents": 1760,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1320,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 567672,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1452,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 59000,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1100,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1089,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 880,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 2904,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2178,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1196,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true
+      },
+      "type": "NEGENTWEE",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=9292%7CfromStation%3D8400282%7CtoStation%3D8400056%7CplannedFromTime%3D2019-10-14T16%3A47%3A00%2B02%3A00%7CplannedArrivalTime%3D2019-10-14T17%3A34%3A00%2B02%3A00%7CyearCard%3Dfalse%7CexcludeHighSpeedTrains%3Dfalse"
+      },
+      "realtime": true
+    },
+    {
+      "plannedDurationInMinutes": 47,
+      "transfers": 1,
+      "status": "NORMAL",
+      "legs": [
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Leeuwarden",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:03:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:03:00+0200",
+            "plannedTrack": "10",
+            "checkinStatus": "CHECKIN",
+            "name": "Den Haag Centraal",
+            "lng": 4.323416,
+            "lat": 52.081436,
+            "countryCode": "NL",
+            "uicCode": "8400282"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:41:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:41:00+0200",
+            "plannedTrack": "1",
+            "exitSide": "LEFT",
+            "checkinStatus": "CHECKOUT",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "product": {
+            "number": "1863",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "NS",
+            "operatorName": "NS",
+            "type": "TRAIN",
+            "displayName": "NS Intercity"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:03:00+0200",
+              "plannedDepartureTrack": "10",
+              "actualDepartureTrack": "10",
+              "plannedArrivalTrack": "10",
+              "actualArrivalTrack": "10",
+              "cancelled": false,
+              "name": "Den Haag Centraal",
+              "lng": 4.323416,
+              "lat": 52.081436,
+              "countryCode": "NL",
+              "uicCode": "8400282"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:17:00+0200",
+              "plannedDepartureTrack": "4b",
+              "actualDepartureTrack": "4b",
+              "plannedArrivalDateTime": "2019-10-14T17:15:00+0200",
+              "plannedArrivalTrack": "4b",
+              "actualArrivalTrack": "4b",
+              "cancelled": false,
+              "name": "Leiden Centraal",
+              "lng": 4.48253,
+              "lat": 52.166447,
+              "countryCode": "NL",
+              "uicCode": "8400390"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:34:00+0200",
+              "plannedDepartureTrack": "1-2",
+              "actualDepartureTrack": "1-2",
+              "plannedArrivalDateTime": "2019-10-14T17:32:00+0200",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "name": "Schiphol",
+              "lng": 4.761818,
+              "lat": 52.30901,
+              "countryCode": "NL",
+              "uicCode": "8400561"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:42:00+0200",
+              "plannedDepartureTrack": "1",
+              "actualDepartureTrack": "1",
+              "plannedArrivalDateTime": "2019-10-14T17:41:00+0200",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            }
+          ],
+          "steps": [],
+          "crowdForecast": "HIGH",
+          "punctuality": 100.0,
+          "crossPlatformTransfer": false,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "https://ews-rpx.ns.nl/mobile-api-serviceinfo?companycode=ns&ritnummer=1863&datetime=2019-10-14T17:03:00+02:00"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T17:41:00+0200",
+            "actualDateTime": "2019-10-14T17:41:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T17:45:00+0200",
+            "actualDateTime": "2019-10-14T17:45:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Centraal Station",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:47:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:47:00+0200",
+            "checkinStatus": "CHECKIN",
+            "quayCode": "NL:Q:30009562",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:49:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:49:00+0200",
+            "checkinStatus": "CHECKOUT",
+            "quayCode": "NL:Q:30007404",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "number": "51",
+            "categoryCode": "SUBWAY",
+            "shortCategoryName": "Metro",
+            "longCategoryName": "Metro",
+            "operatorCode": "GVB",
+            "operatorName": "GVB",
+            "type": "SUBWAY"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:47:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T17:47:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30009562",
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:49:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T17:49:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30007404",
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            }
+          ],
+          "steps": [],
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "BTM",
+              "link": {
+                "uri": "https://btm.ns-mlab.nl/api/v1/trips?agency=GVB&lineNumber=51&departureStopLat=52.339118&departureStopLng=4.873352&arrivalStopLat=52.33739&arrivalStopLng=4.889805&dateTime=2019-10-14T15:47:00Z"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T17:49:00+0200",
+            "actualDateTime": "2019-10-14T17:49:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T17:50:00+0200",
+            "actualDateTime": "2019-10-14T17:50:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "",
+            "lng": 4.889956,
+            "lat": 52.337031,
+            "countryCode": "NL",
+            "uicCode": "8400056"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam RAI",
+              "lng": 4.889956,
+              "lat": 52.337031,
+              "countryCode": "NL",
+              "uicCode": "8400056"
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        }
+      ],
+      "overviewPolyLine": [],
+      "crowdForecast": "HIGH",
+      "punctuality": 100.0,
+      "ctxRecon": "9292|fromStation=8400282|toStation=8400056|plannedFromTime=2019-10-14T17:03:00+02:00|plannedArrivalTime=2019-10-14T17:50:00+02:00|yearCard=false|excludeHighSpeedTrains=false",
+      "actualDurationInMinutes": 47,
+      "idx": 7,
+      "optimal": false,
+      "fares": [
+        {
+          "priceInCents": 1760,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1320,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 567672,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1452,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 59000,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1100,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1089,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 880,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 2904,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2178,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1196,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true
+      },
+      "type": "NEGENTWEE",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=9292%7CfromStation%3D8400282%7CtoStation%3D8400056%7CplannedFromTime%3D2019-10-14T17%3A03%3A00%2B02%3A00%7CplannedArrivalTime%3D2019-10-14T17%3A50%3A00%2B02%3A00%7CyearCard%3Dfalse%7CexcludeHighSpeedTrains%3Dfalse"
+      },
+      "realtime": true
+    },
+    {
+      "plannedDurationInMinutes": 45,
+      "transfers": 2,
+      "status": "NORMAL",
+      "legs": [
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Amsterdam Centraal",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:17:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:17:00+0200",
+            "plannedTrack": "10",
+            "checkinStatus": "CHECKIN",
+            "name": "Den Haag Centraal",
+            "lng": 4.323416,
+            "lat": 52.081436,
+            "countryCode": "NL",
+            "uicCode": "8400282"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:29:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:29:00+0200",
+            "plannedTrack": "4b",
+            "checkinStatus": "NOTHING",
+            "name": "Leiden Centraal",
+            "lng": 4.48253,
+            "lat": 52.166447,
+            "countryCode": "NL",
+            "uicCode": "8400390"
+          },
+          "product": {
+            "number": "2154",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "NS",
+            "operatorName": "NS",
+            "type": "TRAIN",
+            "displayName": "NS Intercity"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:17:00+0200",
+              "plannedDepartureTrack": "10",
+              "actualDepartureTrack": "10",
+              "plannedArrivalTrack": "10",
+              "actualArrivalTrack": "10",
+              "cancelled": false,
+              "name": "Den Haag Centraal",
+              "lng": 4.323416,
+              "lat": 52.081436,
+              "countryCode": "NL",
+              "uicCode": "8400282"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:34:00+0200",
+              "plannedDepartureTrack": "4b",
+              "actualDepartureTrack": "4b",
+              "plannedArrivalDateTime": "2019-10-14T17:29:00+0200",
+              "plannedArrivalTrack": "4b",
+              "actualArrivalTrack": "4b",
+              "cancelled": false,
+              "name": "Leiden Centraal",
+              "lng": 4.48253,
+              "lat": 52.166447,
+              "countryCode": "NL",
+              "uicCode": "8400390"
+            }
+          ],
+          "steps": [],
+          "crowdForecast": "MEDIUM",
+          "punctuality": 100.0,
+          "crossPlatformTransfer": true,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "https://ews-rpx.ns.nl/mobile-api-serviceinfo?companycode=ns&ritnummer=2154&datetime=2019-10-14T17:17:00+02:00"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Lelystad Centrum",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:31:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:31:00+0200",
+            "plannedTrack": "5b",
+            "checkinStatus": "NOTHING",
+            "name": "Leiden Centraal",
+            "lng": 4.48253,
+            "lat": 52.166447,
+            "countryCode": "NL",
+            "uicCode": "8400390"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:54:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:54:00+0200",
+            "plannedTrack": "1",
+            "exitSide": "LEFT",
+            "checkinStatus": "CHECKOUT",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "product": {
+            "number": "2454",
+            "categoryCode": "IC",
+            "shortCategoryName": "IC",
+            "longCategoryName": "Intercity",
+            "operatorCode": "NS",
+            "operatorName": "NS",
+            "type": "TRAIN",
+            "displayName": "NS Intercity"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:31:00+0200",
+              "plannedDepartureTrack": "5b",
+              "actualDepartureTrack": "5b",
+              "plannedArrivalDateTime": "2019-10-14T17:31:00+0200",
+              "plannedArrivalTrack": "5b",
+              "actualArrivalTrack": "5b",
+              "cancelled": false,
+              "name": "Leiden Centraal",
+              "lng": 4.48253,
+              "lat": 52.166447,
+              "countryCode": "NL",
+              "uicCode": "8400390"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:48:00+0200",
+              "plannedDepartureTrack": "1-2",
+              "actualDepartureTrack": "1-2",
+              "plannedArrivalDateTime": "2019-10-14T17:46:00+0200",
+              "plannedArrivalTrack": "1-2",
+              "actualArrivalTrack": "1-2",
+              "cancelled": false,
+              "name": "Schiphol",
+              "lng": 4.761818,
+              "lat": 52.30901,
+              "countryCode": "NL",
+              "uicCode": "8400561"
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:56:00+0200",
+              "plannedDepartureTrack": "1",
+              "actualDepartureTrack": "1",
+              "plannedArrivalDateTime": "2019-10-14T17:54:00+0200",
+              "plannedArrivalTrack": "1",
+              "actualArrivalTrack": "1",
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            }
+          ],
+          "steps": [],
+          "punctuality": 100.0,
+          "crossPlatformTransfer": false,
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "TRAIN_XML",
+              "link": {
+                "uri": "https://ews-rpx.ns.nl/mobile-api-serviceinfo?companycode=ns&ritnummer=2454&datetime=2019-10-14T17:31:00+02:00"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T17:54:00+0200",
+            "actualDateTime": "2019-10-14T17:54:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Amsterdam Zuid",
+            "lng": 4.873205,
+            "lat": 52.339117,
+            "countryCode": "NL",
+            "uicCode": "8400061"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T17:58:00+0200",
+            "actualDateTime": "2019-10-14T17:58:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam Zuid",
+              "lng": 4.873205,
+              "lat": 52.339117,
+              "countryCode": "NL",
+              "uicCode": "8400061"
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "PUBLIC_TRANSIT",
+          "direction": "Gein",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T17:59:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T17:59:00+0200",
+            "checkinStatus": "CHECKIN",
+            "quayCode": "NL:Q:30009562",
+            "name": "Metrostation Station Zuid",
+            "lng": 4.873352,
+            "lat": 52.339118,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "ADDRESS",
+            "plannedTimeZoneOffset": 120,
+            "plannedDateTime": "2019-10-14T18:01:00+0200",
+            "actualTimeZoneOffset": 120,
+            "actualDateTime": "2019-10-14T18:01:00+0200",
+            "checkinStatus": "CHECKOUT",
+            "quayCode": "NL:Q:30007404",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "product": {
+            "number": "50",
+            "categoryCode": "SUBWAY",
+            "shortCategoryName": "Metro",
+            "longCategoryName": "Metro",
+            "operatorCode": "GVB",
+            "operatorName": "GVB",
+            "type": "SUBWAY"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T17:59:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T17:59:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30009562",
+              "name": "Station Zuid",
+              "lng": 4.873352,
+              "lat": 52.339118
+            },
+            {
+              "notes": [],
+              "plannedDepartureDateTime": "2019-10-14T18:01:00+0200",
+              "plannedArrivalDateTime": "2019-10-14T18:01:00+0200",
+              "cancelled": false,
+              "quayCode": "NL:Q:30007404",
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            }
+          ],
+          "steps": [],
+          "shorterStock": false,
+          "journeyDetail": [
+            {
+              "type": "BTM",
+              "link": {
+                "uri": "https://btm.ns-mlab.nl/api/v1/trips?agency=GVB&lineNumber=50&departureStopLat=52.339118&departureStopLng=4.873352&arrivalStopLat=52.33739&arrivalStopLng=4.889805&dateTime=2019-10-14T15:59:00Z"
+              }
+            }
+          ],
+          "reachable": false
+        },
+        {
+          "name": "",
+          "travelType": "WALK",
+          "cancelled": false,
+          "changePossible": true,
+          "alternativeTransport": false,
+          "origin": {
+            "type": "ADDRESS",
+            "plannedDateTime": "2019-10-14T18:01:00+0200",
+            "actualDateTime": "2019-10-14T18:01:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "Metrostation Station RAI",
+            "lng": 4.889805,
+            "lat": 52.33739,
+            "city": "Amsterdam",
+            "countryCode": "NL"
+          },
+          "destination": {
+            "type": "STATION",
+            "plannedDateTime": "2019-10-14T18:02:00+0200",
+            "actualDateTime": "2019-10-14T18:02:00+0200",
+            "checkinStatus": "NOTHING",
+            "name": "",
+            "lng": 4.889956,
+            "lat": 52.337031,
+            "countryCode": "NL",
+            "uicCode": "8400056"
+          },
+          "product": {
+            "type": "WALK"
+          },
+          "notes": [],
+          "stops": [
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Station RAI",
+              "lng": 4.889805,
+              "lat": 52.33739
+            },
+            {
+              "notes": [],
+              "cancelled": false,
+              "name": "Amsterdam RAI",
+              "lng": 4.889956,
+              "lat": 52.337031,
+              "countryCode": "NL",
+              "uicCode": "8400056"
+            }
+          ],
+          "steps": [],
+          "reachable": false
+        }
+      ],
+      "overviewPolyLine": [],
+      "crowdForecast": "MEDIUM",
+      "punctuality": 100.0,
+      "ctxRecon": "9292|fromStation=8400282|toStation=8400056|plannedFromTime=2019-10-14T17:17:00+02:00|plannedArrivalTime=2019-10-14T18:02:00+02:00|yearCard=false|excludeHighSpeedTrains=false",
+      "actualDurationInMinutes": 45,
+      "idx": 8,
+      "optimal": false,
+      "fares": [
+        {
+          "priceInCents": 1760,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1320,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 567672,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1452,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 59000,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1100,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1089,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 880,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 2904,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 2178,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        }
+      ],
+      "productFare": {
+        "priceInCents": 1196,
+        "product": "OVCHIPKAART_ENKELE_REIS",
+        "travelClass": "SECOND_CLASS",
+        "discountType": "NO_DISCOUNT"
+      },
+      "fareOptions": {
+        "isInternationalBookable": false,
+        "isInternational": false,
+        "isEticketBuyable": true,
+        "isPossibleWithOvChipkaart": true
+      },
+      "type": "NEGENTWEE",
+      "shareUrl": {
+        "uri": "https://www.ns.nl/rpx?ctx=9292%7CfromStation%3D8400282%7CtoStation%3D8400056%7CplannedFromTime%3D2019-10-14T17%3A17%3A00%2B02%3A00%7CplannedArrivalTime%3D2019-10-14T18%3A02%3A00%2B02%3A00%7CyearCard%3Dfalse%7CexcludeHighSpeedTrains%3Dfalse"
+      },
+      "realtime": true
+    }
+  ],
+  "scrollRequestBackwardContext": "before_20191014T151700+0200_612814170",
+  "scrollRequestForwardContext": "after_20191014T171700+0200_1692846017"
+}

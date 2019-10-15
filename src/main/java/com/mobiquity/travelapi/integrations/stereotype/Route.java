@@ -15,10 +15,10 @@ public class Route {
     private Itinerary origin;
     private Itinerary destination;
     private String direction;
+    private String dateTime;
     private int numberOfTransfers;
     private int plannedDuration;
     private List<Leg> legs;
     private BigDecimal price;
-
 
 }
