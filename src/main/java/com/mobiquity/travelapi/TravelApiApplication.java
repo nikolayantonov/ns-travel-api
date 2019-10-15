@@ -1,5 +1,6 @@
 package com.mobiquity.travelapi;
 
+import com.mobiquity.travelapi.integrations.nsclient.responsemodel.TravelModelMapper;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;

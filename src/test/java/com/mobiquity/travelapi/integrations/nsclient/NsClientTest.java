@@ -42,9 +42,7 @@ class NsClientTest {
         assertNotEquals(UUID.randomUUID().toString(), nsClient.getHttpEntity().getHeaders().getFirst(expectedKeyName));
     }
 
-    /**
-     * Tests for URI
-     */
+    /** Tests for URI */
     @Test
     void uriBaseUriEqualsExpectedBaseUri() {
         assertEquals(nsBaseUri, nsClient.getUriBase());
@@ -65,9 +63,6 @@ class NsClientTest {
         assertNotEquals(UUID.randomUUID().toString(), nsClient.getUriBase());
     }
 
-    /**
-     * TODO: Make it more generic
-     */
     @Test
     void fullUriConsumesInputInCreateUriMethod() {
         TravelRequest travelRequest = new TravelRequest.Builder()
@@ -80,15 +75,12 @@ class NsClientTest {
         assertEquals(expectedUri, nsClient.buildUri(travelRequest).toString());
     }
 
-    /**
-     * Tests for HttpEntity creation
-     */
+    /** Tests for HttpEntity creation */
     @Test
     void httpEntityHasHeader() {
         assertEquals(expectedKeyValue, nsClient.getHttpEntity()
                 .getHeaders().getFirst(expectedKeyName));
     }
-
     @Test
     void testThatHeaderIsNotNull() {
         assertFalse(nsClient.getHttpEntity().getHeaders().isEmpty());

@@ -12,6 +12,6 @@ import java.util.List;
 public class NsResponse {
 
     @JsonAlias("trips")
-    private List<Route> routes;
+    private List<NsRoute> nsRoutes;
 
 }

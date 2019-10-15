@@ -1,4 +1,4 @@
-package com.mobiquity.travelapi.integrations.stereotype;
+package com.mobiquity.travelapi.integrations.travelmodel;
 
 
 import lombok.Builder;
@@ -11,14 +11,12 @@ import java.util.List;
 @Getter
 public class Route {
 
-    private int index;
-    private Itinerary origin;
-    private Itinerary destination;
-    private String direction;
+    private TripDetail origin;
+    private TripDetail destination;
     private String dateTime;
     private int numberOfTransfers;
     private int plannedDuration;
     private List<Leg> legs;
-    private BigDecimal price;
+    private int price;
 
 }

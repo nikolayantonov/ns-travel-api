@@ -1,6 +1,7 @@
 package com.mobiquity.travelapi.integrations.nsclient;
 
 import com.mobiquity.travelapi.integrations.nsclient.responsemodel.NsResponse;
+import com.mobiquity.travelapi.integrations.travelmodel.TravelPlan;
 import com.mobiquity.travelapi.rest.model.TravelRequest;
 //import org.junit.Test;
 import org.junit.jupiter.api.Test;
@@ -22,7 +23,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 //@RunWith(SpringRunner.class)
 @ExtendWith(SpringExtension.class)
 @SpringBootTest()
-public class NsClientIT {
+class NsClientIT {
 
     @Autowired
     private NsClient nsClient;
@@ -38,7 +39,7 @@ public class NsClientIT {
 
 
     @Test
-    public void nsClientGetMethodSendsRequestToNsAndGetsResponse() {
+    void nsClientGetMethodSendsRequestToNsAndGetsResponse() {
         TravelRequest travelRequest = new TravelRequest.Builder()
                 .dateTime("2019-10-07T16L25:00+0200")
                 .destinationEvaCode("8400056")
@@ -56,7 +57,7 @@ public class NsClientIT {
                 .destinationEvaCode("8400056")
                 .originEvaCode("8400282")
                 .build();
-        assertNotNull(Objects.requireNonNull(nsClient.getNsResponse(travelRequest).getBody()).getRoutes().get(0));
+        assertNotNull(Objects.requireNonNull(nsClient.getNsResponse(travelRequest).getBody()).getNsRoutes().get(0));
     }
 
     @Test
@@ -74,9 +75,7 @@ public class NsClientIT {
                 .destinationEvaCode("8400056")
                 .originEvaCode("8400282")
                 .build();
-        NsResponse nsResponse = nsClient.getNsResponse(travelRequest).getBody();
-        assertEquals(6, nsClient.get(nsResponse).getRoutes().size());
-        //assertEquals(10, nsClient.get(nsResponse));
-
+        TravelPlan travelPlan = nsClient.getTravelPlan(travelRequest);
+        assertEquals(6, travelPlan.getRoutes().size());
     }
 }

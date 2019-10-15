@@ -1,8 +1,8 @@
 package com.mobiquity.travelapi.integrations.nsclient;
 
-import com.mobiquity.travelapi.integrations.nsclient.responsemodel.MapNsResponseToModel;
+import com.mobiquity.travelapi.integrations.nsclient.responsemodel.TravelModelMapper;
 import com.mobiquity.travelapi.integrations.nsclient.responsemodel.NsResponse;
-import com.mobiquity.travelapi.integrations.stereotype.TravelPlan;
+import com.mobiquity.travelapi.integrations.travelmodel.TravelPlan;
 import com.mobiquity.travelapi.rest.model.TravelRequest;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +25,9 @@ import java.net.URI;
 public class NsClient {
 
     @Autowired
-    private RestTemplate restTemplate;
+    private RestTemplate restTemplate;    /** variables should be final*/
+    @Autowired
+    private TravelModelMapper travelModelMapper;
     private String uriBase;
     private String uriPath;
     private HttpEntity httpEntity;
@@ -44,25 +46,24 @@ public class NsClient {
     }
 
     private HttpHeaders createHttpHeader(String keyName, String keyValue) {
-        MultiValueMap<String, String> map = new LinkedMultiValueMap<>();
-        map.add(keyName, keyValue);
-        return new HttpHeaders(map);
+        MultiValueMap<String, String> mvMap = new LinkedMultiValueMap<String, String>() {{
+            add(keyName, keyValue);
+        }};
+        return new HttpHeaders(mvMap);
     }
 
 
-
-    public TravelPlan get(NsResponse nsResponse) {
-
-        return MapNsResponseToModel.map(nsResponse);
+    public TravelPlan getTravelPlan(TravelRequest travelRequest) {
+        return travelModelMapper.mapToTravelPlan(
+                getNsResponse(travelRequest).getBody()
+        );
     }
 
     ResponseEntity<NsResponse> getNsResponse(TravelRequest travelRequest) {
-
         return restTemplate.exchange(buildUri(travelRequest), HttpMethod.GET, httpEntity, NsResponse.class);
     }
 
     URI buildUri(TravelRequest travelRequest) {
-
         UriComponents uri = UriComponentsBuilder.newInstance()
                 .scheme("https").host(uriBase).path(uriPath)
                 .queryParam("originEVACode", travelRequest.getOriginEVACode())

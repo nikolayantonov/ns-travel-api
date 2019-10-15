@@ -1,15 +1,14 @@
-package com.mobiquity.travelapi.integrations.stereotype;
+package com.mobiquity.travelapi.integrations.travelmodel;
 
 import lombok.Builder;
 import lombok.Getter;
 
 @Builder
 @Getter
-public class Itinerary {
+public class TripDetail {
 
-    private String name;
+    private String stationName;
     private String plannedDepartureTime;
     private String plannedArrivalTime;
     private String plannedTrack;
-    private String actualTrack;
 }

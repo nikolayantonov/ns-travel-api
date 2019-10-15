@@ -1,4 +1,4 @@
-package com.mobiquity.travelapi.integrations.stereotype;
+package com.mobiquity.travelapi.integrations.travelmodel;
 
 import lombok.Builder;
 import lombok.Getter;

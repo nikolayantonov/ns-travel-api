@@ -1,4 +1,4 @@
-package com.mobiquity.travelapi.integrations.stereotype;
+package com.mobiquity.travelapi.integrations.travelmodel;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -15,4 +15,5 @@ public class Leg {
     private String arrivalPlatform;
     private int numberOfStops;
     private List<Stop> stops;
+    private String travelType;
 }

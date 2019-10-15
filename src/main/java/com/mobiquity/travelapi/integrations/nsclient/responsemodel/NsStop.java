@@ -5,10 +5,8 @@ import lombok.Getter;
 
 @Getter
 @JsonIgnoreProperties(ignoreUnknown = true)
+public class NsStop {
 
-class Station {
-    private String type;
-    private String plannedDateTime;
-    private String plannedTrack;
     private String name;
+
 }
