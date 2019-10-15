@@ -49,22 +49,16 @@ public class NsClient {
         return new HttpHeaders(map);
     }
 
+
+
     public TravelPlan get(NsResponse nsResponse) {
 
         return MapNsResponseToModel.map(nsResponse);
     }
 
-
-
     ResponseEntity<NsResponse> getNsResponse(TravelRequest travelRequest) {
-        //Call endpoint
-
 
         return restTemplate.exchange(buildUri(travelRequest), HttpMethod.GET, httpEntity, NsResponse.class);
-
-
-        //return response
-        //map response
     }
 
     URI buildUri(TravelRequest travelRequest) {
