@@ -1,16 +1,21 @@
 package com.mobiquity.travelapi.integrations.nsclient;
 
+import com.mobiquity.travelapi.integrations.nsclient.responsemodel.NsResponse;
 import com.mobiquity.travelapi.rest.model.TravelRequest;
+//import org.junit.Test;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
-import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Objects;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 //import org.junit.Test;
 
@@ -40,6 +45,38 @@ public class NsClientIT {
                 .originEvaCode("8400282")
                 .build();
 
-        assertEquals(200, nsClient.get(travelRequest).getStatusCode().value());
+        assertEquals(200, nsClient.getNsResponse(travelRequest).getStatusCode().value());
+    }
+
+    @Test
+    void nsResponseMapsToNsTripResponse()
+    {
+        TravelRequest travelRequest = new TravelRequest.Builder()
+                .dateTime("2019-10-07T16L25:00+0200")
+                .destinationEvaCode("8400056")
+                .originEvaCode("8400282")
+                .build();
+        assertNotNull(Objects.requireNonNull(nsClient.getNsResponse(travelRequest).getBody()).getRoutes().get(0));
+    }
+
+    @Test
+    void checkIfTravelRequestIsNull()
+    {
+        assertThrows(NullPointerException.class,() -> nsClient.getNsResponse(null).getBody() );
+
+    }
+
+    @Test
+    void mapNsResponseToInternalModel()
+    {
+        TravelRequest travelRequest = new TravelRequest.Builder()
+                .dateTime("2019-10-07T16L25:00+0200")
+                .destinationEvaCode("8400056")
+                .originEvaCode("8400282")
+                .build();
+        NsResponse nsResponse = nsClient.getNsResponse(travelRequest).getBody();
+        assertEquals(6, nsClient.get(nsResponse).getRoutes().size());
+        //assertEquals(10, nsClient.get(nsResponse));
+
     }
 }

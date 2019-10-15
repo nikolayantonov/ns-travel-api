@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 @ExtendWith(SpringExtension.class)
 @WebMvcTest
-class TravelApiControllerTest {
+class TravelApiControllerIT {
 
     @Autowired
     private TravelApiController controller;
