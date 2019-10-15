@@ -17,35 +17,27 @@ public class TravelModelMapper {
     }
 
     private List<Route> getListOfRoutes(NsResponse nsResponse) {
-//        List<Route> stRoutes = new ArrayList<>();
-//
-//        nsResponse.getNsRoutes().forEach(
-//                nsRoute -> stRoutes.add(buildRoute(nsRoute))
-//        );
-
         return new ArrayList<Route>() {{
-           nsResponse.getNsRoutes().forEach(
+            nsResponse.getNsRoutes().forEach(
                    nsRoute -> add(buildRoute(nsRoute))
-           );
+            );
         }};
-//        return stRoutes;
     }
 
     private List<Leg> getListOfLegs(List<NsLeg> nsLegs) {
-        List<Leg> listOfRouteLegs = new ArrayList<>();
-
-        nsLegs.forEach(
-                nsLeg -> listOfRouteLegs.add(buildLeg(nsLeg) )
-        );
-        return listOfRouteLegs;
+        return new ArrayList<Leg>() {{
+            nsLegs.forEach(
+                    nsLeg -> add(buildLeg(nsLeg))
+            );
+        }};
     }
 
     private List<Stop> getNsStops(List<NsStop> nsStops) {
-       List<Stop> stops = new ArrayList<>();
-       nsStops.forEach(
-               nsStop -> stops.add(buildStop(nsStop))
-       );
-       return stops;
+        return new ArrayList<Stop>() {{
+            nsStops.forEach(
+                    nsStop -> add(buildStop(nsStop))
+            );
+        }};
     }
 
     private Route buildRoute(NsRoute nsRoute) {
