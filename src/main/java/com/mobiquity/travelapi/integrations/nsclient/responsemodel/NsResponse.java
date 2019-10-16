@@ -14,9 +14,8 @@ public class NsResponse {
     @JsonAlias("trips")
     private List<NsRoute> nsRoutes;
 
-    @Getter
-
     @JsonIgnoreProperties(ignoreUnknown = true)
+    @Getter
     static
     class NsRoute {
         @JsonAlias("plannedDurationInMinutes")
@@ -38,14 +37,14 @@ public class NsResponse {
             private boolean crossPlatformTransfer;
             private String travelType;
 
-            @Getter
             @JsonIgnoreProperties(ignoreUnknown = true)
+            @Getter
             static class NsStop {
                 private String name;
             }
 
-            @Getter
             @JsonIgnoreProperties(ignoreUnknown = true)
+            @Getter
             static
             class NsStation {
                 private String type;
@@ -55,8 +54,8 @@ public class NsResponse {
             }
         }
 
-        @Getter
         @JsonIgnoreProperties(ignoreUnknown = true)
+        @Getter
         static
         class NsProductFare {
             private int priceInCents;
