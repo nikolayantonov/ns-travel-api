@@ -12,7 +12,6 @@ public class TravelRequest {
     private TravelRequest() {
     }
 
-
     public static class Builder {
 
         private String dateTime;

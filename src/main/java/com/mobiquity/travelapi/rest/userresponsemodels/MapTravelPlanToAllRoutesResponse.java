@@ -1,7 +1,7 @@
 package com.mobiquity.travelapi.rest.userresponsemodels;
 
-import com.mobiquity.travelapi.integrations.travelmodel.Route;
-import com.mobiquity.travelapi.integrations.travelmodel.TravelPlan;
+import com.mobiquity.travelapi.integrations.nsclient.travelmodel.Route;
+import com.mobiquity.travelapi.integrations.nsclient.travelmodel.TravelPlan;
 
 import java.util.ArrayList;
 import java.util.List;

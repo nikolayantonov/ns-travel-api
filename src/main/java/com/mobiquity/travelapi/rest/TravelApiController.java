@@ -17,16 +17,17 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/api/v1/")
 public class TravelApiController {
 
-    private static Logger logger = LoggerFactory.getLogger(TravelApiController.class);
-    @Autowired
-    private TravelService travelService;
-
-    @RequestMapping(value = "trips", method = RequestMethod.POST, consumes = "application/json")
-    public AllRoutesResponse processUserRequest(@RequestBody TravelRequest travelRequest) {
-        logger.info("Inside controller");
-        logger.info(travelRequest.getDateTime() + "  " + travelRequest.getOriginEVACode() + "  " + travelRequest.getDestinationEVACode());
-
-        return travelService.travelHandler(travelRequest);
-    }
+//    private static Logger logger = LoggerFactory.getLogger(TravelApiController.class);
+//
+//    @Autowired
+//    private TravelService travelService;
+//
+//    @RequestMapping(value = "trips", method = RequestMethod.POST, consumes = "application/json")
+//    public AllRoutesResponse processUserRequest(@RequestBody TravelRequest travelRequest) {
+//        logger.info("Inside controller");
+//        logger.info(travelRequest.getDateTime() + "  " + travelRequest.getOriginEVACode() + "  " + travelRequest.getDestinationEVACode());
+//
+//        return travelService.travelHandler(travelRequest);
+//    }
 
 }

@@ -3,7 +3,7 @@ package com.mobiquity.travelapi.integrations.nsclient;
 import com.mobiquity.travelapi.integrations.nsclient.responsemodel.TravelModelMapper;
 import com.mobiquity.travelapi.integrations.nsclient.responsemodel.NsResponse;
 import com.mobiquity.travelapi.integrations.nsclient.travelmodel.TravelPlan;
-import com.mobiquity.travelapi.rest.model.TravelRequest;
+import com.mobiquity.travelapi.rest.userresponsemodels.TravelRequest;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -51,7 +51,6 @@ public class NsClient {
         }};
         return new HttpHeaders(mvMap);
     }
-
 
     public TravelPlan getTravelPlan(TravelRequest travelRequest) {
         return travelModelMapper.mapToTravelPlan(
