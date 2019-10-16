@@ -34,6 +34,7 @@ class TravelModelMapperTest {
     @BeforeEach
     void beforeMethod() {
         travelPlan = travelModelMapper.mapToTravelPlan(nsResponse);
+        System.out.println(travelPlan);
         firstRoute = travelPlan.getRoutes().get(0);
     }
 

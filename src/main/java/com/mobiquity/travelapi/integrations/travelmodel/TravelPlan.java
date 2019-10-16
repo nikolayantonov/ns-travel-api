@@ -14,5 +14,4 @@ public class TravelPlan {
 
     private List<Route> routes;
 
-
 }

@@ -19,6 +19,7 @@ import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
+import java.util.Map;
 
 @Component
 @Getter
@@ -46,7 +47,7 @@ public class NsClient {
     }
 
     private HttpHeaders createHttpHeader(String keyName, String keyValue) {
-        MultiValueMap<String, String> mvMap = new LinkedMultiValueMap<String, String>() {{
+        MultiValueMap<String, String> mvMap = new LinkedMultiValueMap<>() {{
             add(keyName, keyValue);
         }};
         return new HttpHeaders(mvMap);
