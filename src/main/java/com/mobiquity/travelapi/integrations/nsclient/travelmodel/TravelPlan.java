@@ -1,4 +1,4 @@
-package com.mobiquity.travelapi.integrations.travelmodel;
+package com.mobiquity.travelapi.integrations.nsclient.travelmodel;
 
 import lombok.Builder;
 import lombok.Getter;
@@ -11,7 +11,5 @@ public class TravelPlan {
 
     private String origin;
     private String destination;
-
     private List<Route> routes;
-
 }

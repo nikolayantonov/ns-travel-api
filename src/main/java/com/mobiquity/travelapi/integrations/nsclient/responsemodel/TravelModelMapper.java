@@ -1,6 +1,6 @@
 package com.mobiquity.travelapi.integrations.nsclient.responsemodel;
 
-import com.mobiquity.travelapi.integrations.travelmodel.*;
+import com.mobiquity.travelapi.integrations.nsclient.travelmodel.*;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -16,8 +16,6 @@ public class TravelModelMapper {
                 .destination(getDestination(nsResponse))
                 .build();
     }
-
-
 
     private List<Route> getListOfRoutes(NsResponse nsResponse) {
         return new ArrayList<Route>() {{

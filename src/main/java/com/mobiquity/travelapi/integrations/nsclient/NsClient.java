@@ -2,7 +2,7 @@ package com.mobiquity.travelapi.integrations.nsclient;
 
 import com.mobiquity.travelapi.integrations.nsclient.responsemodel.TravelModelMapper;
 import com.mobiquity.travelapi.integrations.nsclient.responsemodel.NsResponse;
-import com.mobiquity.travelapi.integrations.travelmodel.TravelPlan;
+import com.mobiquity.travelapi.integrations.nsclient.travelmodel.TravelPlan;
 import com.mobiquity.travelapi.rest.model.TravelRequest;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,7 +19,6 @@ import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
-import java.util.Map;
 
 @Component
 @Getter

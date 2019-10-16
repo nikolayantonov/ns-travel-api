@@ -1,4 +1,4 @@
-package com.mobiquity.travelapi.integrations.travelmodel;
+package com.mobiquity.travelapi.integrations.nsclient.travelmodel;
 
 import lombok.Builder;
 import lombok.Getter;

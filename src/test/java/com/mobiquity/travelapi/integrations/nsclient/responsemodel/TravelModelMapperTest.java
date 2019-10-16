@@ -2,8 +2,8 @@ package com.mobiquity.travelapi.integrations.nsclient.responsemodel;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mobiquity.travelapi.integrations.travelmodel.Route;
-import com.mobiquity.travelapi.integrations.travelmodel.TravelPlan;
+import com.mobiquity.travelapi.integrations.nsclient.travelmodel.Route;
+import com.mobiquity.travelapi.integrations.nsclient.travelmodel.TravelPlan;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
