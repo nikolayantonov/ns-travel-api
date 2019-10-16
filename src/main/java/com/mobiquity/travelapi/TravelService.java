@@ -13,6 +13,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class TravelService {
 
+    @Autowired
+    NsClient nsClient;
+
+    public TravelPlan getTravelPlanFromNs(TravelRequest travelRequest) {
+        return nsClient.getTravelPlan(travelRequest);
+    }
+
 //    private Logger log = LoggerFactory.getLogger(TravelService.class);
 //    @Autowired
 //    private NsClient nsClient;

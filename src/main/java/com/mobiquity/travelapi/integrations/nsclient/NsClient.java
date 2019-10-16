@@ -4,6 +4,7 @@ import com.mobiquity.travelapi.integrations.nsclient.responsemodel.TravelModelMa
 import com.mobiquity.travelapi.integrations.nsclient.responsemodel.NsResponse;
 import com.mobiquity.travelapi.integrations.nsclient.travelmodel.TravelPlan;
 import com.mobiquity.travelapi.rest.userresponsemodels.TravelRequest;
+import lombok.AccessLevel;
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -21,7 +22,7 @@ import org.springframework.web.util.UriComponentsBuilder;
 import java.net.URI;
 
 @Component
-@Getter
+@Getter(AccessLevel.PROTECTED)
 public class NsClient {
 
     @Autowired
