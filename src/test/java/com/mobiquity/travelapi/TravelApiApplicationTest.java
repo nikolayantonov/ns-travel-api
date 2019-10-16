@@ -8,16 +8,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@RunWith(SpringRunner.class)
 @SpringBootTest
 public class TravelApiApplicationTest {
-
-    @Autowired
-    TravelApiApplication travelApiApplication;
-
-    @Test
-    public void contextLoads() {
-        assertNotNull(travelApiApplication);
-    }
 
 }
