@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class TravelServiceTest {
     @Autowired
-    TravelService travelService;
+    private TravelService travelService;
 
     @Test
     public void checkTravelPlanWhenPassedToTravelPlanIsNotNull(){
@@ -26,6 +26,6 @@ class TravelServiceTest {
               .build();
 
       assertNotNull ( travelService.getTravelPlanFromNs(travelRequest)  );
-
   }
+
 }
