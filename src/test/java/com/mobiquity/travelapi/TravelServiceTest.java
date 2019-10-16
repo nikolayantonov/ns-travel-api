@@ -17,22 +17,15 @@ class TravelServiceTest {
     @Autowired
     TravelService travelService;
 
-  @Test
-  public void checkTravelPlanWhenPassedToTravelPlanIsNotNull(){
+    @Test
+    public void checkTravelPlanWhenPassedToTravelPlanIsNotNull(){
       TravelRequest travelRequest = new TravelRequest.Builder()
               .dateTime("2019-10-07T16L25:00+0200")
               .destinationEvaCode("8400056")
               .originEvaCode("8400282")
               .build();
 
-
       assertNotNull ( travelService.getTravelPlanFromNs(travelRequest)  );
 
-
-
   }
-
-
-
-
 }

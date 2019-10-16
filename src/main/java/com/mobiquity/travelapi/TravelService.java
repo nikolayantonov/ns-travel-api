@@ -14,21 +14,9 @@ import org.springframework.stereotype.Service;
 public class TravelService {
 
     @Autowired
-    NsClient nsClient;
+    private NsClient nsClient;
 
     public TravelPlan getTravelPlanFromNs(TravelRequest travelRequest) {
         return nsClient.getTravelPlan(travelRequest);
     }
-
-//    private Logger log = LoggerFactory.getLogger(TravelService.class);
-//    @Autowired
-//    private NsClient nsClient;
-//
-//    private MapTravelPlanToAllRoutesResponse mapTravelPlanToAllRoutesResponse =new MapTravelPlanToAllRoutesResponse();
-//    public AllRoutesResponse travelHandler(TravelRequest travelRequest) {
-//        TravelPlan travelPlan = nsClient.getTravelPlan(travelRequest);// have to check
-//        log.info ( "Mapping travel plan to All RoutesResponse" );
-//        return mapTravelPlanToAllRoutesResponse.mapToAllRoutesResponse(travelPlan);
-//
-//    }
 }
