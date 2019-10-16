@@ -1,8 +1,7 @@
 package com.mobiquity.travelapi.integrations.nsclient;
 
-import com.mobiquity.travelapi.integrations.nsclient.responsemodel.NsResponse;
 import com.mobiquity.travelapi.integrations.travelmodel.TravelPlan;
-import com.mobiquity.travelapi.rest.model.TravelRequest;
+import com.mobiquity.travelapi.rest.userresponsemodels.TravelRequest;
 //import org.junit.Test;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
