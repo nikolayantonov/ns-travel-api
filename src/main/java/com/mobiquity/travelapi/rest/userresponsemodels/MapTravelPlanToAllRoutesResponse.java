@@ -36,7 +36,6 @@ public class MapTravelPlanToAllRoutesResponse {
                 .duration(route.getPlannedDuration())
                 .numberOfLegs(route.getLegs().size())
                 .build();
-
     }
 
 }

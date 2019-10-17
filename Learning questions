@@ -1,0 +1,6 @@
+Questions:
+
+1) How do we do what we are doing with the {{}} without using the {{}}
+2) POST or GET?
+3) There's a lot of duplicate code in our mappers.. How could we extract it better?
+4) Where's the best place to store our secrets? Do we inject it into our containers and disable the console for them?
