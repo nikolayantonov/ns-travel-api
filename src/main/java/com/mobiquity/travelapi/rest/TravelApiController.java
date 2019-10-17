@@ -22,22 +22,8 @@ public class TravelApiController {
     @PostMapping(value = "trips", consumes = "application/json")
     public @ResponseBody AllRoutesResponse postAllAvailableRoutes(@RequestBody TravelRequest travelRequest) {
 
-        System.out.println ("Stop here" );
         return travelPlanToAllRoutesResponse.mapToAllRoutesResponse (
                 travelService.getTravelPlanFromNs ( travelRequest ) );
     }
-
-//    private static Logger logger = LoggerFactory.getLogger(TravelApiController.class);
-//
-//    @Autowired
-//    private TravelService travelService;
-//
-//    @RequestMapping(value = "trips", method = RequestMethod.POST, consumes = "application/json")
-//    public AllRoutesResponse processUserRequest(@RequestBody TravelRequest travelRequest) {
-//        logger.info("Inside controller");
-//        logger.info(travelRequest.getDateTime() + "  " + travelRequest.getOriginEVACode() + "  " + travelRequest.getDestinationEVACode());
-//
-//        return travelService.travelHandler(travelRequest);
-//    }
 
 }
