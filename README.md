@@ -5,22 +5,22 @@
 # Requirements
 In 2 teams, each consisting of 3 BackEnd and 2 DevOps engineers, create a travel application using a continuous integration/continuous deployment (CI/CD) zero downtime deployment (ZDD). The travel application must consist of an API service (no user-interface required) that, given some information (like date & time, from and to locations), gets the available routes from the ns.nl API. Additionally, each group is challenged to also obtain the weather for the destination and arrival time from some public, open & free REST API. The travel application, the CI/CD pipelines, and the deployed cluster must make proper use of or choose a proper implementation for:
 
-* Redirect http requests automatically to https
-* Bonus points for Blue/Green deployment with manual approval 
-* Bonus points for implementing canary deployment 
-* Bonus points for custom auto scaling metrics
-* Auto-Scaling 
-* Secrets (like API keys, https keys & certificates) 
-* Unit tests (integrated in CI/CD) 
-* Integration tests (as a separate part of CI and/or CD) 
+* Deploy to a Kubernetes cluster on AWS
 * Proper use of Security Groups
-* Deploy to a Kubernetes cluster on AWS 
+* Redirect http requests automatically to https
+* Secrets (like API keys, https keys & certificates)
+* Auto-Scaling 
+* Manual approval before deployment to prod (or staging for blue/green) 
+* Bonus points for implementing canary deployment 
+* Bonus points for Blue/Green deployment with manual approval 
+* Bonus points for custom auto scaling metrics
+* Bonus points for custom health checks
 * Logging (events, audits, etc.) 
 * Monitoring (including the most significant business-related metrics)
+* Unit tests (integrated in CI/CD) 
+* Integration tests (as a separate part of CI and/or CD) 
 * Source code repository with version control 
 * Spring Boot REST implementation using MVC design with controller(s) and TDD
-* Manual approval before deployment to prod (or staging for blue/green) 
-* Bonus points for custom health checks
 
 # Deploy to a Kubernetes cluster on AWS
 
@@ -50,31 +50,8 @@ eksctl create cluster --name=travelApp-EKS-CLUSTER --nodes=1 --region=eu-west-2 
 --tags "Owner=IakovosBelonias, Task=createdByIakovos Travel App Challenge"
 ```
 
-###### On the machine that created the EKS Cluster
-[ℹ]  CloudWatch logging will not be enabled for cluster "travelApp-EKS-CLUSTER" in "eu-central-1"
-[ℹ]  you can enable it with 'eksctl utils update-cluster-logging --region=eu-west-2 --name=travelApp-EKS-CLUSTER'
-
-* You have to enable the logging and approve it
-
-```bash
-$ eksctl utils update-cluster-logging --region=eu-west-2 --name=travelApp-EKS-CLUSTER --enable-types all --approve
-```
-
 ###### Install and Setup Jenkins on EC2 Instance
 
-* **IMPORTANT** At Security Groups ClusterSharedNodeSecurityGroup add TCP Rule for PORT 8080 IF YOU RUN IN CLUSTER
-* **IMPORTANT FOR GITHUB WEBHOOKS**
-
-```bash
-IN THE SECURITY GROUP THAT IS RESPONSIBLE FOR THE JENKINS PIPELINE ON THE SSH PORT ADD THIS IP 90.145.66.50/32
-Change default security group for EKS nodegroup,
-Add inbound access on port 8080 for 90.145.66.50/32 140.82.112.0/20 192.30.252.0/22
-
-Change default security group for eks nodegroup,
-Allow inbound access for 90.145.66.50/32, 140.82.112.0/20, 192.30.252.0/22, 172.217.17.48/32
-(140.82.112.0/20 192.30.252.0/22 github.com
-172.217.17.48  kubernetes-charts.storage.googleapis.com
-```
 * **NOTICE** [WATCH FOR MAVEN INSTALLATION](https://docs.aws.amazon.com/neptune/latest/userguide/iam-auth-connect-prerq.html)
 * **NOTICE** FOR DOCKER SUDO permissions you might need to restart
 
@@ -146,6 +123,24 @@ $ helm list
 **WARNING** FOR UNKNOWN REASONS -n doesn't work
 #
 
+# Proper use of security groups
+
+* **IMPORTANT** At Security Groups ClusterSharedNodeSecurityGroup add TCP Rule for PORT 8080 IF YOU RUN IN CLUSTER
+* **IMPORTANT FOR GITHUB WEBHOOKS**
+
+```bash
+IN THE SECURITY GROUP THAT IS RESPONSIBLE FOR THE JENKINS PIPELINE ON THE SSH PORT ADD THIS IP 90.145.66.50/32
+Change default security group for EKS nodegroup,
+Add inbound access on port 8080 for 90.145.66.50/32 140.82.112.0/20 192.30.252.0/22
+
+Change default security group for eks nodegroup,
+Allow inbound access for 90.145.66.50/32, 140.82.112.0/20, 192.30.252.0/22, 172.217.17.48/32
+(140.82.112.0/20 192.30.252.0/22 github.com
+172.217.17.48  kubernetes-charts.storage.googleapis.com
+```
+
+#
+
 # Redirect http requests automatically to https
 
 * [How to create and upload CERTS to IAM user](https://medium.com/faun/how-to-create-and-upload-an-ssl-certificate-to-your-aws-account-using-aws-iam-4a247c4e5966)
@@ -176,7 +171,7 @@ TypeRoot
 CA common namecreatedByIakovosDELETEAFTER
 ARNarn:aws:acm-pca:eu-west-2:473293451041:certificate-authority/c1276cbd-6ef1-471c-8d35-bee18c573809
 ```
-# Helm install NGINX INGRESS
+###### Helm install NGINX INGRESS
 
 ```bash
 $ helm install stable/nginx-ingress
@@ -407,8 +402,7 @@ Run helm upgrade --install in the pipelines deploy step.
 
 #
 
-# Autoscaling
-Bonus points for custom auto scaling metrics 
+# Bonus points for custom auto scaling metrics
 Kubernetes metrics addon:
 https://github.com/helm/charts/tree/master/stable/kube-state-metrics
 
@@ -445,6 +439,20 @@ kubectl describe pod <>
 
 #
 
+# Logging (events, audits, etc.)
+# Monitoring (including the most significant business-related metrics)
+
+On the machine that created the EKS Cluster
+[ℹ]  CloudWatch logging will not be enabled for cluster "travelApp-EKS-CLUSTER" in "eu-central-1"
+[ℹ]  you can enable it with 'eksctl utils update-cluster-logging --region=eu-west-2 --name=travelApp-EKS-CLUSTER'
+
+* You have to enable the logging and approve it
+
+```bash
+$ eksctl utils update-cluster-logging --region=eu-west-2 --name=travelApp-EKS-CLUSTER --enable-types all --approve
+```
+
+#
 
 # Cleanup
 ```bash
