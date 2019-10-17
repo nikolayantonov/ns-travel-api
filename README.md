@@ -424,49 +424,6 @@ kubectl describe pod <>
 
 #
 
-####################################
-# CodeBuild Setup
-* Specify the CodeCommit Repository
-* Create Key to KMS
-* Apply policies? For keys!
-* Uncheck Disable Artifact Encryption
-* On advanced settings select the key we created
-#
-
-
-# Random
-
-* On Wednday 9 October
-* SOLVED -> Logout and Login again
-```
-In initial EC2 Instance when I've tried to run the commnad
-$ $(aws ecr get-login --no-include-email --region eu-west-2)
-I got this error:
-WARNING! Using --password via the CLI is insecure. Use --password-stdin.
-Warning: failed to get default registry endpoint from daemon (Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.38/info: dial unix /var/run/docker.sock: connect: permission denied). Using system default: https://index.docker.io/v1/
-Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Post http://%2Fvar%2Frun%2Fdocker.sock/v1.38/auth: dial unix /var/run/docker.sock: connect: permission denied
-
-I've tried some restarts but nothing. The command runs only with sudo
-
-```
-
-* I gave access to security groups 
-* ANT PIPELINE EMAIL EXTENSION didn't installed
-* When I tried again everything installed fine **BUT** moments before redirect it turned red for a momment 
-* [Try this](https://stackoverflow.com/questions/41117989/jenkins-2-dependency-errors-loading-some-plugins)
-* Install Amazon ECR Plugin
-
-```bash
-   18  sudo getent group ec2-user
-   19  sudo getent group jenkins
-   20  sudo getent group docker
-   21  sudo getent group | grep ec2-user
-```
-
-* [Possiblw HTTPS WORKAROUND](https://github.com/kubernetes/ingress-nginx/issues/2724)
-* [Demo of SSL termination](https://www.youtube.com/watch?v=SE7kb5bZ2AU)
-* [TLS/SSL termination on aws](https://www.youtube.com/watch?v=gEzCKNA-nCg)
-#################
 
 # Cleanup
 ```bash
