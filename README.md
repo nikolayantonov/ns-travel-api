@@ -384,6 +384,26 @@ Healthy threshold
 
 # Blue/Green Deployment
 
+Use different helm deployments pointing to a single service. 
+ 
+Set application version in helm chart values
+ 
+app: ns-travel-api-prod
+selectApp: <applicatin version>
+ 
+Specify deployment labels for different application versions
+ 
+kind: Deployment
+metadata:
+  name: travelappdeployment-prod
+  labels:
+    app: {{ .Values.app }}
+ 
+Specify deployment version to deploy using 
+helm --set selectApp=<application version>
+ 
+Run helm upgrade --install in the pipelines deploy step.
+
 #
 
 # Autoscaling
