@@ -66,12 +66,12 @@ class NsClientTest {
     @Test
     void fullUriConsumesInputInCreateUriMethod() {
         TravelRequest travelRequest = new TravelRequest.Builder()
-                .dateTime("2019-10-07T16L25:00+0200")
+                .dateTime("2019-10-07T16:25:00+0200")
                 .destinationEvaCode("8400056")
                 .originEvaCode("8400282")
                 .build();
 
-        String expectedUri = "https://gateway.apiportal.ns.nl/public-reisinformatie/api/v3/trips?originEVACode=8400282&destinationEVACode=8400056&dateTime=2019-10-07T16L25:00+0200";
+        String expectedUri = "https://gateway.apiportal.ns.nl/public-reisinformatie/api/v3/trips?originEVACode=8400282&destinationEVACode=8400056&dateTime=2019-10-07T16:25:00+0200";
         assertEquals(expectedUri, nsClient.buildUri(travelRequest).toString());
     }
 

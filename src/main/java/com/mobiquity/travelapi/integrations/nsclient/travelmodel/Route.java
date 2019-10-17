@@ -1,10 +1,8 @@
-package com.mobiquity.travelapi.integrations.travelmodel;
-
+package com.mobiquity.travelapi.integrations.nsclient.travelmodel;
 
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
-
-import java.math.BigDecimal;
 import java.util.List;
 
 @Builder
@@ -18,5 +16,4 @@ public class Route {
     private int plannedDuration;
     private List<Leg> legs;
     private int price;
-
 }

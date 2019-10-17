@@ -1,7 +1,9 @@
-package com.mobiquity.travelapi.integrations.travelmodel;
+package com.mobiquity.travelapi.integrations.nsclient.travelmodel;
 
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.Getter;
+import lombok.ToString;
 
 import java.util.List;
 
@@ -11,8 +13,6 @@ public class TravelPlan {
 
     private String origin;
     private String destination;
-
     private List<Route> routes;
-
 
 }

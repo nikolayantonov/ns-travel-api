@@ -19,7 +19,6 @@ import java.net.URI;
 @Component
 class NsRestClient {
     private static Logger log = LoggerFactory.getLogger(NsRestClient.class);
-
     private RestTemplate restTemplate = new RestTemplate();
     private final String nsKey;
     private final String nsValue;

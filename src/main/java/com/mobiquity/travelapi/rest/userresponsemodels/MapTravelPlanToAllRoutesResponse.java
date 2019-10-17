@@ -1,16 +1,18 @@
 package com.mobiquity.travelapi.rest.userresponsemodels;
 
-import com.mobiquity.travelapi.integrations.travelmodel.Route;
-import com.mobiquity.travelapi.integrations.travelmodel.TravelPlan;
+import com.mobiquity.travelapi.integrations.nsclient.travelmodel.Route;
+import com.mobiquity.travelapi.integrations.nsclient.travelmodel.TravelPlan;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MapTravelPlanToAllRoutesResponse {
 
-    public AllRoutesResponse mapToAllRoutesResponse(TravelPlan travelPlan)
-    {
-        System.out.println("here......");
+    public static AllRoutesResponse mapToAllRoutesResponse(TravelPlan travelPlan) {
+        return new MapTravelPlanToAllRoutesResponse().map(travelPlan);
+    }
+
+    private AllRoutesResponse map(TravelPlan travelPlan) {
         return AllRoutesResponse.builder()
                 .origin(travelPlan.getOrigin())
                 .destination(travelPlan.getDestination())
@@ -18,10 +20,7 @@ public class MapTravelPlanToAllRoutesResponse {
                 .build();
     }
 
-    // possible duplicate code. how to avoid?
-
     private List<AllRoutesResponse.Route> getListOfRoutes(TravelPlan travelPlan) {
-
         return new ArrayList<AllRoutesResponse.Route>() {{
             travelPlan.getRoutes().forEach(
                     travelRoute -> add(buildRoute(travelRoute))
@@ -30,14 +29,12 @@ public class MapTravelPlanToAllRoutesResponse {
     }
 
     private AllRoutesResponse.Route buildRoute( Route route) {
-
         return AllRoutesResponse.Route.builder()
-                .startTime(route.getDateTime())
-                .arrivalTime(route.getDateTime())
+                .startTime(route.getOrigin().getPlannedDepartureTime())
+                .arrivalTime(route.getDestination().getPlannedArrivalTime())
                 .duration(route.getPlannedDuration())
                 .numberOfLegs(route.getLegs().size())
                 .build();
-
     }
 
 }

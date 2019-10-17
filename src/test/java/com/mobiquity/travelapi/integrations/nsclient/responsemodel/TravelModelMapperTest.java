@@ -2,8 +2,8 @@ package com.mobiquity.travelapi.integrations.nsclient.responsemodel;
 
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mobiquity.travelapi.integrations.travelmodel.Route;
-import com.mobiquity.travelapi.integrations.travelmodel.TravelPlan;
+import com.mobiquity.travelapi.integrations.nsclient.travelmodel.Route;
+import com.mobiquity.travelapi.integrations.nsclient.travelmodel.TravelPlan;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -34,6 +34,7 @@ class TravelModelMapperTest {
     @BeforeEach
     void beforeMethod() {
         travelPlan = travelModelMapper.mapToTravelPlan(nsResponse);
+        System.out.println(travelPlan);
         firstRoute = travelPlan.getRoutes().get(0);
     }
 
@@ -44,19 +45,19 @@ class TravelModelMapperTest {
     }
 
     @Test
-    void stopsCreatedFromNsResponseModelValid() {
-        String expectedNameOfStopInSecondLeg = "Leiden Centraal";
+    void stopsCreatedFromFirstRouteSecondLegInNsResponseModelValid() {
+        String expectedNameOfStopInSecondLeg = "Den Haag Laan v NOI";
         assertEquals(expectedNameOfStopInSecondLeg ,firstRoute.getLegs().get(0).getStops().get(1).getName());
     }
     @Test
-    void stopsCreatedFromNsResponseModelInValid() {
-        String incorrectName = "Not Leiden Centraal";
+    void stopsCreatedFromFirstRouteSecondLegInNsResponseModelInValid() {
+        String incorrectName = "Not Some Other Station";
         assertNotEquals(incorrectName, firstRoute.getLegs().get(0).getStops().get(1).getName());
     }
 
     @Test
     void legsCreatedFromNsResponseModelFirstRouteValid() {
-        int expectedNumberLegs = 5;
+        int expectedNumberLegs = 3;
         assertEquals(expectedNumberLegs, travelPlan.getRoutes().get(0).getLegs().size());
     }
     @Test
@@ -67,7 +68,7 @@ class TravelModelMapperTest {
 
     @Test
     void originCreatedFromNsResponseModelSecondRouteFirstLegValid() {
-        String expectedDepartureTime = "2019-10-14T15:33:00+0200";
+        String expectedDepartureTime = "2019-10-07T16:33:00+0200";
         assertEquals(expectedDepartureTime, travelPlan.getRoutes().get(1).getOrigin().getPlannedDepartureTime());
     }
 
