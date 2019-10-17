@@ -33,7 +33,7 @@ node {
          aws eks --region eu-west-2 update-kubeconfig --name travelApp-EKS-CLUSTER-3
          /usr/local/bin/kubectl version
          /usr/local/bin/kubectl get nodes
-         /usr/local/bin/helm upgrade --install helm-ta-prod ./helm-ta-prod
+         /usr/local/bin/helm upgrade --install helm-ta-prod ./helm-ta
     '''
     //    /usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
 }
