@@ -22,8 +22,9 @@ In 2 teams, each consisting of 3 BackEnd and 2 DevOps engineers, create a travel
 * Manual approval before deployment to prod (or staging for blue/green) 
 * Bonus points for custom health checks
 
+# Deploy to a Kubernetes cluster on AWS
 
-# Install eksctl and kubectl
+###### Install eksctl and kubectl
 * [EKSCTL installation](https://docs.aws.amazon.com/eks/latest/userguide/getting-started-eksctl.html)
 * [KUBECTL](https://kubernetes.io/docs/tasks/tools/install-kubectl/)
 * [KUBECTL AWS INSTALLATION](https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html)
@@ -36,7 +37,7 @@ $ scp -i ~/Desktop/kleidia/iakovoschallenge.pem ~/Desktop/kleidia/iakovoschallen
 * [EKSCTL DOCS](https://eksctl.io/introduction/getting-started/)
 
 
-# AWS CLI
+###### AWS CLI
 * [GitHub Repository](https://github.com/slychops/ns-travel-api.git)
 * Setup aws cli with proper credentials
 * Create SSH Keys for EC2 instances
@@ -59,7 +60,7 @@ eksctl create cluster --name=travelApp-EKS-CLUSTER --nodes=1 --region=eu-west-2 
 $ eksctl utils update-cluster-logging --region=eu-west-2 --name=travelApp-EKS-CLUSTER --enable-types all --approve
 ```
 
-# Install and Setup Jenkins on EC2 Instance
+###### Install and Setup Jenkins on EC2 Instance
 
 * **IMPORTANT** At Security Groups ClusterSharedNodeSecurityGroup add TCP Rule for PORT 8080 IF YOU RUN IN CLUSTER
 * **IMPORTANT FOR GITHUB WEBHOOKS**
@@ -124,7 +125,7 @@ $ kubectl get svc
 ```
 #
 
-# Install and Setup Helm3
+###### Install and Setup Helm3
 * **NEXT STEPS ARE FOR HELM3**
 
 * [What's new?](https://helm.sh/blog/helm-v3-beta/)
@@ -145,7 +146,7 @@ $ helm list
 **WARNING** FOR UNKNOWN REASONS -n doesn't work
 #
 
-# HTTPS SSL CERTIFICATION
+# Redirect http requests automatically to https
 
 * [How to create and upload CERTS to IAM user](https://medium.com/faun/how-to-create-and-upload-an-ssl-certificate-to-your-aws-account-using-aws-iam-4a247c4e5966)
 
