@@ -10,7 +10,6 @@ public class MapTravelPlanToAllRoutesResponse {
 
     public AllRoutesResponse mapToAllRoutesResponse(TravelPlan travelPlan)
     {
-        System.out.println("here......");
         return AllRoutesResponse.builder()
                 .origin(travelPlan.getOrigin())
                 .destination(travelPlan.getDestination())

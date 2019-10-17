@@ -1,12 +1,15 @@
 package com.mobiquity.travelapi.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.databind.type.TypeFactory;
 import com.mobiquity.travelapi.integrations.nsclient.responsemodel.NsResponse;
 import com.mobiquity.travelapi.integrations.nsclient.responsemodel.TravelModelMapper;
 import com.mobiquity.travelapi.integrations.nsclient.travelmodel.TravelPlan;
 import com.mobiquity.travelapi.rest.userresponsemodels.AllRoutesResponse;
 import com.mobiquity.travelapi.rest.userresponsemodels.MapTravelPlanToAllRoutesResponse;
+import com.mobiquity.travelapi.rest.userresponsemodels.TravelRequest;
 import org.json.JSONObject;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -28,6 +31,7 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.mock;
+import static org.springframework.http.MediaType.APPLICATION_JSON_UTF8;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
@@ -38,7 +42,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 @SpringBootTest
 @AutoConfigureMockMvc
 
-class TravelApiControllerIT {
+class  TravelApiControllerIT {
 
     @Autowired
     private MockMvc mockMvc;
@@ -46,46 +50,45 @@ class TravelApiControllerIT {
     @Test
     public void shouldReturnAllRouteResponse()  throws Exception{
 
-
-
-
-
         //assert : AllRoutesResponse == Controller response
        // AllRoutesResponse allRoutesResponse ;
 
-
-        //Controller response --> string
-        MultiValueMap<String, String> valueMap = new LinkedMultiValueMap<> (  );
-            valueMap.add("datetime", "2019-10-07T16L25:00+0200");
-            valueMap.add ( "destinationEvaCode", "8400056" );
-            valueMap.add ( "originEvaCode", "8400282" );
-            JSONObject json = new JSONObject ( valueMap );
-
+        TravelRequest travelRequest = new TravelRequest.Builder()
+                .dateTime("2019-10-07T16L25:00+0200")
+                .destinationEvaCode("8400056")
+                .originEvaCode("8400282")
+                .build();
 
         MvcResult result = mockMvc.perform (post("/api/v1/trips")
-//                .content ( json.toString () ).contentType ( MediaType.APPLICATION_JSON_UTF8 ).
+                .contentType(MediaType.APPLICATION_JSON)
+                .characterEncoding("utf-8")
+                .content (asJsonString(travelRequest)))
+                .andReturn();
 
-                .andDo ( print())
-                .andExpect ( status().isOk () )
-                .andReturn ();
 
         String returnObject = result.getResponse ().getContentAsString ();
 
         //mocks AllRoutesResponse
         ObjectMapper objectMapper = new ObjectMapper (  );
-        NsResponse fakeNsResponse = objectMapper.readValue(new File("./src/test/java/resources/TestNsResponse.json"), NsResponse.class);
-        TravelModelMapper mapToTravelPlan = new TravelModelMapper ();
-        TravelPlan fakeTravelPlan = mapToTravelPlan.mapToTravelPlan ( fakeNsResponse );
-        MapTravelPlanToAllRoutesResponse mapToExpectedResponse = new MapTravelPlanToAllRoutesResponse ();
-        AllRoutesResponse fakeAllRoutesResponse = mapToExpectedResponse.mapToAllRoutesResponse ( fakeTravelPlan );
+       // NsResponse fakeNsResponse = objectMapper.readValue(new File("./src/test/java/resources/TestNsResponse.json"),NsResponse.class);
+        AllRoutesResponse fakeAllRoutesResponse = objectMapper.readValue(new File("./src/test/java/resources/TestAllRoutesResponse.json"), AllRoutesResponse.class);
+//        TravelModelMapper mapToTravelPlan = new TravelModelMapper ();
+//        TravelPlan fakeTravelPlan = mapToTravelPlan.mapToTravelPlan ( fakeNsResponse );
+//        MapTravelPlanToAllRoutesResponse mapToExpectedResponse = new MapTravelPlanToAllRoutesResponse ();
+//        AllRoutesResponse fakeAllRoutesResponse = mapToExpectedResponse.mapToAllRoutesResponse ( fakeTravelPlan );
+//        System.out.println(returnObject);
 
-        assertEquals ( returnObject, fakeAllRoutesResponse.toString () );
+        System.out.println(asJsonString(fakeAllRoutesResponse));
+        assertTrue ( returnObject.equals(asJsonString(fakeAllRoutesResponse)) );
 
+    }
 
-
-
-
-
+    public static String asJsonString(final Object obj) {
+        try {
+            return new ObjectMapper().writeValueAsString(obj);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
 }
