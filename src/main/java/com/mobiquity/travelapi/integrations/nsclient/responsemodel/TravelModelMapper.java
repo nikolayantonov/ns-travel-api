@@ -9,7 +9,11 @@ import java.util.List;
 @Component
 public class TravelModelMapper {
 
-    public TravelPlan mapToTravelPlan(NsResponse nsResponse) {
+    public static TravelPlan mapToTravelPlan(NsResponse nsResponse) {
+        return new TravelModelMapper().map(nsResponse);
+    }
+
+    private TravelPlan map(NsResponse nsResponse) {
         return TravelPlan.builder()
                 .routes(getListOfRoutes(nsResponse))
                 .origin(getOrigin(nsResponse))

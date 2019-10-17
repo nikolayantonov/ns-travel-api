@@ -13,12 +13,11 @@ public class TravelApiController {
 
     @Autowired
     private TravelService travelService;
-    private MapTravelPlanToAllRoutesResponse travelPlanToAllRoutesResponse = new MapTravelPlanToAllRoutesResponse();
 
     @PostMapping(value = "trips", consumes = "application/json")
     public @ResponseBody AllRoutesResponse postAllAvailableRoutes(@RequestBody TravelRequest travelRequest) {
 
-        return travelPlanToAllRoutesResponse.mapToAllRoutesResponse(
+        return MapTravelPlanToAllRoutesResponse.mapToAllRoutesResponse(
                 travelService.getTravelPlanFromNs(travelRequest));
     }
 

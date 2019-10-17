@@ -1,7 +1,7 @@
 package com.mobiquity.travelapi.integrations.nsclient;
 
-import com.mobiquity.travelapi.integrations.nsclient.responsemodel.TravelModelMapper;
 import com.mobiquity.travelapi.integrations.nsclient.responsemodel.NsResponse;
+import com.mobiquity.travelapi.integrations.nsclient.responsemodel.TravelModelMapper;
 import com.mobiquity.travelapi.integrations.nsclient.travelmodel.TravelPlan;
 import com.mobiquity.travelapi.rest.userresponsemodels.TravelRequest;
 import lombok.AccessLevel;
@@ -18,7 +18,6 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
-
 import java.net.URI;
 
 @Component
@@ -27,8 +26,6 @@ public class NsClient {
 
     @Autowired
     private RestTemplate restTemplate;    /** variables should be final*/
-    @Autowired
-    private TravelModelMapper travelModelMapper;
     private String uriBase;
     private String uriPath;
     private HttpEntity httpEntity;
@@ -54,7 +51,7 @@ public class NsClient {
     }
 
     public TravelPlan getTravelPlan(TravelRequest travelRequest) {
-        return travelModelMapper.mapToTravelPlan(
+        return TravelModelMapper.mapToTravelPlan(
                 getNsResponse(travelRequest).getBody()
         );
     }
