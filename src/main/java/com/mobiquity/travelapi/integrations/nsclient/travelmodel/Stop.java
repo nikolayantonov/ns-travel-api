@@ -9,5 +9,6 @@ import lombok.Getter;
 public class Stop {
 
     private String name;
-
+    private String longitude;
+    private String latitude;
 }

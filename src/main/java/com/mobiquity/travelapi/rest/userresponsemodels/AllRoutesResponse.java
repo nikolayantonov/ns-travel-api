@@ -1,5 +1,6 @@
 package com.mobiquity.travelapi.rest.userresponsemodels;
 
+import com.mobiquity.travelapi.integrations.weather.Weather;
 import lombok.Builder;
 import lombok.Getter;
 
@@ -22,7 +23,9 @@ public class AllRoutesResponse {
         private String arrivalTime;
         private int duration;
         private  int numberOfLegs;
-
+        private String summary;
+        private double temperature;
+        private Weather weather;
     }
 
 }

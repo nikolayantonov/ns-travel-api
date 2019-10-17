@@ -55,6 +55,8 @@ public class NsResponse {
             @EqualsAndHashCode
             static class NsStop {
                 private String name;
+                private String longitude;
+                private String latitude;
             }
 
             @JsonIgnoreProperties(ignoreUnknown = true)

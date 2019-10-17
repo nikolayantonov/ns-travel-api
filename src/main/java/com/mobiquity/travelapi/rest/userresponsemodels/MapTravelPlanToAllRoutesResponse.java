@@ -2,11 +2,16 @@ package com.mobiquity.travelapi.rest.userresponsemodels;
 
 import com.mobiquity.travelapi.integrations.nsclient.travelmodel.Route;
 import com.mobiquity.travelapi.integrations.nsclient.travelmodel.TravelPlan;
+import com.mobiquity.travelapi.integrations.weather.WeatherClient;
+import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class MapTravelPlanToAllRoutesResponse {
+
+    @Autowired
+    private WeatherClient weatherClient;
 
     public static AllRoutesResponse mapToAllRoutesResponse(TravelPlan travelPlan) {
         return new MapTravelPlanToAllRoutesResponse().map(travelPlan);
@@ -26,6 +31,8 @@ public class MapTravelPlanToAllRoutesResponse {
                     travelRoute -> add(buildRoute(travelRoute))
             );
         }};
+
+
     }
 
     private AllRoutesResponse.Route buildRoute( Route route) {
@@ -34,6 +41,7 @@ public class MapTravelPlanToAllRoutesResponse {
                 .arrivalTime(route.getDestination().getPlannedArrivalTime())
                 .duration(route.getPlannedDuration())
                 .numberOfLegs(route.getLegs().size())
+             //   .weather(weatherClient.getDarkSkyResponse(route.getLegs().get(0).getStops().get(0).getLatitude())) not sure how to build here weather response
                 .build();
     }
 
