@@ -1,5 +1,5 @@
 package com.mobiquity.travelapi;
-import com.nsapplication.api.travelapi.model.TravelRequest;
+import com.mobiquity.travelapi.rest.userresponsemodels.TravelRequest;
 import org.junit.jupiter.api.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +17,7 @@ class TravelServiceTest {
 
     @Test
     public void checkTravelPlanWhenPassedToTravelPlanIsNotNull(){
-      TravelRequest travelRequest = new TravelRequest.Builder()
+      com.mobiquity.travelapi.rest.userresponsemodels.TravelRequest travelRequest = new TravelRequest.Builder()
               .dateTime("2019-10-07T16L25:00+0200")
               .destinationEvaCode("8400056")
               .originEvaCode("8400282")
