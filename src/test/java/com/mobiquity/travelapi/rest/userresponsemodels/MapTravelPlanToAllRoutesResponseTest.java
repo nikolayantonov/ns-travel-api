@@ -14,9 +14,6 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class MapTravelPlanToAllRoutesResponseTest {
 
-
-    private NsClient nsClient;
-
     private static NsResponse nsResponse;
     private static TravelPlan travelPlan ;
     private AllRoutesResponse.Route firstRoute;
