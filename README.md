@@ -125,8 +125,8 @@ $ helm list
 
 # Proper use of security groups
 
-* **IMPORTANT** At Security Groups ClusterSharedNodeSecurityGroup add TCP Rule for PORT 8080 IF YOU RUN IN CLUSTER
-* **IMPORTANT FOR GITHUB WEBHOOKS**
+* At Security Groups ClusterSharedNodeSecurityGroup add TCP Rule for PORT 8080 if you run inside cluster
+* FOR GITHUB WEBHOOKS
 
 ```bash
 IN THE SECURITY GROUP THAT IS RESPONSIBLE FOR THE JENKINS PIPELINE ON THE SSH PORT ADD THIS IP 90.145.66.50/32
