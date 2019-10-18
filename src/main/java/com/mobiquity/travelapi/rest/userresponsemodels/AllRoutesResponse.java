@@ -22,7 +22,7 @@ public class AllRoutesResponse {
         private String startTime;
         private String arrivalTime;
         private int duration;
-        private  int numberOfLegs;
+        private int numberOfLegs;
         private String summary;
         private double temperature;
         private Weather weather;

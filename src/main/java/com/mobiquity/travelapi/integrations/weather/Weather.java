@@ -11,6 +11,7 @@ public class Weather {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     @Getter
+    static
     class Currently
     {
         private String summary;

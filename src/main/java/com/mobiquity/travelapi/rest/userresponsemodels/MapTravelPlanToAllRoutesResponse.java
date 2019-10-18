@@ -32,10 +32,9 @@ public class MapTravelPlanToAllRoutesResponse {
             );
         }};
 
-
     }
 
-    private AllRoutesResponse.Route buildRoute( Route route) {
+    private AllRoutesResponse.Route buildRoute(Route route) {
         return AllRoutesResponse.Route.builder()
                 .startTime(route.getOrigin().getPlannedDepartureTime())
                 .arrivalTime(route.getDestination().getPlannedArrivalTime())

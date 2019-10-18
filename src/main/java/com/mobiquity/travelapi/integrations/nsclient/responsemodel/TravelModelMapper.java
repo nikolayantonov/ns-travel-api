@@ -1,8 +1,9 @@
 package com.mobiquity.travelapi.integrations.nsclient.responsemodel;
 
 import com.mobiquity.travelapi.integrations.nsclient.travelmodel.*;
-import com.mobiquity.travelapi.integrations.weather.WeatherClient;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.apache.logging.log4j.util.StringBuilders;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -11,8 +12,7 @@ import java.util.List;
 @Component
 public class TravelModelMapper {
 
-    @Autowired
-    private WeatherClient weatherClient;
+    private static final Logger LOGGER = LoggerFactory.getLogger(TravelModelMapper.class);
 
     public static TravelPlan mapToTravelPlan(NsResponse nsResponse) {
         return new TravelModelMapper().map(nsResponse);
