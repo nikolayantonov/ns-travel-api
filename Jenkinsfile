@@ -1,17 +1,9 @@
 node {
-    stage 'Clone repository'
-    checkout([
-        $class: 'GitSCM',
-        branches: [
-            [name: '*/master']
-        ],
-        doGenerateSubmoduleConfigurations: false,
-        extensions: [],
-        submoduleCfg: [],
-        userRemoteConfigs: [
-            [url: 'https://github.com/nikolayantonov/ns-travel-api.git']
-        ]
-    ])
+    stage('Checkout code') {
+    steps {
+        checkout scm
+          }
+    }
 
     stage 'Build & package'
     sh 'mvn clean package'
@@ -30,10 +22,10 @@ node {
     ///usr/local/bin/kubectl apply -f /var/lib/jenkins/.kube/aws-auth-cm.yaml
     sh '''
          export KUBECONFIG=$KUBECONFIG:/var/lib/jenkins/.kube/config
-         aws eks --region eu-west-2 update-kubeconfig --name travelApp-EKS-CLUSTER
+         aws eks --region eu-west-2 update-kubeconfig --name travelApp-EKS-CLUSTER-3
          /usr/local/bin/kubectl version
          /usr/local/bin/kubectl get nodes
-         /usr/local/bin/helm upgrade --install helm-ta-prod ./helm
+         /usr/local/bin/helm upgrade --install helm-ta-prod ./helm-ta
     '''
     //    /usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
 }
