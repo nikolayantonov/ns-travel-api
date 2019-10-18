@@ -120,13 +120,13 @@ $ helm install my-nginx stable/nginx-ingress
 $ helm install stable/nginx-ingress --generate-name
 $ helm list
 ```
-**WARNING** FOR UNKNOWN REASONS -n doesn't work
+
 #
 
 # Proper use of security groups
 
 * At Security Groups ClusterSharedNodeSecurityGroup add TCP Rule for PORT 8080 if you run inside cluster
-* FOR GITHUB WEBHOOKS
+* For Github Webhooks
 
 ```bash
 IN THE SECURITY GROUP THAT IS RESPONSIBLE FOR THE JENKINS PIPELINE ON THE SSH PORT ADD THIS IP 90.145.66.50/32
