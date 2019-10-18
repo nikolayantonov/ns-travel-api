@@ -1,7 +1,6 @@
 package com.mobiquity.travelapi.integrations.nsclient.responsemodel;
 
 import com.mobiquity.travelapi.integrations.nsclient.travelmodel.*;
-import org.apache.logging.log4j.util.StringBuilders;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;

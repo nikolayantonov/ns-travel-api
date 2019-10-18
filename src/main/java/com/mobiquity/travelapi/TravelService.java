@@ -1,23 +1,18 @@
 package com.mobiquity.travelapi;
 
+import com.mobiquity.travelapi.dto.RouteAndWeather;
 import com.mobiquity.travelapi.integrations.nsclient.NsClient;
 import com.mobiquity.travelapi.integrations.nsclient.travelmodel.Leg;
 import com.mobiquity.travelapi.integrations.nsclient.travelmodel.Route;
 import com.mobiquity.travelapi.integrations.nsclient.travelmodel.Stop;
-import com.mobiquity.travelapi.integrations.nsclient.travelmodel.TravelPlan;
-import com.mobiquity.travelapi.integrations.weather.Weather;
 import com.mobiquity.travelapi.integrations.weather.WeatherClient;
-import com.mobiquity.travelapi.rest.userresponsemodels.AllRoutesResponse;
-import com.mobiquity.travelapi.rest.userresponsemodels.MapTravelPlanToAllRoutesResponse;
 import com.mobiquity.travelapi.rest.userresponsemodels.TravelRequest;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.ZonedDateTime;
+import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class TravelService {
@@ -27,17 +22,19 @@ public class TravelService {
     @Autowired
     private WeatherClient weatherClient;
 
-    public TravelPlan getTravelPlanFromNs(TravelRequest travelRequest) {
-        return nsClient.getTravelPlan(travelRequest);
-    }
-
-    public Map<Route, Weather> getTravelPlan(TravelRequest travelRequest) {
-        List<Route> routes = nsClient.getTravelPlan(travelRequest).getRoutes();
-        for (Route route: routes) {
+    public List<RouteAndWeather> getTravelResponse(TravelRequest travelRequest) {
+        List<RouteAndWeather> travelResponse = new ArrayList<>();
+        for (Route route : nsClient.getTravelPlan(travelRequest).getRoutes()) {
             Stop lastStopOfRoute = getLastStop(route);
-            weatherClient.getDarkSkyResponse(getLongitude(lastStopOfRoute), getLatitude(lastStopOfRoute), getDateTime(route));
+            travelResponse.add(RouteAndWeather.builder()
+                    .route(route)
+                    .weather(weatherClient.getDarkSkyResponse(
+                            getLongitude(lastStopOfRoute),
+                            getLatitude(lastStopOfRoute),
+                            getDateTime(route)).getBody())
+                    .build());
         }
-        return null;
+        return travelResponse;
     }
 
     private String getDateTime(Route route) {
@@ -60,9 +57,6 @@ public class TravelService {
     private Leg getLastLeg(Route route) {
         return route.getLegs().get(route.getLegs().size() - 1);
     }
-
-
-    //Get weather by sending locations + epoch
 
     String getEpochTime(String dateTime) {
         ZonedDateTime zdt = ZonedDateTime.parse(correctDateTime(dateTime));

@@ -15,10 +15,11 @@ public class TravelApiController {
     private TravelService travelService;
 
     @PostMapping(value = "trips", consumes = "application/json")
-    public @ResponseBody AllRoutesResponse postAllAvailableRoutes(@RequestBody TravelRequest travelRequest) {
+    public @ResponseBody
+    AllRoutesResponse postAllAvailableRoutes(@RequestBody TravelRequest travelRequest) {
 
         return MapTravelPlanToAllRoutesResponse.mapToAllRoutesResponse(
-                travelService.getTravelPlanFromNs(travelRequest));
+                travelService.getTravelResponse(travelRequest));
     }
 
 }

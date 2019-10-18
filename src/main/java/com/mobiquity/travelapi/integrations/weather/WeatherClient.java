@@ -1,16 +1,17 @@
 package com.mobiquity.travelapi.integrations.weather;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
-import java.time.ZonedDateTime;
-import java.util.Map;
 
 @Component
 public class WeatherClient {
@@ -22,6 +23,7 @@ public class WeatherClient {
     private final String key;
     private final String scheme;
     private final String exclusions;
+    private static final Logger LOGGER = LoggerFactory.getLogger(WeatherClient.class);
 
     WeatherClient(@Value("${authentication.key.darkSky}") String key,
                   @Value("${urls.base.darkSky}") String uriBase,
@@ -34,6 +36,9 @@ public class WeatherClient {
     }
 
     public ResponseEntity<Weather> getDarkSkyResponse(String longitude, String latitude, String dateTime) {
+
+        LOGGER.info(buildUri(dateTime, longitude, latitude).toString());
+
         return restTemplate.getForEntity(
                 buildUri(dateTime, longitude, latitude), Weather.class);
     }

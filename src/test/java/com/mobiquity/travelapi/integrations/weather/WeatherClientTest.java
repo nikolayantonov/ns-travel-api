@@ -20,7 +20,7 @@ class WeatherClientTest {
     }
 
     @Test
-    void weatherClientUrlIsGeneratedWithLocationInputWithoutExclusionParameters() {
+    void weatherClientUrlIsGeneratedWithLocationInput() {
         String longitude = "4.483028";
         String latitude = "52.166542";
         String dateTime = "1570458300";
@@ -29,7 +29,8 @@ class WeatherClientTest {
                 + keyValue + "/"
                 + latitude + ","
                 + longitude + ","
-                + dateTime);
+                + dateTime
+                + "?exclude=" + getExclusions());
 
         URI actualUri = weatherClient.buildUri(dateTime, longitude, latitude);
         assertEquals(expectedUri, actualUri);

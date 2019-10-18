@@ -46,7 +46,7 @@ class TravelModelMapperTest {
 
     @Test
     void stopsCreatedFromFirstRouteSecondLegInNsResponseModelValid() {
-        String expectedNameOfStopInSecondLeg = "Den Haag Laan v NOI";
+        String expectedNameOfStopInSecondLeg = "Leiden Centraal";
         assertEquals(expectedNameOfStopInSecondLeg ,firstRoute.getLegs().get(0).getStops().get(1).getName());
     }
     @Test

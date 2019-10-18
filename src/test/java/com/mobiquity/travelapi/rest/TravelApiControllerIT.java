@@ -1,9 +1,12 @@
 package com.mobiquity.travelapi.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.mobiquity.travelapi.dto.RouteAndWeather;
 import com.mobiquity.travelapi.integrations.nsclient.responsemodel.NsResponse;
 import com.mobiquity.travelapi.integrations.nsclient.responsemodel.TravelModelMapper;
+import com.mobiquity.travelapi.integrations.nsclient.travelmodel.Route;
 import com.mobiquity.travelapi.integrations.nsclient.travelmodel.TravelPlan;
+import com.mobiquity.travelapi.integrations.weather.WeatherClient;
 import com.mobiquity.travelapi.rest.userresponsemodels.MapTravelPlanToAllRoutesResponse;
 import com.mobiquity.travelapi.rest.userresponsemodels.TravelRequest;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,6 +21,8 @@ import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
 
 import java.io.File;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
@@ -34,7 +39,12 @@ class TravelApiControllerIT {
     private MockMvc mockMvc;
     @Autowired
     private ObjectMapper objectMapper;
+    @Autowired
+    private WeatherClient weatherClient;
     private TravelRequest travelRequest;
+    private String longitude, latitude;
+    private List<String> dateTime;
+
 
     @BeforeEach
     void setUp() {
@@ -43,6 +53,9 @@ class TravelApiControllerIT {
                 .destinationEvaCode("8400056")
                 .originEvaCode("8400282")
                 .build();
+        latitude = "52.337301";
+        longitude = "4.889512";
+        dateTime = List.of("1570458540", "1570461060", "1570460340", "1570462860", "1570462140", "1570464660");
     }
 
     @Test
@@ -61,8 +74,21 @@ class TravelApiControllerIT {
 
     private String checkTestDataResult() throws Exception {
         TravelPlan mockedTravelPlan = TravelModelMapper.mapToTravelPlan(getMockedNsResponseFromFile());
+        List<RouteAndWeather> mockedTravelResponse = new ArrayList<>();
+        int counter = 0;
 
-        return objectMapper.writeValueAsString(MapTravelPlanToAllRoutesResponse.mapToAllRoutesResponse(mockedTravelPlan));
+        for (Route route: mockedTravelPlan.getRoutes()) {
+            mockedTravelResponse.add(RouteAndWeather.builder()
+                    .route(route)
+                    .weather(weatherClient.getDarkSkyResponse(
+                            longitude,
+                            latitude,
+                            dateTime.get(counter++)).getBody()
+                    )
+                    .build());
+        }
+
+        return objectMapper.writeValueAsString(MapTravelPlanToAllRoutesResponse.mapToAllRoutesResponse(mockedTravelResponse));
     }
 
     private NsResponse getMockedNsResponseFromFile() throws Exception {
