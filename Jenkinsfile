@@ -1,9 +1,17 @@
 node {
-    stage('Checkout code') {
-    steps {
-        checkout scm
-          }
-    }
+    stage 'Clone repository'
+    checkout([
+        $class: 'GitSCM',
+        branches: [
+            [name: '*/master']
+        ],
+        doGenerateSubmoduleConfigurations: false,
+        extensions: [],
+        submoduleCfg: [],
+        userRemoteConfigs: [
+            [url: 'https://github.com/nikolayantonov/ns-travel-api.git']
+        ]
+    ])          
 
     stage 'Build & package'
     sh 'mvn clean package'
