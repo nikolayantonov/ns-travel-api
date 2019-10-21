@@ -1,4 +1,8 @@
 node {
+    withAwsCli([
+        credentialsId: 'ns-travel-api-prod',
+        defaultRegion: 'eu-west-2']) {
+
     stage ('Checkout'){
     checkout([
         $class: 'GitSCM',
@@ -15,13 +19,10 @@ node {
     }
 
     stage ('Build') {
-    withAwsCli([
-          credentialsId: 'ns-travel-api-prod',
-          defaultRegion: 'eu-west-2']) {
          sh '''
           aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'
          '''
-    }
+
 
     // NSKEY = sh {
     //     script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
@@ -59,5 +60,6 @@ node {
          /usr/local/bin/helm upgrade --install helm-ta-prod ./helm
     '''
     //    /usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
+    }
     }
 }
