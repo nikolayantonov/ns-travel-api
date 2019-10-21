@@ -121,6 +121,9 @@ $ helm install stable/nginx-ingress --generate-name
 $ helm list
 ```
 
+Attach iam policy for ALB to NodeInstanceRole:
+https://github.com/kubernetes-sigs/aws-alb-ingress-controller/blob/master/docs/examples/iam-policy.json
+
 Create and apply ConfigMap:
 
 ```bash
