@@ -14,7 +14,7 @@ node {
     ])
 
     stage 'Build & package' {
-    withAwsCli(
+    withAwsCli([
           credentialsId: 'ns-travel-api-prod',
           defaultRegion: 'eu-west-2']) {
          sh '''
