@@ -44,7 +44,7 @@ $ scp -i ~/Desktop/kleidia/iakovoschallenge.pem ~/Desktop/kleidia/iakovoschallen
 * Create Cluster with EKSCTL
 
 ```bash
-eksctl create cluster --name=travelApp-EKS-CLUSTER --nodes=1 --region=eu-west-2 --node-type=t3.medium \
+eksctl create cluster --name=travelApp-EKS-CLUSTER ---version=1.13 --nodes=1 --region=eu-west-2 --node-type=t3.medium \
 --node-security-groups sg-b79231de \
 --ssh-public-key=iakovoschallenge \
 --tags "Owner=IakovosBelonias, Task=createdByIakovos Travel App Challenge"
@@ -195,6 +195,27 @@ helm repo add external-secrets https://godaddy.github.io/kubernetes-external-sec
 helm repo update
 helm install --name kubernetes-external-secrets --set env.AWS_REGION='eu-west-2' external-secrets/kubernetes-external-secrets --version 1.0.1
 ```
+
+Create and apply ConfigMap:
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: aws-auth
+  namespace: kube-system
+data:
+  mapRoles: |
+    - rolearn: <NodeInstanceRole ARN>
+      username: system:node:{{EC2PrivateDNSName}}
+      groups:
+        - system:bootstrappers
+        - system:nodes
+  mapUsers: |
+    - userarn: <USER ARN>
+      username: nantonov@mobiquityinc.com
+      groups:
+        - system:masters
+
+
 #
 
 # Auto-Scaling
