@@ -58,7 +58,7 @@ eksctl create cluster --name=travelApp-EKS-CLUSTER --nodes=1 --region=eu-west-2 
 ```bash
 $ sudo yum update -y
 $ sudo yum remove java-1.7.0-openjdk -y
-$ sudo yum install git java-1.8.0 maven -y
+$ sudo yum install git java-1.8.0 maven jq -y
 $ sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
 $ sudo rpm --import https://jenkins-ci.org/redhat/jenkins-ci.org.key
 $ sudo yum install jenkins -y
