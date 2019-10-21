@@ -25,10 +25,10 @@ node {
             script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
             returnStdout: true
         )
-        
+
         dir('/') {
         withEnv([
-            "NSKEY=${sh "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'"}"
+            "NSKEY=${NSKEY}"
         ]) {
             sh 'mvn clean package'
         }
