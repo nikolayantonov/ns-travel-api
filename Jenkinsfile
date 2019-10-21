@@ -1,7 +1,4 @@
 node {
-    withAwsCli([
-        credentialsId: 'ns-travel-api-prod',
-        defaultRegion: 'eu-west-2']) {
 
     stage ('Checkout'){
     checkout([
@@ -60,6 +57,5 @@ node {
          /usr/local/bin/helm upgrade --install helm-ta-prod ./helm
     '''
     //    /usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
-    }
     }
 }
