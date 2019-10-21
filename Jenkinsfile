@@ -1,7 +1,11 @@
 node {
 
-    NSNEWKEY = sh (
+    NSKEY = sh (
         script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
+        returnStdout: true
+    )
+    DARKKEY = sh (
+        script: "aws secretsmanager get-secret-value --secret-id darkkey | jq -r '.SecretString'",
         returnStdout: true
     )
 
