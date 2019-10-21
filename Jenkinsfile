@@ -1,12 +1,10 @@
 node {
-    sh '''
-      aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'
-    '''
-
-    NSNEWKEY = sh (
-        script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
-        returnStdout: true
-    )
+    environment {
+        NSNEWKEY = sh (
+            script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
+            returnStdout: true
+        )
+    }
 
     stage ('Checkout'){
     checkout([
@@ -27,7 +25,7 @@ node {
         //NSNEWKEY=${sh "'aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'"}
 
         NSKEY = ''
-        
+
         dir('/') {
         withEnv([
             "NSKEY=${NSNEWKEY}"
