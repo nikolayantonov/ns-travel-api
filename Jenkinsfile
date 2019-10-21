@@ -22,8 +22,13 @@ node {
 
     stage ('Build') {
     //NSNEWKEY=${sh "'aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'"}
-    APPVERSION=${sh 'mvn help:evaluate -Dexpression=project.version -q -DforceStdout'}
+    APPVERSION= sh (
+        script: "mvn help:evaluate -Dexpression=project.version -q -DforceStdout",
+        returnStdout: true
+    )
     
+    echo "${APPVERSION}"
+
     sh 'mvn clean package'
     input'Continue to next stage?'
     }
