@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: travelappdeployment-dev
+  labels:
+    app: {{ .Values.app }}
+spec:
+  replicas: 9
+  selector:
+    matchLabels:
+      app: {{ .Values.app }}
+  template:
+    metadata:
+      labels:
+        app: {{ .Values.app }}
+    spec:
+      containers:
+      - name: {{ .Values.app }}
+        image: 473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-dev:latest
+        ports:
+          - containerPort: 8081
