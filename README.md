@@ -122,6 +122,8 @@ $ helm list
 ```
 
 Create and apply ConfigMap:
+
+```bash
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -139,7 +141,7 @@ data:
       username: nantonov@mobiquityinc.com
       groups:
         - system:masters
-
+```
 #
 
 # Proper use of security groups
