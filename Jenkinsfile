@@ -26,7 +26,7 @@ node {
         script: "mvn help:evaluate -Dexpression=project.version -q -DforceStdout",
         returnStdout: true
     )
-    
+
     echo "${APPVERSION}"
 
     sh 'mvn clean package'
@@ -34,10 +34,10 @@ node {
     }
 
     stage ('Docker push') {
-    def img = docker.build('473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod')
+    def img = docker.build('473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod:$APPVERSION')
     //eval $(aws ecr get-login --no-include-email --region eu-west-2 | sed 's|https://||')
     docker.withRegistry('https://473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod', 'ecr:eu-west-2:ns-travel-api-prod') {
-      docker.image('473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod').push('latest')
+      docker.image('473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod').push('$APPVERSION')
     }
     }
 
