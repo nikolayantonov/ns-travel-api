@@ -25,7 +25,7 @@ public class WeatherClient {
     private final String exclusions;
     private static final Logger LOGGER = LoggerFactory.getLogger(WeatherClient.class);
 
-    WeatherClient(@Value("${authentication.key.darkSky}") String key,
+    WeatherClient(@Value("#{environment.DARKKEY}") String key,
                   @Value("${urls.base.darkSky}") String uriBase,
                   @Value("${urls.scheme.darkSky}") String scheme,
                   @Value("${urls.parameters.exclusions.darkSky}") String exclusions) {

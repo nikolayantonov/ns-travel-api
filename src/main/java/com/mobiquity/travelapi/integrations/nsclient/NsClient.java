@@ -35,7 +35,7 @@ public class NsClient {
     private HttpEntity httpEntity;
 
     NsClient(@Value("${authentication.key.name.ns}") String keyName,
-             @Value("${authentication.key.value.ns}") String keyValue,
+             @Value("#{environment.NSKEY}") String keyValue,
              @Value("${urls.base.ns}") String uriBase,
              @Value("${urls.path.ns}") String uriPath) {
         this.uriBase = uriBase;
