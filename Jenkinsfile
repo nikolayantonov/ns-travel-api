@@ -1,5 +1,5 @@
 pipeline {
-  agent node
+  agent { node {
   environment {
       NSNEWKEY = sh (
           script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
@@ -59,5 +59,7 @@ pipeline {
     '''
     //    /usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
     }
+}
+}
 }
 }
