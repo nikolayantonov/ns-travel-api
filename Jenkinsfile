@@ -1,4 +1,5 @@
-node {
+pipeline {
+  node {
     environment {
         NSNEWKEY = sh (
             script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
@@ -57,4 +58,5 @@ node {
     '''
     //    /usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
     }
+}
 }
