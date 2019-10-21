@@ -22,10 +22,11 @@ node {
          '''
     }
 
-    NSKEY = sh {
-        script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
-        returnStdout: true
-    }
+    // NSKEY = sh {
+    //     script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
+    //     returnStdout: true
+    // }
+        NSKEY = 'blah'
 
         dir('/') {
         withEnv([
