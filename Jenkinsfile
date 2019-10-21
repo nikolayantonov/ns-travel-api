@@ -1,12 +1,13 @@
 pipeline {
-  node {
-    environment {
-        NSNEWKEY = sh (
-            script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
-            returnStdout: true
-        )
+  agent node
+  environment {
+      NSNEWKEY = sh (
+          script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
+          returnStdout: true
+      )
     }
 
+    stages {
     stage ('Checkout'){
     checkout([
         $class: 'GitSCM',
