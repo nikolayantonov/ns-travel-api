@@ -4,7 +4,6 @@ import lombok.Getter;
 
 @Getter
 public class TravelRequest {
-
     private String dateTime;
     private String destinationEVACode;
     private String originEVACode;
@@ -12,10 +11,7 @@ public class TravelRequest {
     private TravelRequest() {
     }
 
-
-
     public static class Builder {
-
         private String dateTime;
         private String destinationEVACode;
         private String originEVACode;

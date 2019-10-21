@@ -13,7 +13,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|593216|0|884|7102019",
+          "journeyDetailRef": "1|596261|0|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -60,7 +60,6 @@
             "plannedTimeZoneOffset": 120,
             "plannedDateTime": "2019-10-07T16:29:00+0200",
             "plannedTrack": "4b",
-            "exitSide": "LEFT",
             "checkinStatus": "NOTHING",
             "notes": [
               {
@@ -165,42 +164,6 @@
               "uicCode": "8400282"
             },
             {
-              "notes": [],
-              "passing": true,
-              "name": "Den Haag Laan v NOI",
-              "lng": 4.34277772903442,
-              "lat": 52.0786094665527,
-              "countryCode": "NL",
-              "uicCode": "8400380"
-            },
-            {
-              "notes": [],
-              "passing": true,
-              "name": "Den Haag Mariahoeve",
-              "lng": 4.36944437026978,
-              "lat": 52.0905570983887,
-              "countryCode": "NL",
-              "uicCode": "8400278"
-            },
-            {
-              "notes": [],
-              "passing": true,
-              "name": "Voorschoten",
-              "lng": 4.43249988555908,
-              "lat": 52.1252784729004,
-              "countryCode": "NL",
-              "uicCode": "8400659"
-            },
-            {
-              "notes": [],
-              "passing": true,
-              "name": "De Vink",
-              "lng": 4.4563889503479,
-              "lat": 52.1472206115723,
-              "countryCode": "NL",
-              "uicCode": "8400188"
-            },
-            {
               "notes": [
                 {
                   "value": "Station Accessible or Travel Assistance",
@@ -259,7 +222,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|593670|0|884|7102019",
+          "journeyDetailRef": "1|596697|0|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -527,7 +490,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|3132|1|884|7102019",
+          "journeyDetailRef": "1|3189|1|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -727,10 +690,10 @@
       "optimal": false,
       "fares": [
         {
-          "priceInCents": 1452,
-          "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "DISCOUNT_20_PERCENT"
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 2178,
@@ -739,16 +702,10 @@
           "discountType": "DISCOUNT_40_PERCENT"
         },
         {
-          "priceInCents": 660,
+          "priceInCents": 1100,
           "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
-          "discountType": "DISCOUNT_40_PERCENT"
-        },
-        {
-          "priceInCents": 1760,
-          "product": "OVCHIPKAART_RETOUR",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "DISCOUNT_20_PERCENT"
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 1089,
@@ -757,20 +714,56 @@
           "discountType": "DISCOUNT_40_PERCENT"
         },
         {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
           "priceInCents": 2904,
           "product": "OVCHIPKAART_RETOUR",
           "travelClass": "FIRST_CLASS",
           "discountType": "DISCOUNT_20_PERCENT"
         },
         {
-          "priceInCents": 880,
+          "priceInCents": 1452,
           "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "SECOND_CLASS",
+          "travelClass": "FIRST_CLASS",
           "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 1320,
           "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
           "discountType": "DISCOUNT_40_PERCENT"
         },
@@ -781,14 +774,8 @@
           "discountType": "NO_DISCOUNT"
         },
         {
-          "priceInCents": 34900,
-          "product": "TRAJECT_VRIJ_MAAND",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 336156,
-          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
           "travelClass": "SECOND_CLASS",
           "discountType": "NO_DISCOUNT"
         },
@@ -799,40 +786,16 @@
           "discountType": "NO_DISCOUNT"
         },
         {
-          "priceInCents": 28000,
-          "product": "TRAJECT_VRIJ_JAAR",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 2200,
+          "priceInCents": 1760,
           "product": "OVCHIPKAART_RETOUR",
           "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
+          "discountType": "DISCOUNT_20_PERCENT"
         },
         {
-          "priceInCents": 1815,
-          "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 47300,
-          "product": "TRAJECT_VRIJ_JAAR",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 1100,
+          "priceInCents": 880,
           "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 3630,
-          "product": "OVCHIPKAART_RETOUR",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
+          "discountType": "DISCOUNT_20_PERCENT"
         }
       ],
       "productFare": {
@@ -868,7 +831,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|598840|0|884|7102019",
+          "journeyDetailRef": "1|601838|0|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -1191,7 +1154,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|3808|0|884|7102019",
+          "journeyDetailRef": "1|3870|0|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -1391,10 +1354,10 @@
       "optimal": true,
       "fares": [
         {
-          "priceInCents": 1452,
-          "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "DISCOUNT_20_PERCENT"
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 2178,
@@ -1403,16 +1366,10 @@
           "discountType": "DISCOUNT_40_PERCENT"
         },
         {
-          "priceInCents": 660,
+          "priceInCents": 1100,
           "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
-          "discountType": "DISCOUNT_40_PERCENT"
-        },
-        {
-          "priceInCents": 1760,
-          "product": "OVCHIPKAART_RETOUR",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "DISCOUNT_20_PERCENT"
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 1089,
@@ -1421,20 +1378,56 @@
           "discountType": "DISCOUNT_40_PERCENT"
         },
         {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
           "priceInCents": 2904,
           "product": "OVCHIPKAART_RETOUR",
           "travelClass": "FIRST_CLASS",
           "discountType": "DISCOUNT_20_PERCENT"
         },
         {
-          "priceInCents": 880,
+          "priceInCents": 1452,
           "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "SECOND_CLASS",
+          "travelClass": "FIRST_CLASS",
           "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 1320,
           "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
           "discountType": "DISCOUNT_40_PERCENT"
         },
@@ -1445,14 +1438,8 @@
           "discountType": "NO_DISCOUNT"
         },
         {
-          "priceInCents": 34900,
-          "product": "TRAJECT_VRIJ_MAAND",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 336156,
-          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
           "travelClass": "SECOND_CLASS",
           "discountType": "NO_DISCOUNT"
         },
@@ -1463,40 +1450,16 @@
           "discountType": "NO_DISCOUNT"
         },
         {
-          "priceInCents": 28000,
-          "product": "TRAJECT_VRIJ_JAAR",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 2200,
+          "priceInCents": 1760,
           "product": "OVCHIPKAART_RETOUR",
           "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
+          "discountType": "DISCOUNT_20_PERCENT"
         },
         {
-          "priceInCents": 1815,
-          "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 47300,
-          "product": "TRAJECT_VRIJ_JAAR",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 1100,
+          "priceInCents": 880,
           "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 3630,
-          "product": "OVCHIPKAART_RETOUR",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
+          "discountType": "DISCOUNT_20_PERCENT"
         }
       ],
       "productFare": {
@@ -1532,7 +1495,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|593218|0|884|7102019",
+          "journeyDetailRef": "1|596264|0|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -1579,7 +1542,6 @@
             "plannedTimeZoneOffset": 120,
             "plannedDateTime": "2019-10-07T16:59:00+0200",
             "plannedTrack": "4b",
-            "exitSide": "LEFT",
             "checkinStatus": "NOTHING",
             "notes": [
               {
@@ -1684,42 +1646,6 @@
               "uicCode": "8400282"
             },
             {
-              "notes": [],
-              "passing": true,
-              "name": "Den Haag Laan v NOI",
-              "lng": 4.34277772903442,
-              "lat": 52.0786094665527,
-              "countryCode": "NL",
-              "uicCode": "8400380"
-            },
-            {
-              "notes": [],
-              "passing": true,
-              "name": "Den Haag Mariahoeve",
-              "lng": 4.36944437026978,
-              "lat": 52.0905570983887,
-              "countryCode": "NL",
-              "uicCode": "8400278"
-            },
-            {
-              "notes": [],
-              "passing": true,
-              "name": "Voorschoten",
-              "lng": 4.43249988555908,
-              "lat": 52.1252784729004,
-              "countryCode": "NL",
-              "uicCode": "8400659"
-            },
-            {
-              "notes": [],
-              "passing": true,
-              "name": "De Vink",
-              "lng": 4.4563889503479,
-              "lat": 52.1472206115723,
-              "countryCode": "NL",
-              "uicCode": "8400188"
-            },
-            {
               "notes": [
                 {
                   "value": "Station Accessible or Travel Assistance",
@@ -1778,7 +1704,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|1330|0|884|7102019",
+          "journeyDetailRef": "1|1358|0|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -2046,7 +1972,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|3135|0|884|7102019",
+          "journeyDetailRef": "1|3192|0|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -2246,10 +2172,10 @@
       "optimal": false,
       "fares": [
         {
-          "priceInCents": 1452,
-          "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "DISCOUNT_20_PERCENT"
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 2178,
@@ -2258,16 +2184,10 @@
           "discountType": "DISCOUNT_40_PERCENT"
         },
         {
-          "priceInCents": 660,
+          "priceInCents": 1100,
           "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
-          "discountType": "DISCOUNT_40_PERCENT"
-        },
-        {
-          "priceInCents": 1760,
-          "product": "OVCHIPKAART_RETOUR",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "DISCOUNT_20_PERCENT"
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 1089,
@@ -2276,20 +2196,56 @@
           "discountType": "DISCOUNT_40_PERCENT"
         },
         {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
           "priceInCents": 2904,
           "product": "OVCHIPKAART_RETOUR",
           "travelClass": "FIRST_CLASS",
           "discountType": "DISCOUNT_20_PERCENT"
         },
         {
-          "priceInCents": 880,
+          "priceInCents": 1452,
           "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "SECOND_CLASS",
+          "travelClass": "FIRST_CLASS",
           "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 1320,
           "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
           "discountType": "DISCOUNT_40_PERCENT"
         },
@@ -2300,14 +2256,8 @@
           "discountType": "NO_DISCOUNT"
         },
         {
-          "priceInCents": 34900,
-          "product": "TRAJECT_VRIJ_MAAND",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 336156,
-          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
           "travelClass": "SECOND_CLASS",
           "discountType": "NO_DISCOUNT"
         },
@@ -2318,40 +2268,16 @@
           "discountType": "NO_DISCOUNT"
         },
         {
-          "priceInCents": 28000,
-          "product": "TRAJECT_VRIJ_JAAR",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 2200,
+          "priceInCents": 1760,
           "product": "OVCHIPKAART_RETOUR",
           "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
+          "discountType": "DISCOUNT_20_PERCENT"
         },
         {
-          "priceInCents": 1815,
-          "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 47300,
-          "product": "TRAJECT_VRIJ_JAAR",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 1100,
+          "priceInCents": 880,
           "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 3630,
-          "product": "OVCHIPKAART_RETOUR",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
+          "discountType": "DISCOUNT_20_PERCENT"
         }
       ],
       "productFare": {
@@ -2387,7 +2313,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|593064|0|884|7102019",
+          "journeyDetailRef": "1|596102|0|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -2710,7 +2636,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|3808|1|884|7102019",
+          "journeyDetailRef": "1|3870|1|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -2910,10 +2836,10 @@
       "optimal": false,
       "fares": [
         {
-          "priceInCents": 1452,
-          "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "DISCOUNT_20_PERCENT"
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 2178,
@@ -2922,16 +2848,10 @@
           "discountType": "DISCOUNT_40_PERCENT"
         },
         {
-          "priceInCents": 660,
+          "priceInCents": 1100,
           "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
-          "discountType": "DISCOUNT_40_PERCENT"
-        },
-        {
-          "priceInCents": 1760,
-          "product": "OVCHIPKAART_RETOUR",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "DISCOUNT_20_PERCENT"
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 1089,
@@ -2940,20 +2860,56 @@
           "discountType": "DISCOUNT_40_PERCENT"
         },
         {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
           "priceInCents": 2904,
           "product": "OVCHIPKAART_RETOUR",
           "travelClass": "FIRST_CLASS",
           "discountType": "DISCOUNT_20_PERCENT"
         },
         {
-          "priceInCents": 880,
+          "priceInCents": 1452,
           "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "SECOND_CLASS",
+          "travelClass": "FIRST_CLASS",
           "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 1320,
           "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
           "discountType": "DISCOUNT_40_PERCENT"
         },
@@ -2964,14 +2920,8 @@
           "discountType": "NO_DISCOUNT"
         },
         {
-          "priceInCents": 34900,
-          "product": "TRAJECT_VRIJ_MAAND",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 336156,
-          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
           "travelClass": "SECOND_CLASS",
           "discountType": "NO_DISCOUNT"
         },
@@ -2982,40 +2932,16 @@
           "discountType": "NO_DISCOUNT"
         },
         {
-          "priceInCents": 28000,
-          "product": "TRAJECT_VRIJ_JAAR",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 2200,
+          "priceInCents": 1760,
           "product": "OVCHIPKAART_RETOUR",
           "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
+          "discountType": "DISCOUNT_20_PERCENT"
         },
         {
-          "priceInCents": 1815,
-          "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 47300,
-          "product": "TRAJECT_VRIJ_JAAR",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 1100,
+          "priceInCents": 880,
           "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 3630,
-          "product": "OVCHIPKAART_RETOUR",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
+          "discountType": "DISCOUNT_20_PERCENT"
         }
       ],
       "productFare": {
@@ -3051,7 +2977,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|593212|1|884|7102019",
+          "journeyDetailRef": "1|596255|1|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -3098,7 +3024,6 @@
             "plannedTimeZoneOffset": 120,
             "plannedDateTime": "2019-10-07T17:29:00+0200",
             "plannedTrack": "4b",
-            "exitSide": "LEFT",
             "checkinStatus": "NOTHING",
             "notes": [
               {
@@ -3203,42 +3128,6 @@
               "uicCode": "8400282"
             },
             {
-              "notes": [],
-              "passing": true,
-              "name": "Den Haag Laan v NOI",
-              "lng": 4.34277772903442,
-              "lat": 52.0786094665527,
-              "countryCode": "NL",
-              "uicCode": "8400380"
-            },
-            {
-              "notes": [],
-              "passing": true,
-              "name": "Den Haag Mariahoeve",
-              "lng": 4.36944437026978,
-              "lat": 52.0905570983887,
-              "countryCode": "NL",
-              "uicCode": "8400278"
-            },
-            {
-              "notes": [],
-              "passing": true,
-              "name": "Voorschoten",
-              "lng": 4.43249988555908,
-              "lat": 52.1252784729004,
-              "countryCode": "NL",
-              "uicCode": "8400659"
-            },
-            {
-              "notes": [],
-              "passing": true,
-              "name": "De Vink",
-              "lng": 4.4563889503479,
-              "lat": 52.1472206115723,
-              "countryCode": "NL",
-              "uicCode": "8400188"
-            },
-            {
               "notes": [
                 {
                   "value": "Station Accessible or Travel Assistance",
@@ -3297,7 +3186,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|1332|0|884|7102019",
+          "journeyDetailRef": "1|1360|0|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -3565,7 +3454,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|3122|6|884|7102019",
+          "journeyDetailRef": "1|3185|3|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -3765,10 +3654,10 @@
       "optimal": false,
       "fares": [
         {
-          "priceInCents": 1452,
-          "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "DISCOUNT_20_PERCENT"
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 2178,
@@ -3777,16 +3666,10 @@
           "discountType": "DISCOUNT_40_PERCENT"
         },
         {
-          "priceInCents": 660,
+          "priceInCents": 1100,
           "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
-          "discountType": "DISCOUNT_40_PERCENT"
-        },
-        {
-          "priceInCents": 1760,
-          "product": "OVCHIPKAART_RETOUR",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "DISCOUNT_20_PERCENT"
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 1089,
@@ -3795,20 +3678,56 @@
           "discountType": "DISCOUNT_40_PERCENT"
         },
         {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
           "priceInCents": 2904,
           "product": "OVCHIPKAART_RETOUR",
           "travelClass": "FIRST_CLASS",
           "discountType": "DISCOUNT_20_PERCENT"
         },
         {
-          "priceInCents": 880,
+          "priceInCents": 1452,
           "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "SECOND_CLASS",
+          "travelClass": "FIRST_CLASS",
           "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 1320,
           "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
           "discountType": "DISCOUNT_40_PERCENT"
         },
@@ -3819,14 +3738,8 @@
           "discountType": "NO_DISCOUNT"
         },
         {
-          "priceInCents": 34900,
-          "product": "TRAJECT_VRIJ_MAAND",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 336156,
-          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
           "travelClass": "SECOND_CLASS",
           "discountType": "NO_DISCOUNT"
         },
@@ -3837,40 +3750,16 @@
           "discountType": "NO_DISCOUNT"
         },
         {
-          "priceInCents": 28000,
-          "product": "TRAJECT_VRIJ_JAAR",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 2200,
+          "priceInCents": 1760,
           "product": "OVCHIPKAART_RETOUR",
           "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
+          "discountType": "DISCOUNT_20_PERCENT"
         },
         {
-          "priceInCents": 1815,
-          "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 47300,
-          "product": "TRAJECT_VRIJ_JAAR",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 1100,
+          "priceInCents": 880,
           "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 3630,
-          "product": "OVCHIPKAART_RETOUR",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
+          "discountType": "DISCOUNT_20_PERCENT"
         }
       ],
       "productFare": {
@@ -3906,7 +3795,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|4988|0|884|7102019",
+          "journeyDetailRef": "1|5144|0|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -4229,7 +4118,7 @@
           "cancelled": false,
           "changePossible": true,
           "alternativeTransport": false,
-          "journeyDetailRef": "1|597530|0|884|7102019",
+          "journeyDetailRef": "1|600634|0|884|7102019",
           "origin": {
             "type": "STATION",
             "prognosisType": "PROGNOSED",
@@ -4429,10 +4318,10 @@
       "optimal": false,
       "fares": [
         {
-          "priceInCents": 1452,
-          "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "DISCOUNT_20_PERCENT"
+          "priceInCents": 2200,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 2178,
@@ -4441,16 +4330,10 @@
           "discountType": "DISCOUNT_40_PERCENT"
         },
         {
-          "priceInCents": 660,
+          "priceInCents": 1100,
           "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
-          "discountType": "DISCOUNT_40_PERCENT"
-        },
-        {
-          "priceInCents": 1760,
-          "product": "OVCHIPKAART_RETOUR",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "DISCOUNT_20_PERCENT"
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 1089,
@@ -4459,20 +4342,56 @@
           "discountType": "DISCOUNT_40_PERCENT"
         },
         {
+          "priceInCents": 34900,
+          "product": "TRAJECT_VRIJ_MAAND",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 47300,
+          "product": "TRAJECT_VRIJ_JAAR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 336156,
+          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
           "priceInCents": 2904,
           "product": "OVCHIPKAART_RETOUR",
           "travelClass": "FIRST_CLASS",
           "discountType": "DISCOUNT_20_PERCENT"
         },
         {
-          "priceInCents": 880,
+          "priceInCents": 1452,
           "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "SECOND_CLASS",
+          "travelClass": "FIRST_CLASS",
           "discountType": "DISCOUNT_20_PERCENT"
+        },
+        {
+          "priceInCents": 3630,
+          "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
         },
         {
           "priceInCents": 1320,
           "product": "OVCHIPKAART_RETOUR",
+          "travelClass": "SECOND_CLASS",
+          "discountType": "DISCOUNT_40_PERCENT"
+        },
+        {
+          "priceInCents": 1815,
+          "product": "OVCHIPKAART_ENKELE_REIS",
+          "travelClass": "FIRST_CLASS",
+          "discountType": "NO_DISCOUNT"
+        },
+        {
+          "priceInCents": 660,
+          "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
           "discountType": "DISCOUNT_40_PERCENT"
         },
@@ -4483,14 +4402,8 @@
           "discountType": "NO_DISCOUNT"
         },
         {
-          "priceInCents": 34900,
-          "product": "TRAJECT_VRIJ_MAAND",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 336156,
-          "product": "BUSINESS_CARD_TRAJECT_VRIJ_JAAR",
+          "priceInCents": 28000,
+          "product": "TRAJECT_VRIJ_JAAR",
           "travelClass": "SECOND_CLASS",
           "discountType": "NO_DISCOUNT"
         },
@@ -4501,40 +4414,16 @@
           "discountType": "NO_DISCOUNT"
         },
         {
-          "priceInCents": 28000,
-          "product": "TRAJECT_VRIJ_JAAR",
-          "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 2200,
+          "priceInCents": 1760,
           "product": "OVCHIPKAART_RETOUR",
           "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
+          "discountType": "DISCOUNT_20_PERCENT"
         },
         {
-          "priceInCents": 1815,
-          "product": "OVCHIPKAART_ENKELE_REIS",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 47300,
-          "product": "TRAJECT_VRIJ_JAAR",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 1100,
+          "priceInCents": 880,
           "product": "OVCHIPKAART_ENKELE_REIS",
           "travelClass": "SECOND_CLASS",
-          "discountType": "NO_DISCOUNT"
-        },
-        {
-          "priceInCents": 3630,
-          "product": "OVCHIPKAART_RETOUR",
-          "travelClass": "FIRST_CLASS",
-          "discountType": "NO_DISCOUNT"
+          "discountType": "DISCOUNT_20_PERCENT"
         }
       ],
       "productFare": {
@@ -4558,6 +4447,6 @@
       "routeId": "KlE="
     }
   ],
-  "scrollRequestBackwardContext": "1|OB|MTµ11µ438737µ438737µ438785µ438785µ0µ0µ4µ438963µ-1µ22µ438745µ1µ1|PDHµ5ee0f2d80355f9c86ba694f3f471216f",
-  "scrollRequestForwardContext": "1|OF|MTµ11µ438813µ438813µ438862µ438862µ0µ0µ325µ438798µ5µ-2147483626µ0µ1µ2|PDHµ5ee0f2d80355f9c86ba694f3f471216f"
+  "scrollRequestBackwardContext": "1|OB|MTµ11µ438737µ438737µ438785µ438785µ0µ0µ4µ438963µ-1µ22µ438745µ1µ1|PDHµ51c66e0eb5dcafc4ad52ac7edced7a69",
+  "scrollRequestForwardContext": "1|OF|MTµ11µ438813µ438813µ438862µ438862µ0µ0µ325µ438798µ5µ-2147483626µ0µ1µ2|PDHµ51c66e0eb5dcafc4ad52ac7edced7a69"
 }

@@ -1,7 +1,7 @@
 package com.mobiquity.travelapi.integrations.nsclient;
 
-import com.mobiquity.travelapi.integrations.nsclient.responsemodel.TravelModelMapper;
 import com.mobiquity.travelapi.integrations.nsclient.responsemodel.NsResponse;
+import com.mobiquity.travelapi.integrations.nsclient.responsemodel.TravelModelMapper;
 import com.mobiquity.travelapi.integrations.nsclient.travelmodel.TravelPlan;
 import com.mobiquity.travelapi.rest.userresponsemodels.TravelRequest;
 import lombok.AccessLevel;
@@ -26,17 +26,18 @@ import java.net.URI;
 public class NsClient {
 
     @Autowired
-    private RestTemplate restTemplate;    /** variables should be final*/
-    @Autowired
-    private TravelModelMapper travelModelMapper;
+    private RestTemplate restTemplate;
+    /**
+     * variables should be final
+     */
     private String uriBase;
     private String uriPath;
     private HttpEntity httpEntity;
 
     NsClient(@Value("${authentication.key.name.ns}") String keyName,
-                    @Value("${authentication.key.value.ns}") String keyValue,
-                    @Value("${urls.base.ns}") String uriBase,
-                    @Value("${urls.path.ns}") String uriPath) {
+             @Value("${authentication.key.value.ns}") String keyValue,
+             @Value("${urls.base.ns}") String uriBase,
+             @Value("${urls.path.ns}") String uriPath) {
         this.uriBase = uriBase;
         this.uriPath = uriPath;
         this.httpEntity = createHttpEntity(keyName, keyValue);
@@ -54,7 +55,7 @@ public class NsClient {
     }
 
     public TravelPlan getTravelPlan(TravelRequest travelRequest) {
-        return travelModelMapper.mapToTravelPlan(
+        return TravelModelMapper.mapToTravelPlan(
                 getNsResponse(travelRequest).getBody()
         );
     }

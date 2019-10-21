@@ -1,6 +1,8 @@
 package com.mobiquity.travelapi.integrations.nsclient.responsemodel;
 
 import com.mobiquity.travelapi.integrations.nsclient.travelmodel.*;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -9,7 +11,13 @@ import java.util.List;
 @Component
 public class TravelModelMapper {
 
-    public TravelPlan mapToTravelPlan(NsResponse nsResponse) {
+    private static final Logger LOGGER = LoggerFactory.getLogger(TravelModelMapper.class);
+
+    public static TravelPlan mapToTravelPlan(NsResponse nsResponse) {
+        return new TravelModelMapper().map(nsResponse);
+    }
+
+    private TravelPlan map(NsResponse nsResponse) {
         return TravelPlan.builder()
                 .routes(getListOfRoutes(nsResponse))
                 .origin(getOrigin(nsResponse))
@@ -67,6 +75,8 @@ public class TravelModelMapper {
     private Stop buildStop(NsResponse.NsRoute.NsLeg.NsStop nsStop) {
         return Stop.builder()
                 .name(nsStop.getName())
+                .latitude(nsStop.getLatitude())
+                .longitude(nsStop.getLongitude())
                 .build();
     }
 

@@ -1,7 +1,6 @@
 package com.mobiquity.travelapi.integrations.nsclient.travelmodel;
 
 import lombok.Builder;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
 
 @Builder
@@ -9,4 +8,6 @@ import lombok.Getter;
 public class Stop {
 
     private String name;
+    private String longitude;
+    private String latitude;
 }

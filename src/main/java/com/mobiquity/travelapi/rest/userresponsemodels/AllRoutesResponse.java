@@ -1,47 +1,36 @@
 package com.mobiquity.travelapi.rest.userresponsemodels;
 
+import com.mobiquity.travelapi.integrations.weather.Weather;
 import lombok.Builder;
 import lombok.Getter;
-import lombok.Setter;
 
 import java.util.List;
 
 //model class to show response to user
 @Builder
 @Getter
-
 public class AllRoutesResponse {
 
     private String origin;
     private String destination;
-    private List<Route> availableRoutes;
-
-    public AllRoutesResponse() {
-    }
-
-    public AllRoutesResponse(String origin, String destination, List<Route> availableRoutes) {
-        this.origin = origin;
-        this.destination = destination;
-        this.availableRoutes = availableRoutes;
-    }
+    private List<RouteWeather> availableRoutes;
 
     @Builder
     @Getter
-    static class Route
-    {
+    static class RouteWeather {
         private String startTime;
         private String arrivalTime;
         private int duration;
-        private  int numberOfLegs;
+        private int numberOfLegs;
+        private Weather weatherAtDestination;
 
-        public Route() {
-        }
-
-        public Route(String startTime, String arrivalTime, int duration, int numberOfLegs) {
-            this.startTime = startTime;
-            this.arrivalTime = arrivalTime;
-            this.duration = duration;
-            this.numberOfLegs = numberOfLegs;
+        @Builder
+        @Getter
+        static class Weather {
+            private String summary;
+            private double temperature;
+            private double humidity;
+            private double windSpeed;
         }
     }
 
