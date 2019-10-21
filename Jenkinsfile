@@ -7,7 +7,7 @@ node {
         script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
         returnStdout: true
     )
-    
+
     stage ('Checkout'){
     checkout([
         $class: 'GitSCM',
@@ -26,6 +26,8 @@ node {
     stage ('Build') {
         //NSNEWKEY=${sh "'aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'"}
 
+        NSKEY = ''
+        
         dir('/') {
         withEnv([
             "NSKEY=${NSNEWKEY}"
