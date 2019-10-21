@@ -11,10 +11,17 @@ node {
         userRemoteConfigs: [
             [url: 'https://github.com/nikolayantonov/ns-travel-api.git']
         ]
-    ])          
+    ])
 
     stage 'Build & package' {
-    
+    withAwsCli(
+          credentialsId: 'ns-travel-api-prod',
+          defaultRegion: 'eu-west-2']) {
+         sh '''
+          aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'
+         '''
+    }
+
     NSKEY = sh {
         script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
         returnStdout: true
@@ -26,7 +33,7 @@ node {
         ]) {
             sh 'mvn clean package'
         }
-        
+
     }
     input'Continue to next stage?'
     }
