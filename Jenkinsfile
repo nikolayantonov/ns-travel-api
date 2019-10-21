@@ -30,7 +30,7 @@ node {
 
         dir('/') {
         withEnv([
-            "NSKEY"=${sh "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'"}
+            NSKEY=${sh "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'"}
         ]) {
             sh 'mvn clean package'
         }
