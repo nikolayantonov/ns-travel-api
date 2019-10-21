@@ -1,5 +1,13 @@
 node {
+    sh '''
+      aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'
+    '''
 
+    NSNEWKEY = sh (
+        script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
+        returnStdout: true
+    )
+    
     stage ('Checkout'){
     checkout([
         $class: 'GitSCM',
@@ -16,14 +24,6 @@ node {
     }
 
     stage ('Build') {
-         sh '''
-          aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'
-         '''
-
-        NSNEWKEY = sh (
-            script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
-            returnStdout: true
-        )
         //NSNEWKEY=${sh "'aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'"}
 
         dir('/') {
