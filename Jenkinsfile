@@ -21,16 +21,9 @@ node {
     }
 
     stage ('Build') {
-        //NSNEWKEY=${sh "'aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'"}
+    //NSNEWKEY=${sh "'aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'"}
 
-        NSKEY = ''
-
-        dir('/') {
-        withEnv([
-            "NSKEY=${NSNEWKEY}"
-        ]) {
-            sh 'mvn clean package'
-        }
+    sh 'mvn clean package'
 
     }
     input'Continue to next stage?'
