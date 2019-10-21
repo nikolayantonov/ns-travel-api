@@ -1,8 +1,8 @@
 package com.mobiquity.travelapi.integrations.nsclient.travelmodel;
 
 import lombok.Builder;
-import lombok.EqualsAndHashCode;
 import lombok.Getter;
+
 import java.util.List;
 
 @Builder

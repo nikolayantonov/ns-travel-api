@@ -18,6 +18,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponents;
 import org.springframework.web.util.UriComponentsBuilder;
+
 import java.net.URI;
 
 @Component
@@ -25,15 +26,18 @@ import java.net.URI;
 public class NsClient {
 
     @Autowired
-    private RestTemplate restTemplate;    /** variables should be final*/
+    private RestTemplate restTemplate;
+    /**
+     * variables should be final
+     */
     private String uriBase;
     private String uriPath;
     private HttpEntity httpEntity;
 
     NsClient(@Value("${authentication.key.name.ns}") String keyName,
-                    @Value("${authentication.key.value.ns}") String keyValue,
-                    @Value("${urls.base.ns}") String uriBase,
-                    @Value("${urls.path.ns}") String uriPath) {
+             @Value("${authentication.key.value.ns}") String keyValue,
+             @Value("${urls.base.ns}") String uriBase,
+             @Value("${urls.path.ns}") String uriPath) {
         this.uriBase = uriBase;
         this.uriPath = uriPath;
         this.httpEntity = createHttpEntity(keyName, keyValue);
