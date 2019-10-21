@@ -1,13 +1,10 @@
-pipeline {
-  agent { node {
-  environment {
-      NSNEWKEY = sh (
-          script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
-          returnStdout: true
-      )
-    }
+node {
 
-    stages {
+    NSNEWKEY = sh (
+        script: "aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'",
+        returnStdout: true
+    )
+
     stage ('Checkout'){
     checkout([
         $class: 'GitSCM',
@@ -59,7 +56,4 @@ pipeline {
     '''
     //    /usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
     }
-}
-}
-}
 }
