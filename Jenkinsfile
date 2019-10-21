@@ -24,11 +24,8 @@ node {
     //NSNEWKEY=${sh "'aws secretsmanager get-secret-value --secret-id nskey | jq -r '.SecretString'"}
 
     sh 'mvn clean package'
-
-    }
     input'Continue to next stage?'
     }
-
 
     stage ('Docker push') {
     def img = docker.build('473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod')
