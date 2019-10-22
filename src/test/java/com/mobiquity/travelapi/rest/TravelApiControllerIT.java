@@ -1,8 +1,13 @@
 package com.mobiquity.travelapi.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.exc.MismatchedInputException;
+import com.mobiquity.travelapi.integrations.weather.Weather;
 import com.mobiquity.travelapi.integrations.weather.WeatherClient;
+import com.mobiquity.travelapi.rest.userresponsemodels.AllRoutesResponse;
 import com.mobiquity.travelapi.rest.userresponsemodels.TravelRequest;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,8 +24,7 @@ import org.springframework.web.util.NestedServletException;
 import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 
-import static org.junit.jupiter.api.Assertions.assertThrows;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -75,14 +79,18 @@ class TravelApiControllerIT {
     }
 
     @Test
-    void routeAndWeatherSize_IsNotNull_ifCorrectPackageSentToNs() throws Exception {
+    void routeAndWeather_IsNotNull_ifCorrectPackageSentToNs() throws Exception {
         MvcResult result = mockMvc.perform(post("/api/v1/trips")
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(objectMapper.writeValueAsString(travelRequest)))
                 .andExpect(status().is(200))
                 .andReturn();
 
-        System.out.println("Stop");
+        AllRoutesResponse arr = objectMapper.readValue(
+                result.getResponse().getContentAsString()
+                , AllRoutesResponse.class);
+
+        assertNotNull(arr);
     }
 
     @Test
@@ -93,29 +101,28 @@ class TravelApiControllerIT {
                 .andExpect(status().is(400))
                 .andReturn();
 
-        System.out.println("Stop");
+        MismatchedInputException thrown =
+        assertThrows(MismatchedInputException.class,
+                () -> objectMapper.readValue(
+                        result.getResponse().getContentAsString()
+                        , AllRoutesResponse.class)
+                        , "Expected no RoutesAndWeather class to be created");
+        assertNull(objectMapper.readValue(
+                result.getResponse().getContentAsString()
+                , AllRoutesResponse.class));
+//        assertEquals("", thrown.getCause().getMessage());
     }
 
     @Test
     void statusCode_415_ifIncorrectKeyUsed() {
-
-//        try {
-//            mockMvc.perform(post("/api/v1/trips")
-//                    .contentType(MediaType.APPLICATION_JSON)
-//                    .content(objectMapper.writeValueAsString(travelRequest)));
-//        } catch (Exception e) {
-//            System.out.println(e);
-//        }
-
         NestedServletException thrown =
                 assertThrows(NestedServletException.class,
                 () -> mockMvc.perform(post("/api/v1/trips")
                         .contentType(MediaType.APPLICATION_JSON)
                         .content(objectMapper.writeValueAsString(travelRequest))),
                         "Expected servlet exception but didn't occur");
-//        thrown.getCause()
-        Throwable throwable = thrown.getRootCause().getCause();
-        assertTrue(thrown.getMessage().contains("Request processing failed"));
+
+        assertEquals("401 Access Denied", thrown.getCause().getMessage());
     }
 
     void shouldReturnAllRouteResponse() throws Exception {
