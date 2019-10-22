@@ -40,6 +40,8 @@ public class NsClient {
              @Value("${urls.path.ns}") String uriPath) {
         this.uriBase = uriBase;
         this.uriPath = uriPath;
+        System.out.println("keyValue=========================="+keyValue);
+        System.out.println("keyValue from Terminal=========================="+System.getenv("NSKEY"));
         this.httpEntity = createHttpEntity(keyName, keyValue);
     }
 
