@@ -174,34 +174,47 @@ Allow inbound access for 90.145.66.50/32, 140.82.112.0/20, 192.30.252.0/22, 172.
 $ aws iam delete-server-certificate --server-certificate-name my-server-test // How to delete the cert
 ```
 
-```bash
-{
-    "ServerCertificateMetadata": {
-        "ServerCertificateId": "ASCAW4MT454QWXT666ABW",
-        "ServerCertificateName": "my-server-test",
-        "Expiration": "2020-10-10T12:17:21Z",
-        "Path": "/",
-        "Arn": "arn:aws:iam::473293451041:server-certificate/my-server-test",
-        "UploadDate": "2019-10-11T12:17:36Z"
-    }
-}
-```
+###### Deploy AWS ALB Ingress controller
 
-* [Possible workaround](https://github.com/kubernetes/ingress-nginx/issues/2724)
+1. Attach the IAM policy ALBIngressControllerIAMPolicy to eksctl-travelApp-EKS-CLUSTER-node-NodeInstanceRole
+2. Deploy RBAC Roles and RoleBindings needed by the AWS ALB Ingress controller
 
-```
-CA information
-TypeRoot
-CA common namecreatedByIakovosDELETEAFTER
-ARNarn:aws:acm-pca:eu-west-2:473293451041:certificate-authority/c1276cbd-6ef1-471c-8d35-bee18c573809
-```
-###### Helm install NGINX INGRESS
+```kubectl apply -f https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.0.0/docs/examples/rbac-role.yaml```
 
-```bash
-$ helm install stable/nginx-ingress
-$ kubectl --namespace default get services -o wide -w idle-arachnid-nginx-ingress-controller
-```
+3. Download the AWS ALB Ingress controller YAML into a local file
+
+```curl -sS "https://raw.githubusercontent.com/kubernetes-sigs/aws-alb-ingress-controller/v1.0.0/docs/examples/alb-ingress-controller.yaml" > alb-ingress-controller.yaml```
+
+4. Edit the AWS ALB Ingress controller YAML to include the clusterName of the Kubernetes (or) Amazon EKS cluster.
+
+```Edit the –cluster-name flag to be the real name of our Kubernetes (or) Amazon EKS cluster.```
+
+5. Create S3 bucket for controller logs:
+
+```aws s3api create-bucket --bucket xxxx-alb-access-logs  --region eu-west-2 --create-bucket-configuration LocationConstraint=eu-west-2```
+
+6. Specify cluster name, deploy the AWS ALB Ingress controller YAML:
+
+```kubectl apply -f alb-ingress-controller.yaml```
+
+7. Create and configure https service and external ingress:
+https://github.com/nikolayantonov/ns-travel-api/tree/master/helm/templates
+
+8. Verify that the deployment was successful and the controller started:
+
+```kubectl logs -n kube-system $(kubectl get po -n kube-system | egrep -o alb-ingress[a-zA-Z0-9-]+)```
+
+9. Create alb-target-group for HTTPS, specify eksctl-created VPC, 
+   specify health check path: /actuators/health,
+   attached Cluster Node as target.
+
+10. Allow inbound access on ALB SG for ports 80 and 443
+
+11. Create Listeners on ALB for ports 80 and 443,
+   specify redirect to https rule for port 80 listener and
+   forwarding to alb-target group for port 443.
 #
+
 # Manage Secrets
 AWS Secrets bound to EKS Secrets as a Custom Resource:
 https://github.com/godaddy/kubernetes-external-secrets
