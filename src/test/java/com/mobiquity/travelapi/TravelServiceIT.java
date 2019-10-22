@@ -12,8 +12,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@ExtendWith(SpringExtension.class)
-@SpringBootTest
+//@ExtendWith(SpringExtension.class)
+//@SpringBootTest
 class TravelServiceIT {
 
     @Autowired
@@ -31,7 +31,7 @@ class TravelServiceIT {
                 .build();
     }
 
-    @Test
+//    @Test
     void listOfRoutesAndWeatherIs6() {
         int expectedSize = 6;
         assertEquals(expectedSize, travelService.getTravelResponse(travelRequest).size());
@@ -40,7 +40,7 @@ class TravelServiceIT {
         }
     }
 
-    @Test
+//    @Test
     void listOfRoutesAndWeatherIsInvalid() {
         int invalidSize = 23423424;
         assertNotEquals(invalidSize, travelService.getTravelResponse(travelRequest).size());

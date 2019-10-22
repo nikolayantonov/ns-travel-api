@@ -107,35 +107,7 @@ class TravelApiControllerIT {
                         result.getResponse().getContentAsString()
                         , AllRoutesResponse.class)
                         , "Expected no RoutesAndWeather class to be created");
-        assertNull(objectMapper.readValue(
-                result.getResponse().getContentAsString()
-                , AllRoutesResponse.class));
-//        assertEquals("", thrown.getCause().getMessage());
+        assertEquals("No content to map due to end-of-input"
+                , thrown.getOriginalMessage());
     }
-
-    @Test
-    void statusCode_415_ifIncorrectKeyUsed() {
-        NestedServletException thrown =
-                assertThrows(NestedServletException.class,
-                () -> mockMvc.perform(post("/api/v1/trips")
-                        .contentType(MediaType.APPLICATION_JSON)
-                        .content(objectMapper.writeValueAsString(travelRequest))),
-                        "Expected servlet exception but didn't occur");
-
-        assertEquals("401 Access Denied", thrown.getCause().getMessage());
-    }
-
-    void shouldReturnAllRouteResponse() throws Exception {
-        MvcResult result = mockMvc.perform(post("/api/v1/trips")
-                .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(travelRequest))
-                .accept(MediaType.APPLICATION_JSON))
-                .andDo(print())
-                .andExpect(status().isOk())
-                .andReturn();
-        String nsResultFromMock = result.getResponse().getContentAsString();
-
-    }
-
-
 }

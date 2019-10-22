@@ -21,8 +21,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
-@ExtendWith(SpringExtension.class)
-@SpringBootTest()
+//@ExtendWith(SpringExtension.class)
+//@SpringBootTest()
 class NsClientIT {
 
     @Autowired
@@ -49,29 +49,29 @@ class NsClientIT {
     }
 
 
-    @Test
+//    @Test
     void nsClientGetMethodSendsRequestToNsAndGetsResponse() {
         assertEquals(200, nsClient.getNsResponse(travelRequest).getStatusCode().value());
     }
 
-    @Test
+//    @Test
     void nsResponseMapsToNsTripResponse() {
         assertNotNull(Objects.requireNonNull(nsClient.getNsResponse(travelRequest).getBody()).getNsRoutes().get(0));
     }
 
-    @Test
+//    @Test
     void checkIfTravelRequestIsNull() {
         assertThrows(NullPointerException.class, () -> nsClient.getNsResponse(null).getBody());
 
     }
 
-    @Test
+//    @Test
     void mapNsResponseToInternalModel() {
         TravelPlan travelPlan = nsClient.getTravelPlan(travelRequest);
         assertEquals(6, travelPlan.getRoutes().size());
     }
 
-    @Test
+//    @Test
     void checkNsResponseFileMatchesNsResponse() {
         NsResponse ourNsResponse = fetchTestNsResponseFile();
         NsResponse nsResponse = nsClient.getNsResponse(travelRequest).getBody();
