@@ -68,12 +68,12 @@ $ sudo usermod -a -G docker jenkins
 $ sudo service docker restart
 $ sudo service jenkins restart
 $ sudo $(aws ecr get-login --no-include-email --region eu-west-2)
-$ eval $(aws ecr get-login --no-include-email --region eu-west-2 | sed 's|https://||')   !!!!!!!
+$ eval $(aws ecr get-login --no-include-email --region eu-west-2 | sed 's|https://||') 
 $ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 
 
-* Once you loggedin instal **Amazon ECR Plugin(GOOGLE CHROME CRUSHING)**
+* Once you loggedin instal **Amazon ECR Plugin(preferably with Firefox)**
 * On the left select Credentials and setup your **AWS Credentials** 
 * On Configure System
 
