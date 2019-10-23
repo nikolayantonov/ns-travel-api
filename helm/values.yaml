@@ -5,6 +5,10 @@
 replicaCount: 1
 app: ns-travel-api-prod
 selectApp: ns-travel-api-prod
+albSubnets: ""
+clusterNodeSecurityGroup: ""
+
+
 
 image:
   repository: 473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod

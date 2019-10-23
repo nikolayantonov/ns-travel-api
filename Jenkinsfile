@@ -9,6 +9,24 @@ node {
         returnStdout: true
     )
 
+    ALB_SUBNETS = sh (
+        script: "aws cloudformation describe-stacks \
+        --stack-name eksctl-travelApp-EKS-CLUSTER-cluster | \
+        jq -r '.Stacks[0].Outputs[] |
+                select(.OutputKey == "SubnetsPrivate") |
+                .OutputValue'"
+        returnStdout: true
+    )
+
+    CLUSTERNODESG = sh (
+        script: "aws cloudformation describe-stacks \
+        --stack-name eksctl-travelApp-EKS-CLUSTER-cluster | \
+        jq -r '.Stacks[0].Outputs[] |
+                select(.OutputKey == "ClusterSharedNodeSecurityGroup") |
+                .OutputValue'"
+        returnStdout: true
+    )
+
     stage ('Checkout'){
     checkout([
         $class: 'GitSCM',
@@ -56,6 +74,9 @@ node {
          /usr/local/bin/kubectl get nodes
          /usr/local/bin/helm upgrade --install helm-ta-prod ./helm
     '''
-    //    /usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api ./helm-ta-prod
+    //sh '''
+    //usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api \
+    //albSubnets=${ALB_SUBNETS} clusterNodeSecurityGroup=${CLUSTERNODESG} ./helm-ta-prod
+    //'''
     }
 }
