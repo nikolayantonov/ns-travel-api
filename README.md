@@ -44,7 +44,7 @@ $ scp -i ~/Desktop/kleidia/iakovoschallenge.pem ~/Desktop/kleidia/iakovoschallen
 * Create Cluster with EKSCTL
 
 ```bash
-eksctl create cluster --name=travelApp-EKS-CLUSTER ---version=1.13 --nodes=1 --region=eu-west-2 --node-type=t3.medium \
+eksctl create cluster --name=travelApp-EKS-CLUSTER --version=1.13 --nodes=1 --region=eu-west-2 --node-type=t3.medium \
 --node-security-groups sg-b79231de \
 --ssh-public-key=iakovoschallenge \
 --tags "Owner=IakovosBelonias, Task=createdByIakovos Travel App Challenge"
