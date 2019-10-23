@@ -27,6 +27,12 @@ node {
         returnStdout: true
     )
 
+    CERTIFICATE = sh (
+        script: "aws iam list-server-certificates | jq -r '.ServerCertificateMetadataList[] | \
+        select(.ServerCertificateName == "my-server-test") | .Arn'"
+        returnStdout: true
+    )
+
     stage ('Checkout'){
     checkout([
         $class: 'GitSCM',
@@ -75,8 +81,8 @@ node {
          /usr/local/bin/helm upgrade --install helm-ta-prod ./helm
     '''
     //sh '''
-    //usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api \
-    //albSubnets=${ALB_SUBNETS} clusterNodeSecurityGroup=${CLUSTERNODESG} ./helm-ta-prod
+    //usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api, \
+    //albSubnets=${ALB_SUBNETS}, clusterNodeSecurityGroup=${CLUSTERNODESG}, certificate=${CERTIFICATE} ./helm-ta-prod
     //'''
     }
 }
