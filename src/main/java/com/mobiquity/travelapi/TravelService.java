@@ -26,15 +26,25 @@ public class TravelService {
         List<RouteAndWeather> travelResponse = new ArrayList<>();
         for (Route route : nsClient.getTravelPlan(travelRequest).getRoutes()) {
             Stop lastStopOfRoute = getLastStop(route);
+            Stop firstStopOfRoute = getFirstStop(route);
             travelResponse.add(RouteAndWeather.builder()
                     .route(route)
-                    .weather(weatherClient.getDarkSkyResponse(
+                    .weatherAtDestination(weatherClient.getDarkSkyResponse(
                             getLongitude(lastStopOfRoute),
                             getLatitude(lastStopOfRoute),
                             getDateTime(route)).getBody())
+                    .weatherAtOrigin(weatherClient.getDarkSkyResponse(
+                            getLongitude(firstStopOfRoute),
+                            getLatitude(firstStopOfRoute),
+                            getOriginDateTime(route)).getBody())
                     .build());
         }
         return travelResponse;
+    }
+
+    private Stop getFirstStop(Route route) {
+        Leg firstLeg= route.getLegs().get(0);
+        return firstLeg.getStops().get(0);
     }
 
     private String getDateTime(Route route) {
@@ -67,5 +77,10 @@ public class TravelService {
         StringBuilder sb = new StringBuilder().append(dateTime);
         sb.delete(sb.indexOf("+") + 3, sb.length());
         return sb.append(":00").toString();
+    }
+
+    private String getOriginDateTime(Route route)
+    {
+        return getEpochTime(route.getDestination().getPlannedDepartureTime());
     }
 }

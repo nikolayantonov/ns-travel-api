@@ -19,10 +19,12 @@ public class AllRoutesResponse {
     @Getter
     static class RouteWeather {
         private String startTime;
-        private String arrivalTime;
+        private Weather weatherAtOrigin;
         private int duration;
         private int numberOfLegs;
+        private String arrivalTime;
         private Weather weatherAtDestination;
+
 
         @Builder
         @Getter

@@ -30,22 +30,32 @@ public class MapTravelPlanToAllRoutesResponse {
             routeWeathers.add(
                     AllRoutesResponse.RouteWeather.builder()
                             .startTime(rw.getRoute().getOrigin().getPlannedDepartureTime())
+                            .weatherAtOrigin(setOriginWeather(rw)) //added for weather at start station
                             .numberOfLegs(rw.getRoute().getLegs().size())
                             .duration(rw.getRoute().getPlannedDuration())
                             .arrivalTime(rw.getRoute().getDestination().getPlannedArrivalTime())
-                            .weatherAtDestination(setWeather(rw))
+                            .weatherAtDestination(setDestinationWeather(rw))
                             .build()
             );
         }
         return routeWeathers;
     }
 
-    private AllRoutesResponse.RouteWeather.Weather setWeather(RouteAndWeather rw) {
+    private AllRoutesResponse.RouteWeather.Weather setOriginWeather(RouteAndWeather rw) {
         return AllRoutesResponse.RouteWeather.Weather.builder()
-                .summary(rw.getWeather().getCurrently().getSummary())
-                .humidity(rw.getWeather().getCurrently().getHumidity())
-                .temperature(rw.getWeather().getCurrently().getTemperature())
-                .windSpeed(rw.getWeather().getCurrently().getWindSpeed())
+                .summary(rw.getWeatherAtOrigin().getCurrently().getSummary())
+                .humidity(rw.getWeatherAtOrigin().getCurrently().getHumidity())
+                .temperature(rw.getWeatherAtOrigin().getCurrently().getTemperature())
+                .windSpeed(rw.getWeatherAtOrigin().getCurrently().getWindSpeed())
+                .build();
+    }
+
+    private AllRoutesResponse.RouteWeather.Weather setDestinationWeather(RouteAndWeather rw) {
+        return AllRoutesResponse.RouteWeather.Weather.builder()
+                .summary(rw.getWeatherAtDestination().getCurrently().getSummary())
+                .humidity(rw.getWeatherAtDestination().getCurrently().getHumidity())
+                .temperature(rw.getWeatherAtDestination().getCurrently().getTemperature())
+                .windSpeed(rw.getWeatherAtDestination().getCurrently().getWindSpeed())
                 .build();
     }
 

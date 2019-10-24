@@ -9,5 +9,6 @@ import lombok.Getter;
 @Getter
 public class RouteAndWeather {
     private Route route;
-    private Weather weather;
+    private Weather weatherAtDestination;
+    private Weather weatherAtOrigin;
 }

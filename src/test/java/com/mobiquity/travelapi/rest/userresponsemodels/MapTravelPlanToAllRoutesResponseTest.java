@@ -20,18 +20,25 @@ import static org.junit.jupiter.api.Assertions.*;
 class MapTravelPlanToAllRoutesResponseTest {
 
     private static NsResponse nsResponse;
-    private static Weather weatherResponse;
+    private static Weather weatherDestination;
     private static TravelPlan travelPlan ;
     private AllRoutesResponse.RouteWeather firstRoute;
+    private static Weather weatherOrigin;
 
     @BeforeAll
-    static void setUp() {
+     static void setUp() {
+
+        Weather.Currently originCurrentWeather = new Weather.Currently("Overcast",57.01,0.77,11.48);
+        weatherOrigin = new Weather(originCurrentWeather);
+
+        Weather.Currently destinationCurrentWeather = new Weather.Currently("Overcast",51.71,0.88,12.8);
+        weatherDestination  =new Weather(destinationCurrentWeather);
+
         ObjectMapper objMapper = new ObjectMapper();
         objMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
         try {
             nsResponse = objMapper.readValue(new File("./src/test/java/resources/TestNsResponse.json"), NsResponse.class);
-            weatherResponse = objMapper.readValue(new File("./src/test/java/resources/WeatherTestResponse.json"), Weather.class);
         } catch (Exception e) {
             System.out.println(e.getLocalizedMessage());
         }
@@ -39,11 +46,13 @@ class MapTravelPlanToAllRoutesResponseTest {
 
     @BeforeEach
     void setup() {
+
         travelPlan = TravelModelMapper.mapToTravelPlan(nsResponse);
         List<RouteAndWeather> rw = new ArrayList<>();
         for (Route route : travelPlan.getRoutes()) {
             rw.add(RouteAndWeather.builder().route(route)
-                .weather(weatherResponse)
+                .weatherAtDestination(weatherDestination)
+                 .weatherAtOrigin(weatherOrigin)
                 .build());
         }
         AllRoutesResponse allRoutesResponse = MapTravelPlanToAllRoutesResponse.mapToAllRoutesResponse(rw);
@@ -58,9 +67,15 @@ class MapTravelPlanToAllRoutesResponseTest {
 
     @Test
     void checkThatWeatherMappedFromWeatherModel() {
-        double expectedHumidity = weatherResponse.getCurrently().getHumidity();
+        double expectedHumidity = weatherDestination.getCurrently().getHumidity();
         assertEquals(expectedHumidity, firstRoute.getWeatherAtDestination().getHumidity());
     }
 
+    @Test
+    void checkThatWeatherAtOriginMappedFromWeatherModel() {
+
+       // double expectedHumidity = weatherOrigin.getCurrently().getHumidity();
+        assertEquals(0.77, firstRoute.getWeatherAtOrigin().getHumidity());
+    }
 
 }

@@ -80,7 +80,7 @@ class TravelApiControllerIT {
         for (Route route: mockedTravelPlan.getRoutes()) {
             mockedTravelResponse.add(RouteAndWeather.builder()
                     .route(route)
-                    .weather(weatherClient.getDarkSkyResponse(
+                    .weatherAtDestination(weatherClient.getDarkSkyResponse(
                             longitude,
                             latitude,
                             dateTime.get(counter++)).getBody()
