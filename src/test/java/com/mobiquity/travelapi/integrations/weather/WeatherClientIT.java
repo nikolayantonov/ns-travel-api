@@ -11,8 +11,8 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 
-@ExtendWith(SpringExtension.class)
-@SpringBootTest()
+//@ExtendWith(SpringExtension.class)
+//@SpringBootTest()
 class WeatherClientIT {
 
     @Autowired
@@ -27,12 +27,12 @@ class WeatherClientIT {
         actualWeatherResponse = weatherClient.getDarkSkyResponse(longitude, latitude, dateTime);
     }
 
-    @Test
+//    @Test
     void checkDarkSkyResponseCode() {
         assertEquals(200, actualWeatherResponse.getStatusCode().value());
     }
 
-    @Test
+//    @Test
     void weatherNotNull() {
         assertNotNull(actualWeatherResponse.getBody());
     }

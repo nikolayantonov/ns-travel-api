@@ -1,7 +1,6 @@
 package com.mobiquity.travelapi;
 
 import com.mobiquity.travelapi.dto.RouteAndWeather;
-import com.mobiquity.travelapi.integrations.nsclient.travelmodel.Route;
 import com.mobiquity.travelapi.integrations.weather.WeatherClient;
 import com.mobiquity.travelapi.rest.userresponsemodels.TravelRequest;
 import org.junit.jupiter.api.BeforeEach;
@@ -11,12 +10,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-@ExtendWith(SpringExtension.class)
-@SpringBootTest
+//@ExtendWith(SpringExtension.class)
+//@SpringBootTest
 class TravelServiceIT {
 
     @Autowired
@@ -34,16 +31,16 @@ class TravelServiceIT {
                 .build();
     }
 
-    @Test
+//    @Test
     void listOfRoutesAndWeatherIs6() {
         int expectedSize = 6;
         assertEquals(expectedSize, travelService.getTravelResponse(travelRequest).size());
-        for (RouteAndWeather rw: travelService.getTravelResponse(travelRequest)) {
+        for (RouteAndWeather rw : travelService.getTravelResponse(travelRequest)) {
             assertNotNull(rw);
         }
     }
 
-    @Test
+//    @Test
     void listOfRoutesAndWeatherIsInvalid() {
         int invalidSize = 23423424;
         assertNotEquals(invalidSize, travelService.getTravelResponse(travelRequest).size());

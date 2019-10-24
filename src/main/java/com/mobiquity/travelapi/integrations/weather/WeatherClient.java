@@ -23,7 +23,6 @@ public class WeatherClient {
     private final String key;
     private final String scheme;
     private final String exclusions;
-    private static final Logger LOGGER = LoggerFactory.getLogger(WeatherClient.class);
 
     WeatherClient(@Value("#{environment.DARKKEY}") String key,
                   @Value("${urls.base.darkSky}") String uriBase,
@@ -36,9 +35,6 @@ public class WeatherClient {
     }
 
     public ResponseEntity<Weather> getDarkSkyResponse(String longitude, String latitude, String dateTime) {
-
-        LOGGER.info(buildUri(dateTime, longitude, latitude).toString());
-
         return restTemplate.getForEntity(
                 buildUri(dateTime, longitude, latitude), Weather.class);
     }

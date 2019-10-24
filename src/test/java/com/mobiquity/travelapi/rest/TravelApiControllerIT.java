@@ -1,14 +1,13 @@
 package com.mobiquity.travelapi.rest;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.mobiquity.travelapi.dto.RouteAndWeather;
-import com.mobiquity.travelapi.integrations.nsclient.responsemodel.NsResponse;
-import com.mobiquity.travelapi.integrations.nsclient.responsemodel.TravelModelMapper;
-import com.mobiquity.travelapi.integrations.nsclient.travelmodel.Route;
-import com.mobiquity.travelapi.integrations.nsclient.travelmodel.TravelPlan;
+import com.fasterxml.jackson.databind.exc.MismatchedInputException;
+import com.mobiquity.travelapi.integrations.weather.Weather;
 import com.mobiquity.travelapi.integrations.weather.WeatherClient;
-import com.mobiquity.travelapi.rest.userresponsemodels.MapTravelPlanToAllRoutesResponse;
+import com.mobiquity.travelapi.rest.userresponsemodels.AllRoutesResponse;
 import com.mobiquity.travelapi.rest.userresponsemodels.TravelRequest;
+import org.json.JSONArray;
+import org.json.JSONObject;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -19,12 +18,13 @@ import org.springframework.http.MediaType;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.util.NestedServletException;
 
-import java.io.File;
-import java.util.ArrayList;
-import java.util.List;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
@@ -43,56 +43,71 @@ class TravelApiControllerIT {
     private WeatherClient weatherClient;
     private TravelRequest travelRequest;
     private String longitude, latitude;
-    private List<String> dateTime;
 
 
     @BeforeEach
     void setUp() {
         travelRequest = new TravelRequest.Builder()
-                .dateTime("2019-10-07T16:25:00+0200")
+                .dateTime(getCurrentDateTime())
                 .destinationEvaCode("8400056")
                 .originEvaCode("8400282")
                 .build();
         latitude = "52.337301";
         longitude = "4.889512";
-        dateTime = List.of("1570458540", "1570461060", "1570460340", "1570462860", "1570462140", "1570464660");
+    }
+
+    private String getCurrentDateTime() {
+        ZonedDateTime aDate = ZonedDateTime.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYYY-MM-dd'T'HH:mm:ddZ");
+        return aDate.format(formatter);
     }
 
     @Test
-    void shouldReturnAllRouteResponse() throws Exception {
+    void statusCode_400_expectedFromNs_IfNothingPassedToTravelService() throws Exception {
+        mockMvc.perform(post("/api/v1/trips")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(""))
+                .andExpect(status().is(400));
+    }
+
+    @Test
+    void statusCode_200_ifCorrectPackageSentToNs() throws Exception {
+        mockMvc.perform(post("/api/v1/trips")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(objectMapper.writeValueAsString(travelRequest)))
+                .andExpect(status().is(200));
+    }
+
+    @Test
+    void routeAndWeather_IsNotNull_ifCorrectPackageSentToNs() throws Exception {
         MvcResult result = mockMvc.perform(post("/api/v1/trips")
                 .contentType(MediaType.APPLICATION_JSON)
-                .content(objectMapper.writeValueAsString(travelRequest))
-                .accept(MediaType.APPLICATION_JSON))
-                .andDo(print())
-                .andExpect(status().isOk())
+                .content(objectMapper.writeValueAsString(travelRequest)))
+                .andExpect(status().is(200))
                 .andReturn();
-        String nsResultFromMock = result.getResponse().getContentAsString();
 
-        assertEquals(checkTestDataResult(), nsResultFromMock);
+        AllRoutesResponse arr = objectMapper.readValue(
+                result.getResponse().getContentAsString()
+                , AllRoutesResponse.class);
+
+        assertNotNull(arr);
     }
 
-    private String checkTestDataResult() throws Exception {
-        TravelPlan mockedTravelPlan = TravelModelMapper.mapToTravelPlan(getMockedNsResponseFromFile());
-        List<RouteAndWeather> mockedTravelResponse = new ArrayList<>();
-        int counter = 0;
+    @Test
+    void routeAndWeather_IsNull_ifNothingSentToNs() throws Exception {
+        MvcResult result = mockMvc.perform(post("/api/v1/trips")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content(""))
+                .andExpect(status().is(400))
+                .andReturn();
 
-        for (Route route: mockedTravelPlan.getRoutes()) {
-            mockedTravelResponse.add(RouteAndWeather.builder()
-                    .route(route)
-                    .weatherAtDestination(weatherClient.getDarkSkyResponse(
-                            longitude,
-                            latitude,
-                            dateTime.get(counter++)).getBody()
-                    )
-                    .build());
-        }
-
-        return objectMapper.writeValueAsString(MapTravelPlanToAllRoutesResponse.mapToAllRoutesResponse(mockedTravelResponse));
+        MismatchedInputException thrown =
+        assertThrows(MismatchedInputException.class,
+                () -> objectMapper.readValue(
+                        result.getResponse().getContentAsString()
+                        , AllRoutesResponse.class)
+                        , "Expected no RoutesAndWeather class to be created");
+        assertEquals("No content to map due to end-of-input"
+                , thrown.getOriginalMessage());
     }
-
-    private NsResponse getMockedNsResponseFromFile() throws Exception {
-        return objectMapper.readValue(new File("./src/test/java/resources/TestNsResponse.json"), NsResponse.class);
-    }
-
 }
