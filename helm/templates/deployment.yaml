@@ -19,3 +19,8 @@ spec:
         image: {{ .Values.image.repository }}:{{ .Values.image.tag }}
         ports:
           - containerPort: 8080
+        env:
+        - name: NSKEY
+          value: {{ .Values.nsKey }}
+        - name: DARKKEY
+          value: {{ .Values.darkKey }}

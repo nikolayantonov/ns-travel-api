@@ -81,8 +81,9 @@ node {
          /usr/local/bin/helm upgrade --install helm-ta-prod ./helm
     '''
     //sh '''
-    //usr/local/bin/helm upgrade --install helm-ta-prod --set selectApp=ns-travel-api, \
-    //albSubnets=${ALB_SUBNETS}, clusterNodeSecurityGroup=${CLUSTERNODESG}, certificate=${CERTIFICATE} ./helm-ta-prod
+    //usr/local/bin/helm upgrade --install helm --set selectApp=ns-travel-api,\
+    //albSubnets=${ALB_SUBNETS},clusterNodeSecurityGroup=${CLUSTERNODESG},\
+    //certificate=${CERTIFICATE},nsKey=${NSKEY},darkKey=${DARKKEY} ./helm-ta-prod
     //'''
     }
 }
