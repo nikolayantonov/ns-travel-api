@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:11
 RUN mkdir -p ~/app
 WORKDIR /app
 COPY /target/travel-api-1.0.0.jar /app/travel-api-1.0.0.jar
