@@ -13,7 +13,7 @@ darkKey: ""
 
 
 image:
-  repository: 473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-prod
+  repository: 473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-dev
   tag: latest
   pullPolicy: IfNotPresent
 

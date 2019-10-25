@@ -5,7 +5,7 @@ metadata:
   labels:
     app: {{ .Values.app }}
 spec:
-  replicas: 9
+  replicas: 3
   selector:
     matchLabels:
       app: {{ .Values.app }}
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: {{ .Values.app }}
-        image: 473293451041.dkr.ecr.eu-west-2.amazonaws.com/ns-travel-api-dev:latest
+        image: 473293451041.dkr.ecr.eu-west-2.amazonaws.com/app-stag:1.0.2
         ports:
           - containerPort: 8081
         env:
